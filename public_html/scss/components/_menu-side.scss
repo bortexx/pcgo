@@ -1,0 +1,48 @@
+.menu-side{
+    padding: 20px;
+    height: 100%;
+    width: 200px;
+    box-shadow: 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    font-family: $letra;
+    background-color: $fondoMenuSide;
+}
+
+@media(max-width: 727px){
+    .menu-side{
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        box-shadow: 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
+        font-family: $letra;
+        background-color: $fondoMenuSide;
+    }
+}
+
+
+.menu-side__titulo{
+    font-size: 22px;
+    text-align: center;//esto esta mal hay que mirar el html y ponerle clase al P.
+}
+
+
+.menu-side__item{
+    display: block;
+    border-bottom: 1px solid #E7E7E7;
+    text-align:center;
+}
+.menu-side__items{
+    display: block;
+}
+
+.menu-side__items--visible{
+    display:block;
+}
+
+@media(max-width:727px){
+    .menu-side__items{
+        display:none;
+    }
+    .menu-side__items--visible{
+        display:block;
+    }
+}

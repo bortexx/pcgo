@@ -1,0 +1,13 @@
+    .l-productos {
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+    @media(max-width:1237px){
+        .l-productos {
+            display:flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: center;
+        }
+    }

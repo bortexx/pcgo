@@ -1,0 +1,17 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-footer{
+    display: flex;
+    flex-direction: column;
+}
+.menu-footer__titulo{
+    font-size: 20px;
+    color: $footerColorLetra;
+}
+.menu-footer__ite,{
+    color: $footerColorLetra;
+}

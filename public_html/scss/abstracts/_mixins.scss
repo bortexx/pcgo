@@ -1,0 +1,5 @@
+@mixin debug($color:red){
+    @if $debug==1{
+        border: solid 1px $color;
+    }
+}

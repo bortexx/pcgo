@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PCGO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="vendor/font-awesome/css/all.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script src="js/repository.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Aleo|Libre+Baskerville|Libre+Franklin|Oswald|Roboto+Mono" rel="stylesheet">
+
+</head>
+
+<body class="body">
+    <div class="l-landing-page">
+
+        <header class="l-landing-page__header">
+            <nav class="main-menu">
+                <ul class="main-menu__items">
+                    <li class="main-menu__item">
+                        <span>logo</span>
+                    </li>
+
+                    <li class="main-menu__item main-menu__item--centro-izquierda main-menu__item--invisible ui-widget">
+                        <label for="tags">Tags: </label>
+                        <input id="tags">
+                    </li>
+
+                    <li class="main-menu__item">
+                        <a><span>Login</span></a>
+                    </li>
+
+                    <li class="main-menu__item">
+                        <a><span>Registro</span></a>
+                    </li>
+                    <li class="main-menu__item main-menu__item--derecha">
+                        <a href="#"><img id="imagen" src="images/icons8-add-shopping-cart-32.png" /></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="l-landing-page__carousel">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" id="carousel-inner">
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">next</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </div>
+        </div>
+
+        <aside class="l-landing-page__aside">
+            <div class="menu-side" id="menu-side">
+                <div id="Categorias" class="menu-side__titulo">Categorias</div>
+            </div>
+        </aside>
+
+        <div class="l-landing-page__container">
+            <div id="productos" class="productos">
+                <div id="l-productos" class="l-productos">
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/portatil2.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/portatil1.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/portatil3.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/portatil5.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/sobremesa1.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/sobremesa2.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/portatil2.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/portatil1.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/portatil3.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/portatil5.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/sobremesa1.jpg" alt="producto"></div>
+                    <div class="productos__item"><img class="productos__item--imagen" src="images/sobremesa2.jpg" alt="producto"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="l-landing-page__footer">
+            <div class="footer">
+                <div class="footer__izquierda">
+                    <ul menu-footer>
+                        <li menu-footer__titulo>POR QUE COMPRAR</li>
+                        <li menu-footer__item><a class="menu-footer__link">Como comprar</a></li>
+                        <li menu-footer__item><a class="menu-footer__link">Formas de pago</a></li>
+                        <li menu-footer__item><a class="menu-footer__link">Gastos de envio</a></li>
+                    </ul>
+                </div>
+                <div class="footer__centro">
+                    <ul menu-footer>
+                        <li menu-footer__titulo>QUIENES SOMOS</li>
+                        <li menu-footer__item><a class="menu-footer__link">Quienes somos</a></li>
+                        <li menu-footer__item><a class="menu-footer__link">Nuestras tiendas</a></li>
+                        <li menu-footer__item><a class="menu-footer__link">Condiciones de compra</a></li>
+                    </ul>
+                </div>
+                <div class="footer__derecha">
+                    <ul menu-footer>
+                        <li menu-footer__titulo>CONTACTAR</li>
+                        <li menu-footer__item><a class="menu-footer__link">Centro de soporte</a></li>
+                        <li menu-footer__item><a class="menu-footer__link">Devoluciones</a></li>
+                        <li menu-footer__item><a class="menu-footer__link">Garantias</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

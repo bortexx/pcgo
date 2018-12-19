@@ -1,0 +1,65 @@
+.main-menu{
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
+    font-family: $letra;
+    background-color: $fondoMainMenu;
+}
+.main-menu__items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    
+    color: $colorLetraMainMenu;
+}
+
+.main-menu__item{
+    margin-left: 20px;
+    padding-top: 15px;
+}
+
+.main-menu__item--invisible{
+    display:block;
+}
+
+.main-menu__item--derecha{
+    margin-left: auto;
+}
+.main-menu__item--centro-izquierda{
+    margin-left:auto;
+}
+
+@media(max-width:514px){
+    .main-menu__item--invisible{
+        display:none;
+    }
+}
+
+@media(max-width:325px){
+    .main-menu__item--invisible{
+        display:none;
+    }
+    .main-menu__items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+}
+
+@media(max-width:276px){
+    .main-menu__item--invisible{
+        display:none;
+    }
+    .main-menu__items{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+    .main-menu__item--derecha{
+        margin-left: 0px;
+
+}
+}

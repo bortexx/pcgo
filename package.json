@@ -1,0 +1,29 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "Alumno",
+  "contributors": [],
+  "dependencies": {
+    "node-modules": "^1.0.1",
+    "node-sass": "^4.11.0"
+  },
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "deploy": "bash deploy/deploy.sh",
+    "onchange": "onchange -v ./public_html/scss/**/* -- npm run deploy",
+    "start": "onchange -v '../public_html/**/*' -- ./deploy.sh"
+  },
+  "license": "ISC",
+  "devDependencies": {},
+  "description": ""
+}
