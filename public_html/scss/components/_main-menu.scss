@@ -2,22 +2,22 @@
     display: flex;
     justify-content: flex-start;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
-    font-family: $letra;
     background-color: $fondoMainMenu;
 }
 .main-menu__items{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    font-family: $letra;
     width: 100%;
-    
     color: $colorLetraMainMenu;
+    font-size: 20px;
 }
 
 .main-menu__item{
     margin-left: 20px;
     padding-top: 15px;
+    margin-right: 20px;
 }
 
 .main-menu__item--invisible{
@@ -31,7 +31,7 @@
     margin-left:auto;
 }
 
-@media(max-width:514px){
+@media(max-width:734px){
     .main-menu__item--invisible{
         display:none;
     }

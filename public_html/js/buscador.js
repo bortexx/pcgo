@@ -10,4 +10,3 @@
      source: availableTags
      });
      });
-     

@@ -8,9 +8,9 @@ $(document).ready(function () {
 
     let ul = document.createElement("ul");
     ul.className = "menu-side__items";
+    ul.id = "menu-side__items";
 
-
-
+  
     function cargarCategorias(json) {
         json["data"].map(function (cat) {
             let divRellenar = document.getElementById("menu-side");

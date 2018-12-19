@@ -1,7 +1,9 @@
 .footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: $fondoFooter;
+    
 }
 
 .menu-footer{
@@ -11,7 +13,13 @@
 .menu-footer__titulo{
     font-size: 20px;
     color: $footerColorLetra;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: $letra;
 }
-.menu-footer__ite,{
+.menu-footer__item{
+    font-size:14px;
     color: $footerColorLetra;
+    text-align: center;
+    font-family: $letra;
 }
