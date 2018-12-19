@@ -1,1 +1,1 @@
-onchange -v '../public_html/**/*' -- ./deploy.sh
+onchange -v '..\public_html\**\*' -- ./deploy.sh
