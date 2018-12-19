@@ -360,6 +360,10 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
+.logo {
+  width: 45px;
+  height: 45px; }
+
 .productos {
   width: 100%;
   height: 100%; }
