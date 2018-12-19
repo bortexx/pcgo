@@ -7,7 +7,7 @@ $(document).ready(function () {
         function () {
             var selectedOption = this.options[select.selectedIndex];
             console.log(selectedOption.text);
-            if (selectedOption.text == "Español") {
+            if (selectedOption.value == "es") {
                 eliminarCategorias();
                 repository.getModels("categorias", cargarEspanyol);
             } else {
