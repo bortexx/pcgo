@@ -1,10 +1,13 @@
-.main-menu{
+.main-menu {
     display: flex;
     justify-content: flex-start;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
     background-color: $fondoMainMenu;
+    margin-bottom: -1rem;
+
 }
-.main-menu__items{
+
+.main-menu__items {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -12,54 +15,66 @@
     width: 100%;
     color: $colorLetraMainMenu;
     font-size: 20px;
+    height: 100%;
+
 }
 
-.main-menu__item{
+.main-menu__item {
     margin-left: 20px;
-    padding-top: 15px;
+    margin-top: 15px;
     margin-right: 20px;
+    height: 100%;
 }
 
-.main-menu__item--invisible{
-    display:block;
+.main-menu__item--invisible {
+    display: block;
 }
 
-.main-menu__item--derecha{
+.main-menu__item--derecha {
     margin-left: auto;
 }
-.main-menu__item--centro-izquierda{
-    margin-left:auto;
+
+.main-menu__item--seleccionado:hover {
+    border-bottom: 2px solid #FFFFFF;
 }
 
-@media(max-width:734px){
-    .main-menu__item--invisible{
-        display:none;
+
+.main-menu__item--centro-izquierda {
+    margin-left: auto;
+}
+
+@media(max-width:734px) {
+    .main-menu__item--invisible {
+        display: none;
     }
 }
 
-@media(max-width:325px){
-    .main-menu__item--invisible{
-        display:none;
+@media(max-width:325px) {
+    .main-menu__item--invisible {
+        display: none;
     }
-    .main-menu__items{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
+    .main-menu__items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
-@media(max-width:276px){
-    .main-menu__item--invisible{
-        display:none;
+@media(max-width:276px) {
+    .main-menu__item--invisible {
+        display: none;
     }
-    .main-menu__items{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-}
-    .main-menu__item--derecha{
+
+    .main-menu__items {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .main-menu__item--derecha {
         margin-left: 0px;
 
-}
+    }
 }

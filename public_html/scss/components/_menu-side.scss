@@ -3,7 +3,6 @@
     height: 100%;
     width: 200px;
     box-shadow: 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
-    font-family: $letra;
     background-color: $fondoMenuSide;
 }
 
@@ -13,23 +12,34 @@
         height: 100%;
         width: 100%;
         box-shadow: 5px 0px 0px 0px rgba(0, 0, 0, 0.1);
-        font-family: $letra;
         background-color: $fondoMenuSide;
     }
 }
 
 
 .menu-side__titulo{
+    font-family: $letra;
     font-size: 22px;
     text-align: center;//esto esta mal hay que mirar el html y ponerle clase al P.
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 
 .menu-side__item{
+    font-family: $letra;
     display: block;
     border-bottom: 1px solid #E7E7E7;
     text-align:center;
+    border-width:1px;
 }
+.menu-side__item:hover{
+    display: block;
+    text-align:center;
+    background-color:#000000;
+    color:white
+}
+
 .menu-side__items{
     display: block;
 }

@@ -26,6 +26,8 @@ $(document).ready(function () {
             ul.appendChild(li);
         });
         document.getElementById("Registro").innerHTML = "Sign Up";
+        document.getElementById("Categorias").innerHTML = "Categories";
+
     }
 
     function cargarEspanyol(json) {
@@ -37,7 +39,7 @@ $(document).ready(function () {
             ul.appendChild(li);
         });
         document.getElementById("Registro").innerHTML = "Registro";
-
+        document.getElementById("Categorias").innerHTML = "Categorias";
     }
 
     function eliminarCategorias() {
