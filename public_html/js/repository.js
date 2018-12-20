@@ -1,6 +1,6 @@
 class Repository {
     constructor(prefijo) {
-        let pref = "http://192.168.1.7/pcgo/php/";
+        let pref = "http://172.16.205.89/pcgo/php/";
         if (this.prefijo == undefined) {
             this.prefijo = pref;
         } else {

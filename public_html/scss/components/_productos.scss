@@ -1,9 +1,23 @@
-
-.productos{
-   width: 100%;
-   height: 100%;
+.productos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.productos__item{
+
+@media(max-width:1237px) {
+    .productos {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.productos__item {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -15,12 +29,9 @@
     border: 1px solid black;
 }
 
-.productos__item--imagen{
+.productos__item--imagen {
     height: 120px;
     width: 160px;
 }
 
-.productos__item--texto{
-
-}
-
+.productos__item--texto {}

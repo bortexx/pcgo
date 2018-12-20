@@ -366,7 +366,19 @@ html {
 
 .productos {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+@media (max-width: 1237px) {
+  .productos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; } }
 
 .productos__item {
   padding-top: 10px;
@@ -526,7 +538,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #000000; }
+  background-color: #202124; }
 
 .menu-footer {
   display: flex;
