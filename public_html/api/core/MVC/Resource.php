@@ -38,7 +38,7 @@ abstract class Resource {
             } 
             $i++;
         }
-        $this->numRows = $i;
+        $this->num_rows = $i;
     }
 
     

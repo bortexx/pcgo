@@ -22,14 +22,14 @@ class CompruebaResource extends Resource {
         WHERE nombreUsuario = '$usuario' LIMIT 1";        
         $this->execSQL();
 
-        $usuarioComprueba =  $this->data[0]['nombreUsuario'];
-        $passwordComprueba = $this->data[0]['contrasenya'];
+        $usuario_comprueba =  $this->data[0]['nombreUsuario'];
+        $password_comprueba = $this->data[0]['contrasenya'];
 
-        if ($this->numRows === 0) {
+        if ($this->num_rows === 0) {
             echo "nombre de usuario no válido";
         }
 
-        else if ($password == $passwordComprueba) {
+        else if ($password == $password_comprueba) {
             setcookie("logeado", $this->data[0]['id'] . ";" . $this->data[0]['nombreUsuario'] , time() + (86400 * 7));
             echo "hola";
         } else {
