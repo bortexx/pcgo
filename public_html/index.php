@@ -46,10 +46,27 @@
                         <input class="buscador" id="tags"> <a href="#"><i class="fas fa-search lupa"></i></a>
                     </li>
                     <li class="main-menu__item main-menu__item--derecha main-menu__item--seleccionado">
+                       
+            <?php
+        if (!isset($_SESSION['logeado'])) {
+            ?>
                         <a>
                             <span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>Login</span>
                         </a>
-                        <a><i class="fas fa-user main-menu__icon-login"></i></a>
+                        <?php
+        }
+            ?>     
+                    <?php
+        if (isset($_SESSION['logeado'])) {
+            ?>
+                        <a>
+                            <span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>xD</span>
+                        </a>
+                        <?php
+        }
+            ?>    
+                                            <a><i class="fas fa-user main-menu__icon-login"></i></a>
+                                            
                     </li>
                     <li class="main-menu__item main-menu__item--seleccionado">
                         <a><span class="main-menu__register" data-toggle='modal'  data-target='#registrarseModal'>Registro</span></a>
