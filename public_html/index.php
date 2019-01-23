@@ -45,33 +45,38 @@
                         <label for="tags"></label>
                         <input class="buscador" id="tags"> <a href="#"><i class="fas fa-search lupa"></i></a>
                     </li>
-                    <li class="main-menu__item main-menu__item--derecha main-menu__item--seleccionado">
                        
-            <?php
-        if (!isset($_SESSION['logeado'])) {
-            ?>
-                        <a>
-                            <span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>Login</span>
-                        </a>
                         <?php
-        }
-            ?>     
-                    <?php
-        if (isset($_SESSION['logeado'])) {
-            ?>
-                        <a>
-                            <span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>xD</span>
-                        </a>
+                        session_start();
+                        if (isset($_SESSION["logged"])) {
+                        ?>
+
+
+                        <li class="main-menu__item main-menu__item--derecha main-menu__item--seleccionado">
+                         <a><span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>Perfil</span></a>
+                        </li>
+
+
                         <?php
-        }
-            ?>    
-                                            <a><i class="fas fa-user main-menu__icon-login"></i></a>
-                                            
-                    </li>
-                    <li class="main-menu__item main-menu__item--seleccionado">
+                        } else {           
+                        ?>
+
+
+                        <li class="main-menu__item main-menu__item--derecha main-menu__item--seleccionado">
+                         <a><span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>Login</span></a>
+                        <a><i class="fas fa-user main-menu__icon-login"></i></a>
+                        </li>
+
+
+                        <li class="main-menu__item main-menu__item--seleccionado">
                         <a><span class="main-menu__register" data-toggle='modal'  data-target='#registrarseModal'>Registro</span></a>
                         <a><i class="fas fa-lock main-menu__icon-register"></i></a>
-                    </li>
+                        </li>
+ 
+                        <?php
+                        }
+                        ?>
+                                            
                     <li class="main-menu__item ">
                         <a id="imagen" href="#"><img src="images/icons8-add-shopping-cart-32.png" /></a>
                     </li>

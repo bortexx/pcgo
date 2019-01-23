@@ -11,7 +11,7 @@ class CompruebaResource extends Resource {
     }*/
     
     public function postAllAction() {
-        
+
         $rawData = file_get_contents("php://input");
         $data = json_decode($rawData);
     
@@ -30,11 +30,26 @@ class CompruebaResource extends Resource {
         }
 
         else if ($password == $password_comprueba) {
-            setcookie("logeado", $this->data[0]['id'] . ";" . $this->data[0]['nombreUsuario'] , time() + (86400 * 7));
-            echo "hola";
+            setcookie("DWS", $this->data[0]['id'] . ";" . $this->data[0]['nombreUsuario'] , time() + (86400 * 7));
+            echo "Logeado con existo";
         } else {
             echo "password no válido";
-        }    
+        }
+        session_start();
+
+        
+    if (isset($_COOKIE["DWS"])) {
+        //$usuario = explode(";", $_COOKIE["DWS"]);
+        //$_SESSION["id"] = $usuario[0];
+        //$_SESSION["extensionAvatar"] = $usuario[1];
+        $_SESSION["logged"] = true;
+    } else {
+       // unset($_SESSION["usuario"]);
+        //unset($_SESSION["avatar"]);
+        $_SESSION["logged"] = false;
     }
+    }
+
+  
 
     }

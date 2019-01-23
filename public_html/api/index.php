@@ -1,4 +1,5 @@
 <?php
+
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
@@ -14,7 +15,6 @@
         echo $e;
         exit();
     }
-    
     
     $config = require_once "./configs/config.php";
     require_once("./core/AutoLoad.php");

@@ -7,7 +7,9 @@ class IndexController {
         indexController.mostrarDetallesCompra();
     }
     compruebaLogin(a) {
-        alert(a);
+        if(a == "Logeado con existo"){
+            location.reload();
+        }
     }
     mostrarCategorias(json) {
         $("#menu-side").append("<ul class='menu-side__items' id='menu-side__items'>");
