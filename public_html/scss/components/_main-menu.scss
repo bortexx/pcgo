@@ -3,7 +3,45 @@
     justify-content: flex-start;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
     background-color: $fondoMainMenu;
+      flex-wrap: wrap;
 }
+
+.main-menu__icon-login{
+    display:none;
+}
+
+.main-menu__icon-register{
+    display:none;
+}
+
+@media(max-width:727px) {
+    .main-menu {
+    display: flex;
+    justify-content: flex-start;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: $fondoMainMenu;
+      flex-wrap: wrap;
+      position: absolute;
+     z-index: 1;
+    width: 100%;
+    
+}
+.main-menu__login{
+    display:none;
+}
+.main-menu__register{
+    display:none
+}
+.main-menu__icon-login{
+    display:block;
+}
+
+.main-menu__icon-register{
+    display:block;
+}
+}
+
+
 
 .main-menu__items {
     display: flex;
@@ -65,7 +103,7 @@
 
     .main-menu__items {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
     }
