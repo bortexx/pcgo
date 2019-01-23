@@ -9,6 +9,7 @@ abstract class Resource {
     protected $db;
     protected $sql;
     protected $controller;
+    protected $numRows;
 
     //public function __construct($id = null) {
     public function __construct() {
@@ -37,6 +38,7 @@ abstract class Resource {
             } 
             $i++;
         }
+        $this->numRows = $i;
     }
 
     

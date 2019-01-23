@@ -185,14 +185,10 @@ function login() {
         return d << _ | d >>> 32 - _
     }
 
-
-
     var contrasenyaEncriptada = MD5(contraseña);
 
     var str = '{"usuario":"' + usuario + '","password":"' + contrasenyaEncriptada + '"}';
 
-    let datosJson = JSON.parse(str);
-    console.log(datosJson);
-    console.log(str);
+    //let datosJson = JSON.parse(str);
     repository.postModels('comprueba', indexController.compruebaLogin, str);
 }
