@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class IndexController {
 
     mostrarProductos(json) {
@@ -168,4 +169,146 @@ function login() {
 
 function logout() {
     repository.postModels('logout', indexController.compruebaLogout);
+=======
+let cantidad1;
+class IndexController {
+    mostrarProductos(json) {
+        json.map(function (prod) {
+            $("#productos").append("<div class='card' id = " + prod.id + "><img class=card__image src=images/" + prod.imagen + "><div class=card__titulo>" + prod.nombreCarta + "</div><div class=card__precio>" + prod.precio + " €</div><p class='info'>" + prod.nombreCompleto + "</p><p class='info'>" + prod.descripcion + "</p><button id='botonProductoAbrirModal' type='button' onclick='reinicioContador()' class='card__boton' data-toggle='modal' data-target='#exampleModal'>Ver Detalles</button> </div>");
+        });
+        indexController.mostrarDetallesCompra();
+    }
+
+    mostrarCategorias(json) {
+        $("#menu-side").append("<ul class='menu-side__items' id='menu-side__items'>");
+        json.map(function (cat) {
+            $(".menu-side__items").append("<li id=" + cat.Nombre + " class='menu-side__item'>" + cat.Nombre + "</li>");
+        });
+        indexController.mostrarProductosFromCategorias();
+    }
+
+    mostrarCarrusel(json) {
+        json.map(function (carr) {
+            $("#carousel-inner").append("<div class='carousel-item'><img class='carousel__image' src=images/" + carr.imagenes + "></div>");
+            $(".carousel-inner").children().first().addClass("active");
+        });
+    }
+
+    mostrarDetallesCompra() {
+        $(".card").click(function () {
+            let art = articulo.mostrarArticulo(this);
+            console.log(art);
+            $("#modaltitulo").text(art.nombre);
+            $("#modalNombre").text(art.nombreCompleto);
+            $("#modalprecio").text("Precio: " + art.precio + " €");
+            $("#modalDescripcion").text(art.descripcion);
+            $("#modalImage").remove();
+            $("#modalimagen").append("<img id='modalImage'class='modal-body__imagen' src=images/" + art.imagen + "></img>");
+            articulo.id = art.id;
+            articulo.nombre = art.nombre;
+            articulo.imagen = art.imagen;
+            articulo.precio = art.precio;
+            articulo.nombreCompleto = art.nombreEspanyol;
+            articulo.descripcion = art.descripcion;
+        });
+    }
+    mostrarCategoriasDesplegable() {
+        $("#hamburguesa").click(function () {
+            if (!$("#menu-side__items").hasClass("menu-side__items--visible") && !$("#menu-side__items").hasClass("menu-side__items--invisible")) {
+                $("#menu-side__items").addClass("menu-side__items--visible");
+            } else if ($("#menu-side__items").hasClass("menu-side__items--visible") && !$("#menu-side__items").hasClass("menu-side__items--invisible")) {
+                $("#menu-side__items").removeClass("menu-side__items--visible");
+                $("#menu-side__items").addClass("menu-side__items--invisible");
+            } else {
+                $("#menu-side__items").removeClass("menu-side__items--invisible");
+                $("#menu-side__items").addClass("menu-side__items--visible");
+            }
+        });
+    }
+
+    mostrarProductosFromCategorias() {
+        $(".menu-side__item").on("click", function () {
+            eliminarElemento.eliminarElemento("productos");
+            let tipo = this.id.toLowerCase();
+            console.log(tipo);
+            if (tipo == "ordenadores") {
+                repository.getModelosTipo("productos", indexController.mostrarProductos, "sobremesa");
+                repository.getModelosTipo("productos", indexController.mostrarProductos, "portatil");
+            } else {
+                repository.getModelosTipo("productos", indexController.mostrarProductos, tipo);
+            }
+        });
+    }
+}
+let cantidad = 1;
+
+$(document).ready(function () {
+
+    $("#redireccionLogo").attr('href', window.location.href);
+
+    $("#form-login").attr('action', window.location.href + "php/compruebaLogin.php");
+    console.log(window.location.href);
+    $("#simboloMenos").on("click", function () {
+        if (cantidad > 1) {
+            cantidad--;
+            $('.modal-body__unidades').text(cantidad);
+            console.log(cantidad);
+        } else {
+            cantidad = 1;
+            $('.modal-body__unidades').text(cantidad);
+
+        }
+    });
+    $("#simboloMas").on("click", function () {
+        cantidad++;
+        $('.modal-body__unidades').text(cantidad);
+        console.log(cantidad);
+    });
+
+
+    $("#botoncomprar").click(function () {
+        
+        articulo.unidades = Number($("#numeroContador").text());
+        articulo.anyadirArticuloAlCarrito(carrito);
+    });
+
+
+});
+
+
+function login() {
+    console.log("hola");
+
+    var datos = {
+        "usuario": $('#usuario').val(),
+        "contraseña": $('#contraseña').val(),
+    }
+   // $.ajax({
+    
+   //type: "post", //Tipo de peticion
+     //   url: $url, //URL pagina a cargar
+       // data: datos, //Datos a pasar a pagina PHP
+        //success: function (data) {
+          //  console.log(data);
+       // }
+    //});
+}
+
+function mostrarCarrito(){
+    let arrayCarrito = carrito.mostrarArrayArticulos();
+    $(".modalBody__articuloCarrito").remove();
+    arrayCarrito.map(function(articulo){
+        console.log(articulo.id, articulo.nombre, articulo.unidades);
+        $("#bodyModalCarrito").append("<div class='modalBody__articuloCarrito'> <img class='imagenCarrito' src=images/"+ articulo.imagen +"><span>"+ articulo.nombre +"</span><pan>"+ articulo.unidades +"</span></div>");
+        });
+        
+     
+}
+
+function reinicioContador() {
+    if (!$("#exampleModal").hasClass("show")) {
+        cantidad = 1;
+        $('.modal-body__unidades').text(cantidad);
+    }
+>>>>>>> ramses1
 }

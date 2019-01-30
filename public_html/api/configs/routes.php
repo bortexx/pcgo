@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 
@@ -90,3 +91,57 @@ return array(
 );
 
 
+=======
+<?php
+
+
+return array(	
+	"get" => array(
+		"Categorias" => array(
+			"route" => "pcgo/api/categorias",
+			"resource" => "categorias",
+			"action" => "getAll"
+		),
+		"Carrusel" => array(
+			"route" => "/pcgo/api/carrusel",
+			"resource" => "carrusel",
+			"action" => "getAll"
+		),
+		"Productos" => array(
+			"route" => "/pcgo/api/productos",
+			"resource" => "productos",
+			"action" => "getAll"
+		),
+		"ProductosTipo" => array(
+			"route" => "/pcgo/api/productos/:tipo",
+			"resource" => "productos",
+			"action" => "getByTipo"
+		),
+	),
+
+	"post" => array(
+		"Categorias" => array(
+			"route" => "pcgo/api/categorias",
+			"resource" => "categorias",
+			"action" => "postCategorias"
+		),
+		"Carrusel" => array(
+			"route" => "/pcgo/api/carrusel",
+			"resource" => "carrusel",
+			"action" => "postCarrusel"
+		),
+		"Productos" => array(
+			"route" => "/pcgo/api/productos",
+			"resource" => "productos",
+			"action" => "postProductos"
+		),
+		"ProductosTipo" => array(
+			"route" => "/pcgo/api/productos/:tipo",
+			"resource" => "productos",
+			"action" => "getByTipo"
+		),
+	)
+);
+
+
+>>>>>>> ramses1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .flex{
     display: flex;
     flex-wrap: wrap;
@@ -8,4 +9,16 @@
 
 .flex--vertical{
     flex-direction: column;
+=======
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex--horizontal{
+    flex-direction: row;
+}
+
+.flex--vertical{
+    flex-direction: column;
+>>>>>>> ramses1
 }

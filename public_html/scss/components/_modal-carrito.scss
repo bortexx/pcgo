@@ -1,0 +1,17 @@
+.modal-content--tamaño{
+    right:320px;
+    width:1200px;
+    height: 700px;
+}
+.imagenCarrito{
+    width: 150px;
+    height: 170px;
+}
+
+.modalBody__articuloCarrito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
