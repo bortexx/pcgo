@@ -3,42 +3,56 @@
     justify-content: flex-start;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
     background-color: $fondoMainMenu;
-      flex-wrap: wrap;
+    flex-wrap: wrap;
+    z-index: 1;
 }
 
-.main-menu__icon-login{
-    display:none;
+.main-menu__icon-login {
+    display: none;
 }
 
-.main-menu__icon-register{
-    display:none;
+.main-menu__icon-register {
+    display: none;
+}
+
+.main-menu__logo {
+    margin-left: 30px;
+    margin-top: 12px;
 }
 
 @media(max-width:727px) {
     .main-menu {
-    display: flex;
-    justify-content: flex-start;
-    box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
-    background-color: $fondoMainMenu;
-      flex-wrap: wrap;
-      position: absolute;
-     z-index: 1;
-    width: 100%;
-    
-}
-.main-menu__login{
-    display:none;
-}
-.main-menu__register{
-    display:none
-}
-.main-menu__icon-login{
-    display:block;
-}
+        display: flex;
+        justify-content: flex-start;
+        box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
+        background-color: $fondoMainMenu;
+        flex-wrap: wrap;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
 
-.main-menu__icon-register{
-    display:block;
-}
+    }
+
+    .main-menu__logo {
+        margin-left: 20px;
+        margin-top: 12px;
+    }
+
+    .main-menu__login {
+        display: none;
+    }
+
+    .main-menu__register {
+        display: none
+    }
+
+    .main-menu__icon-login {
+        display: block;
+    }
+
+    .main-menu__icon-register {
+        display: block;
+    }
 }
 
 
@@ -78,7 +92,10 @@
     margin-left: auto;
 }
 
-@media(max-width:734px) {
+
+
+
+@media(max-width:453px) {
     .main-menu__item--invisible {
         display: none;
     }
@@ -87,6 +104,10 @@
 @media(max-width:325px) {
     .main-menu__item--invisible {
         display: none;
+    }
+
+    .main-menu__logo {
+        margin-left: 10px;
     }
 
     .main-menu__items {
@@ -101,6 +122,10 @@
         display: none;
     }
 
+    .main-menu__logo {
+        margin-left: 30px;
+    }
+
     .main-menu__items {
         display: flex;
         flex-direction: row;
@@ -110,6 +135,5 @@
 
     .main-menu__item--derecha {
         margin-left: 0px;
-
     }
 }

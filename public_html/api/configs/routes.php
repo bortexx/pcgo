@@ -33,6 +33,16 @@ return array(
 			"resource" => "comprueba",
 			"action" => "getAll"
 		),
+		"Registro" => array(
+			"route" => "/pcgo/api/registro",
+			"resource" => "registro",
+			"action" => "getAll"
+		),
+		"Logout" => array(
+			"route" => "/pcgo/api/logout",
+			"resource" => "logout",
+			"action" => "getAll"
+		),
 	),
 
 	"post" => array(
@@ -61,13 +71,21 @@ return array(
 			"resource" => "usuarios",
 			"action" => "postUsuario"
 		),
-
 		"Comprueba" => array(
 			"route" => "/pcgo/api/comprueba",
 			"resource" => "comprueba",
 			"action" => "postAll"
 		),
-
+		"Registro" => array(
+			"route" => "/pcgo/api/registro",
+			"resource" => "registro",
+			"action" => "postAll"
+		),
+		"Logout" => array(
+			"route" => "/pcgo/api/logout",
+			"resource" => "logout",
+			"action" => "postAll"
+		),
 	)
 );
 

@@ -5,10 +5,8 @@ let eliminarElemento = new EliminarElemento();
 let articulo = new Articulo();
 
 $(document).ready(function () {
-
     indexController.mostrarCategoriasDesplegable();
     repository.getModels("categorias", indexController.mostrarCategorias);
     repository.getModels("productos", indexController.mostrarProductos);
     repository.getModels("carrusel", indexController.mostrarCarrusel);
-
 });

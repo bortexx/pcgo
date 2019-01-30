@@ -10,7 +10,7 @@ class Repository {
     }
 
     getModels(nombre, callback) {
-        if (this.data == undefined){
+        if (this.data == undefined) {
             this.data == "";
         }
         $.ajax({
@@ -34,7 +34,7 @@ class Repository {
             dataType: 'json',
             success: function (json) {
 
-                        },
+            },
             error: function (jqXHR, status, error) {
                 alert('Disculpe, existió un problema');
             },
@@ -42,15 +42,16 @@ class Repository {
         });
     }
 
-    postModels(nombre, callback,data){
+    postModels(nombre, callback, data) {
         $.ajax({
             url: this.prefijo + nombre,
             type: 'POST',
             data: data,
             dataType: "text",
-            success: function(data) {
-                callback(data);
-              },
+            success: function (a) {
+                    callback(a);
+            },
+
             error: function (jqXHR, status, error) {
                 alert('Disculpe, existió un problema');
             },

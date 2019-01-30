@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -32,52 +33,66 @@
 
 <body class="body">
     <div class="l-landing-page">
+        
+        <button class="boton-carrito-flotante"><i class=" fas fa-shopping-cart"></i></button>
+
         <header class="l-landing-page__header">
             <nav class="main-menu">
                 <ul class="main-menu__items" id="prueba">
                     <li class="main-menu__item" id="hamburguesa">
                         <i class="fas fa-bars menu-side__hamburguesa"></i>
                     </li>
-                    <li class="main-menu__item">
+                    <li class="main-menu__logo">
                         <a id="redireccionLogo"><img class="logo" src="images/white.png" /></a>
                     </li>
-                    <li class="main-menu__item main-menu__item--centro-izquierda main-menu__item--invisible ui-widget">
-                        <label for="tags"></label>
-                        <input class="buscador" id="tags"> <a href="#"><i class="fas fa-search lupa"></i></a>
-                    </li>
-                       
-                        <?php
-                        session_start();
-                        if (isset($_SESSION["logged"])) {
-                        ?>
-
-
-                        <li class="main-menu__item main-menu__item--derecha main-menu__item--seleccionado">
-                         <a><span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>Perfil</span></a>
-                        </li>
-
-
-                        <?php
-                        } else {           
-                        ?>
-
-
-                        <li class="main-menu__item main-menu__item--derecha main-menu__item--seleccionado">
-                         <a><span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>Login</span></a>
-                        <a><i class="fas fa-user main-menu__icon-login"></i></a>
-                        </li>
-
+                    
+                    <?php
+                    session_start();
+                    if(isset($_SESSION['nombreUsuario'])){
+                    ?>
+                        <div class="menu-usuario menu-usuario--derecha">
+                            <div class="menu-usuario__nombre">
+                                <li class="main-menu__item">
+                                <a><span id=""class="main-menu__login"><?php echo ucfirst($_SESSION['nombreUsuario']); ?></span></a>
+                                <a><i class="fas fa-user main-menu__icon-login"></i></a>
+                            </li>
+                            </div>
+                            <div class="menu-usuario__desplegable">
+                                <div class="menu-usuario__item">
+                                    <a><span id=""class="main-usuario__texto">Preferencias</span></a>
+                                </div>
+                                <div class="menu-usuario__item">
+                                    <a><span id=""class="main-usuario__texto">Mi tienda</span></a>
+                                </div>
+                                <div class="menu-usuario__item menu-usuario__item--invisible">
+                                    <a><span id=""class="main-usuario__texto">Logout</span></a>
+                                </div>
+                             </div>
+                        </div>
 
                         <li class="main-menu__item main-menu__item--seleccionado">
-                        <a><span class="main-menu__register" data-toggle='modal'  data-target='#registrarseModal'>Registro</span></a>
-                        <a><i class="fas fa-lock main-menu__icon-register"></i></a>
+                         <a onclick="logout()"><span id="logout"class="main-menu__login"><i class="fas fa-sign-out-alt"></i></span></a>
+                         <a onclick="logout()"><i class="fas fa-sign-out-alt main-menu__icon-register"></i></a>
+
                         </li>
- 
                         <?php
-                        }
+                            } else {
                         ?>
-                                            
-                    <li class="main-menu__item ">
+                        
+                        <li class="main-menu__item main-menu__item--derecha main-menu__item--seleccionado">
+                         <a><span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>Login</span></a>
+                        <a><i class="fas fa-user main-menu__icon-login "  data-toggle='modal'  data-target='#loginModal'></i></a>
+                        </li>
+                        <li class="main-menu__item main-menu__item--seleccionado">
+                        <a><span class="main-menu__register" data-toggle='modal'  data-target='#registrarseModal'>Registro</span></a>
+                        <a><i class="fas fa-lock main-menu__icon-register" data-toggle='modal'  data-target='#registrarseModal'></i></a>
+                        </li>
+
+                        <?php
+                            }
+                        ?>  
+
+                    <li class="main-menu__item main-menu__item--invisible">
                         <a id="imagen" href="#"><img src="images/icons8-add-shopping-cart-32.png" /></a>
                     </li>
                 </ul>
@@ -126,8 +141,8 @@
                 <div class="loginmodal-container">
                     <h1>Login</h1><br>
                     <form id="form-login" method="post"  >
-                        <input id="usuario" type="text" name="usuario" placeholder="Usuario">
-                        <input id="contrasenya" type="password" name="contrasenya" placeholder="Contraseña">
+                        <input id="usuarioLogin" type="text" name="usuario" placeholder="Usuario">
+                        <input id="contrasenyaLogin" type="password" name="contrasenya" placeholder="Contraseña">
                         <button onclick="login()">Enviar</button>
                     </form>
                 </div>
@@ -138,23 +153,26 @@
         <div class="modal fade" id="registrarseModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
+            <div class="modal-content">
                 <div class="loginmodal-container">
                     <h1>Registrate</h1><br>
-                    <form>
-                        <input type="text" name="correo" placeholder="Correo Electrónico">
-                        <input type="text" name="usuario" placeholder="Nombre">
-                        <input type="text" name="usuario" placeholder="Apellidos">
-                        <input type="text" name="usuario" placeholder="Dirección">
-                        <input type="text" name="usuario" placeholder="Código Postal">
-                        <input type="text" name="usuario" placeholder="Usuario">
-                        <input type="password" name="contraseña" placeholder="Contraseña">
-                        <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                    <form name="registro" method="post" onsubmit="return false">
+                        <input id="correoRegistro" type="text" name="correo" placeholder="Correo Electrónico">
+                        <input id="nombreRegistro" type="text" name="nombre" placeholder="Nombre">
+                        <input id="apellidosRegistro" type="text" name="apellidos" placeholder="Apellidos">
+                        <input id="direccionRegistro" type="text" name="direccion" placeholder="Dirección">
+                        <input id="codigoPostalRegistro" type="text" name="codigoPostal" placeholder="Código Postal">
+                        <input id="usuarioRegistro" type="text" name="usuario" placeholder="Usuario">
+                        <input id="contrasenyaRegistro" type="password" name="contraseña" placeholder="Contraseña">
+                        <input type="submit" id="btnSubmit" value="Registrarme!" onclick="registro()"/>
                     </form>
 
                     <div class="login-help">
                     </div>
                 </div>
+            </div>            
             </div>
+
         </div>
 
 
@@ -202,16 +220,11 @@
                         </div>
                     </div>
                     <div class="modal-footer1">
-                        <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                        <!--boton de cancelar comentado por si se decide ponerse-->
                         <button type="button" id="botoncomprar" class="modal__botonPrimario">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
 
         <footer class="l-landing-page__footer">
 
