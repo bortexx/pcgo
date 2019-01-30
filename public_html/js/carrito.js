@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-class Carrito{
-    constructor(numero){
-        this.numero = numero;
-        this.articulos = [];
-    }
-    anyadirArticulo(articulo){
-        this.articulos.push(articulo);
-    }
-}
-=======
 class Carrito{
     constructor(numero){
         this.numero = numero;
@@ -34,4 +23,3 @@ class Carrito{
         return this.articulos;
     }
 }
->>>>>>> ramses1
