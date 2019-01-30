@@ -187,7 +187,7 @@
                 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Comprar</button>
             </div>
             </div>
 
@@ -223,7 +223,7 @@
 
                             <div class="modal-body__contador" id="contadorUnidades">
                                 <button class="moda-body__boton-menos" id="simboloMenos"> <i class="fas fa-minus"></i></button>
-                                <span class="modal-body__unidades">1</span>
+                                <span id='numeroContador' class="modal-body__unidades">1</span>
                                 <button id="simboloMas" class="moda-body__boton-mas"> <i class="fas fa-plus"></i></button>
 
                             </div>

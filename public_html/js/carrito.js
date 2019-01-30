@@ -1,22 +1,25 @@
 class Carrito{
+    
     constructor(numero){
         this.numero = numero;
         this.articulos = [];
     }
-    anyadirArticulo(articulo){
+    anyadirArticulo(articulo, unidades){
+        let distinto = true;
         if(this.articulos.length == 0){
-            this.articulos.push(articulo);
+            this.articulos.push({articulo, unidades});
+            console.log({articulo, unidades});
         }else{
-            this.articulos.map(function(articulo1){
-                console.log(articulo1);
-                if(articulo1.id == articulo.id){  
-                    let unidadesArticuloNuevo = articulo.unidades;//Esto coje el id del articulo pasado por paramentro al metodo(que es el articulo entrante)
-                    articulo1.unidades = articulo1.unidades + unidadesArticuloNuevo;
-                }else{
-                    this.articulos.push(articulo);
+            for(let i=0; i < this.articulos.length; i++){
+                if(this.articulos[i].articulo[0] == articulo[0]){
+                    this.articulos[i].unidades = this.articulos[i].unidades + unidades;
+                    distinto = false; 
                 }
-            });
-        }  
+            }
+            if(distinto == true){
+                this.articulos.push({articulo, unidades});
+            }
+        } 
     }
 
     mostrarArrayArticulos(){

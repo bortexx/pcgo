@@ -949,14 +949,17 @@ html {
     border: none;
     outline: none; } }
 
-.modal-content--tamaño {
-  right: 320px;
-  width: 1200px;
-  height: 700px; }
+.modal-body {
+  overflow-y: auto; }
 
-.imagenCarrito {
-  width: 150px;
-  height: 170px; }
+.modal-content--tamaño {
+  width: 90vw;
+  height: 90vh; }
+
+@media (max-width: 500px) {
+  .modal-content--tamaño {
+    width: 200px;
+    height: auto; } }
 
 .modalBody__articuloCarrito {
   display: flex;
@@ -964,3 +967,13 @@ html {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center; }
+
+.modalBody__articuloCarrito--oscuro {
+  background-color: #E7E7E7; }
+
+.imagenCarrito {
+  width: 150px;
+  height: 170px; }
+
+.item {
+  margin-left: 10px; }

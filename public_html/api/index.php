@@ -13,8 +13,8 @@
 
     header("Access-Control-Allow-Origin: * ");
     try {
-        $mysql = new PDO("mysql:dbname=tienda;host=localhost", "root", "");
-        //$mysql = new PDO("mysql:dbname=tienda;host=172.16.205.57:3303", "root", "root");
+        //$mysql = new PDO("mysql:dbname=tienda;host=localhost", "root", "");
+        $mysql = new PDO("mysql:dbname=tienda;host=172.16.205.57:3303", "root", "root");
         $mysql->exec("set names utf8");
         $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
