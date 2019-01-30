@@ -130,62 +130,58 @@ $(document).ready(function () {
 
 });
 
-
 function login() {
-    console.log("hola");
-
-    var datos = {
-        "usuario": $('#usuario').val(),
-        "contraseña": $('#contraseña').val(),
+    event.preventDefault();
+    let datos = {
+        usuario: $('#usuarioLogin').val(),
+        contrasenya: $('#contrasenyaLogin').val()
     }
-   // $.ajax({
-    
-   //type: "post", //Tipo de peticion
-     //   url: $url, //URL pagina a cargar
-       // data: datos, //Datos a pasar a pagina PHP
-        //success: function (data) {
-          //  console.log(data);
-       // }
-    //});
+    repository.postModels('comprueba', indexController.compruebaLogin, datos);
 }
 
-function mostrarCarrito(){
+
+function logout() {
+    repository.postModels('logout', indexController.compruebaLogout);
+}
+
+function mostrarCarrito() {
     let contador = 0;
     let arrayCarrito = carrito.mostrarArrayArticulos();
     $(".modalBody__articuloCarrito").remove();
     $(".modalBody__articuloCarrito--oscuro").remove();
     console.log(arrayCarrito);
-    arrayCarrito.map(function(articulo){
+    arrayCarrito.map(function (articulo) {
         contador++;
-        if(contador % 2 == 0){
-            $("#bodyModalCarrito").append("<div class='modalBody__articuloCarrito--oscuro'> <img class='imagenCarrito' src=images/"+ articulo.articulo[1] +"><span class='item'>"+ articulo.articulo[2] +"</span><button class='moda-body__boton-menos item' id='simboloMenos'> <i class='fas fa-minus'></i></button><span id='unidades'class='item'>"+ articulo.unidades +"</span><button id='simboloMas' class='moda-body__boton-mas item'> <i class='fas fa-plus'></i></button><span>"+articulo.articulo[3]+"</span></div>");
+        if (contador % 2 == 0) {
+            $("#bodyModalCarrito").append("<div class='modalBody__articuloCarrito--oscuro'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='moda-body__boton-menos item' id='simboloMenos'> <i class='fas fa-minus'></i></button><span id='unidades'class='item'>" + articulo.unidades + "</span><button id='simboloMas' class='moda-body__boton-mas item'> <i class='fas fa-plus'></i></button><span>" + articulo.articulo[3] + "</span></div>");
 
-        }else{
-            $("#bodyModalCarrito").append("<div class='modalBody__articuloCarrito'> <img class='imagenCarrito' src=images/"+ articulo.articulo[1] +"><span class='item'>"+ articulo.articulo[2] +"</span><button class='moda-body__boton-menos item' id='simboloMenos'> <i class='fas fa-minus'></i></button><span id='unidades' class='item'>"+ articulo.unidades +"</span><button id='simboloMas' class='moda-body__boton-mas item'> <i class='fas fa-plus'></i></button><span>"+articulo.articulo[3]+"</span></div>");
+        } else {
+            $("#bodyModalCarrito").append("<div class='modalBody__articuloCarrito'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='moda-body__boton-menos item' id='simboloMenos'> <i class='fas fa-minus'></i></button><span id='unidades' class='item'>" + articulo.unidades + "</span><button id='simboloMas' class='moda-body__boton-mas item'> <i class='fas fa-plus'></i></button><span>" + articulo.articulo[3] + "</span></div>");
         }
-        });  
+    });
 }
 
-function compraFinalizada(){
+function compraFinalizada() {
     repository.getModels("pedido", indexController.mostrarCategorias);
 }
-function mensajeCompra(a){
-    if(a == "Compra realizada con exito"){
+
+function mensajeCompra(a) {
+    if (a == "Compra realizada con exito") {
         alert("Compra realizada con exito.");
-    }else{
+    } else {
         alert("Error. La compra no se ha podido realizar.");
     }
 }
 
-function botonMasCarrito(){
-    $("#simboloMas").click(function(){
+function botonMasCarrito() {
+    $("#simboloMas").click(function () {
         articulo.unidades = articulo.unidades++;
         $("#unidades").text(articulo.unidades);
     });
 }
 
-function botonMenosCarrito(unidades){
-    $("#simboloMenos").click(function(){
+function botonMenosCarrito(unidades) {
+    $("#simboloMenos").click(function () {
         articulo.unidades = articulo.unidades--;
         $("#unidades").text(articulo.unidades);
     });
