@@ -93,7 +93,7 @@
                         ?>  
 
                     <li class="main-menu__item main-menu__item--invisible">
-                        <a id="imagen" href="#"><img src="images/icons8-add-shopping-cart-32.png" /></a>
+                        <a id="imagen" data-toggle='modal'  data-target='#modalCarrito' onclick="mostrarCarrito()"><img src="images/icons8-add-shopping-cart-32.png" /></a>
                     </li>
                 </ul>
             </nav>

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 @charset "UTF-8";
->>>>>>> ramses1
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -401,11 +398,11 @@ html {
 
 .l-landing-page {
   display: grid;
-  grid-template-areas: "page__header page__header page__header page__header page__header page__header " "page__carousel page__carousel page__carousel page__carousel page__carousel page__carousel " "page__aside page__container page__container page__container page__container page__container " "page__aside page__container page__container page__container page__container page__container " "page__footer page__footer page__footer page__footer page__footer page__footer "; }
+  grid-template-areas: "page__header page__header page__header page__header page__header page__header " "page__carousel page__carousel page__carousel page__carousel page__carousel page__carousel " "page__aside page__container page__container page__container page__container page__container " "page__aside page__container page__container page__container page__container page__container " "page__footer page__footer page__footer page__footer page__footer page__footer "; }
 
 @media (max-width: 727px) {
   .l-landing-page {
-    grid-template-areas: "page__header" "page__aside" "page__carousel" "page__container" "page__footer"; } }
+    grid-template-areas: "page__header" "page__aside" "page__carousel" "page__container" "page__footer"; } }
 
 .l-landing-page__header {
   grid-area: page__header; }
@@ -423,12 +420,8 @@ html {
   grid-area: page__carousel; }
 
 .carousel {
-<<<<<<< HEAD
   width: 100%;
   z-index: -1; }
-=======
-  width: 100%; }
->>>>>>> ramses1
 
 .carousel__image {
   width: 100%;
@@ -551,12 +544,8 @@ html {
   justify-content: flex-start;
   box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
   background-color: #202124;
-<<<<<<< HEAD
   flex-wrap: wrap;
   z-index: 1; }
-=======
-  flex-wrap: wrap; }
->>>>>>> ramses1
 
 .main-menu__icon-login {
   display: none; }
@@ -564,13 +553,10 @@ html {
 .main-menu__icon-register {
   display: none; }
 
-<<<<<<< HEAD
 .main-menu__logo {
   margin-left: 30px;
   margin-top: 12px; }
 
-=======
->>>>>>> ramses1
 @media (max-width: 727px) {
   .main-menu {
     display: flex;
@@ -581,12 +567,9 @@ html {
     position: absolute;
     z-index: 1;
     width: 100%; }
-<<<<<<< HEAD
   .main-menu__logo {
     margin-left: 20px;
     margin-top: 12px; }
-=======
->>>>>>> ramses1
   .main-menu__login {
     display: none; }
   .main-menu__register {
@@ -623,22 +606,15 @@ html {
 .main-menu__item--centro-izquierda {
   margin-left: auto; }
 
-<<<<<<< HEAD
 @media (max-width: 453px) {
-=======
-@media (max-width: 734px) {
->>>>>>> ramses1
   .main-menu__item--invisible {
     display: none; } }
 
 @media (max-width: 325px) {
   .main-menu__item--invisible {
     display: none; }
-<<<<<<< HEAD
   .main-menu__logo {
     margin-left: 10px; }
-=======
->>>>>>> ramses1
   .main-menu__items {
     display: flex;
     flex-direction: row;
@@ -647,11 +623,8 @@ html {
 @media (max-width: 276px) {
   .main-menu__item--invisible {
     display: none; }
-<<<<<<< HEAD
   .main-menu__logo {
     margin-left: 30px; }
-=======
->>>>>>> ramses1
   .main-menu__items {
     display: flex;
     flex-direction: row;
@@ -711,15 +684,6 @@ html {
 .footer__item-centro {
   margin-bottom: 10px; }
 
-<<<<<<< HEAD
-=======
-.lupa {
-  margin-left: 10px; }
-
-.buscador {
-  width: 200px; }
-
->>>>>>> ramses1
 .card {
   width: 200px;
   border: 1px solid black;
@@ -919,7 +883,6 @@ html {
 .login-help {
   font-size: 12px; }
 
-<<<<<<< HEAD
 .menu-usuario {
   text-align: center;
   width: 120px; }
@@ -985,7 +948,7 @@ html {
     border-radius: 25px;
     border: none;
     outline: none; } }
-=======
+
 .modal-content--tamaño {
   right: 320px;
   width: 1200px;
@@ -1001,4 +964,3 @@ html {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center; }
->>>>>>> ramses1

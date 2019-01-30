@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 @mixin debug($color:red){
     @if $debug==1{
         border: solid 1px $color;
     }
-=======
-@mixin debug($color:red){
-    @if $debug==1{
-        border: solid 1px $color;
-    }
->>>>>>> ramses1
 }
