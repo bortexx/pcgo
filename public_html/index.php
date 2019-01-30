@@ -70,7 +70,7 @@
                              </div>
                         </div>
 
-                        <li class="main-menu__item main-menu__item--seleccionado">
+                        <li class="main-menu__item main-menu__item--seleccionado" >
                          <a onclick="logout()"><span id="logout"class="main-menu__login"><i class="fas fa-sign-out-alt"></i></span></a>
                          <a onclick="logout()"><i class="fas fa-sign-out-alt main-menu__icon-register"></i></a>
 
@@ -92,7 +92,7 @@
                             }
                         ?>  
 
-                    <li class="main-menu__item main-menu__item--invisible">
+                    <li class="main-menu__item main-menu__item--invisible" ondrop="drop(event)" ondragover="allowDrop(event)">
                         <a id="imagen" data-toggle='modal'  data-target='#modalCarrito' onclick="mostrarCarrito()"><img src="images/icons8-add-shopping-cart-32.png" /></a>
                     </li>
                 </ul>

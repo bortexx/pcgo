@@ -2,7 +2,7 @@ let arti;
 class IndexController {
     mostrarProductos(json) {
         json.map(function (prod) {
-            $("#productos").append("<div class='card' id = " + prod.id + "><img class=card__image src=images/" + prod.imagen + "><div class=card__titulo>" + prod.nombreCarta + "</div><div class=card__precio>" + prod.precio + " €</div><p class='info'>" + prod.nombreCompleto + "</p><p class='info'>" + prod.descripcion + "</p><button id='botonProductoAbrirModal' type='button' onclick='reinicioContador()' class='card__boton' data-toggle='modal' data-target='#exampleModal'>Ver Detalles</button> </div>");
+            $("#productos").append("<div draggable='true' ondragstart='drag(event)' class='card' id ='" + prod.id + "'><img class=card__image src=images/" + prod.imagen + "><div class=card__titulo>" + prod.nombreCarta + "</div><div class=card__precio>" + prod.precio + " €</div><p class='info'>" + prod.nombreCompleto + "</p><p class='info'>" + prod.descripcion + "</p><button id='botonProductoAbrirModal' type='button' onclick='reinicioContador()' class='card__boton' data-toggle='modal' data-target='#exampleModal'>Ver Detalles</button> </div>");
         });
         indexController.mostrarDetallesCompra();
     }
@@ -192,4 +192,34 @@ function reinicioContador() {
         cantidad = 1;
         $('.modal-body__unidades').text(cantidad);
     }
+}
+let id;
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.currentTarget.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var id = ev.dataTransfer.getData("text");
+
+    articuloSeleccionado = document.getElementById(id);
+    arti = art.mostrarArticulo(articuloSeleccionado);
+    //console.log(articuloDrop);
+    //carrito.anyadirArticulo(articuloDrop);
+
+    let articulo = [
+        id = arti.id,
+        imagen = arti.imagen,
+        nombre = arti.nombre,
+        precio = arti.precio,
+        nombreCompleto = arti.nombreEspanyol,
+        descripcion = arti.descripcion
+    ]
+    let unidades = Number($("#numeroContador").text());
+    art.anyadirArticuloAlCarrito(carrito, articulo, unidades);
 }
