@@ -1,0 +1,1 @@
+onchange -v '..\public_html\**\*' -- ./deploy.sh

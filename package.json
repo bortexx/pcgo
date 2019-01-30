@@ -1,0 +1,25 @@
+{
+  "name": "pcgo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-modules": "^1.0.1",
+    "node-sass": "^4.11.0",
+    "onchange": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "sh D:/Desktop/pcgo/deploy/onchange.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bortexx/pcgo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bortexx/pcgo/issues"
+  },
+  "homepage": "https://github.com/bortexx/pcgo#readme"
+}

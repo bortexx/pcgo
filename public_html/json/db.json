@@ -1,0 +1,30 @@
+{
+
+    "Categorias": 
+            [
+                {  
+                    "id": 1,
+                    "Tipo": "Sobremesa"
+                },
+
+                {
+                    "id": 2,
+                    "Tipo": "Portatil"
+                }
+            ],
+
+    "Productos":
+            [
+                {
+                    "id": 3,
+                    "Nombre": "Portatil1",
+                    "Imagen": "portatil1.jpg"
+                }, 
+                {
+                    "id": 4,
+                    "Nombre": "Portatil2",
+                    "Imagen": "portatil2.jpg"
+                }
+
+            ]
+}
