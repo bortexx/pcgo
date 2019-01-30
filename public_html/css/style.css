@@ -939,8 +939,12 @@ html {
     animation-fill-mode: forwards;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1); } }
 
+.boton-carrito-flotante {
+  display: none; }
+
 @media (max-width: 453px) {
   .boton-carrito-flotante {
+    display: block;
     position: fixed;
     bottom: 20px;
     right: 30px;

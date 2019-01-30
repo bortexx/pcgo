@@ -7,6 +7,33 @@ class IndexController {
         indexController.mostrarDetallesCompra();
     }
 
+
+
+    compruebaLogin(a) {
+        if (a == "password no valido") {
+            alert("password no valido");
+        } else if (a == "nombre de usuario no valido") {
+            alert("nombre de usuario no valido");
+        } else {
+            location.reload(true);
+        }
+    }
+
+    compruebaRegistro(a) {
+        if (a == "Correo electronico no valido") {
+            alert("Dirección de correo electronico no valida");
+        } else if (a == "El usuario ya existe") {
+            alert("El usuario ya existe");
+        } else {
+            alert("Bienvenido :)");
+            location.reload(true);
+        }
+    }
+
+    compruebaLogout() {
+        location.reload(true);
+    }
+
     mostrarCategorias(json) {
         $("#menu-side").append("<ul class='menu-side__items' id='menu-side__items'>");
         json.map(function (cat) {
