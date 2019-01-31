@@ -7,8 +7,13 @@ class ProductosResource extends Resource {
 
     public function getAllAction() {
         $this->sql = 'SELECT * FROM productos order by id';
-        $this->execSQL();
-        $this->setData();
+        try{
+            $this->execSQL();
+            $this->setData();
+        } catch (PDOException $e) {
+            http_response_code(500);
+        }
+       
     }
 
     public function getByTipoAction() {

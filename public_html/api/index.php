@@ -18,8 +18,9 @@
         $mysql->exec("set names utf8");
         $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
-        echo "<p>Error: Cannot connect to database server.</p>\n";
-        echo $e;
+        /*echo "<p>Error: Cannot connect to database server.</p>\n";
+        echo $e;*/
+       http_response_code(500);
         exit();
     }
     

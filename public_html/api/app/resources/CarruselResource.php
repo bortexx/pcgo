@@ -7,8 +7,12 @@ class CarruselResource extends Resource {
 
     public function getAllAction() {
         $this->sql = 'SELECT * FROM carrusel';
-        $this->execSQL();
-        $this->setData();
+        try{
+            $this->execSQL();
+            $this->setData();
+        } catch (PDOException $e) {
+            http_response_code(500);
+        }
     }
 
 }

@@ -5,28 +5,34 @@ use core\MVC\Resource as Resource;
 class CompruebaResource extends Resource {
 
     public function postAllAction() {
+  
         $usuario = $_POST['usuario'];
         $password = $_POST['contrasenya'];
-
-        $this->sql = "SELECT id, nombreUsuario, contrasenya FROM usuarios  
-        WHERE nombreUsuario = '$usuario' LIMIT 1";        
-        $this->execSQL();
-
+        try{
+            $this->sql = "SELECT id, nombreUsuario, contrasenya FROM usuarios  
+            WHERE nombreUsuario = '$usuario' LIMIT 1";        
+            $this->execSQL();
+        } catch (PDOException $e) {
+            http_response_code(500);
+            exit();
+        }
         $usuario_comprueba =  $this->data[0]['nombreUsuario'];
         $password_comprueba = $this->data[0]['contrasenya'];
 
+        
         if ($this->num_rows === 0) {
-            echo "nombre de usuario no valido";
+            http_response_code(401);
         }
-
         else if ($password == $password_comprueba) {
-
             setcookie("DWS", $this->data[0]['id'] . ";" . $this->data[0]['nombreUsuario'] , time() + (86400 * 7));  
             header("location: http://localhost/pcgo/api");
         } else {
-            echo "password no valido";
+            http_response_code(401);
         }
 
+
+        
+    
     }
 
 }

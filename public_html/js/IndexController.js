@@ -1,13 +1,28 @@
 let arti;
+
 class IndexController {
+
+    comprobarErrorApi(codigo) {
+        switch (codigo) {
+            case 400:
+                alert("Error al dar de alta el usuario. El correo electrónico no es correcto o el usuario está en uso");
+                break;
+            case 401:
+                alert("El usuario o la contraseña no son correctos");
+                break;
+            case 500:
+                alert("Error al conectar a la base de datos");
+                break;
+        }
+    }
+
     mostrarProductos(json) {
         json.map(function (prod) {
             $("#productos").append("<div draggable='true' ondragstart='drag(event)' class='card' id ='" + prod.id + "'><img class=card__image src=images/" + prod.imagen + "><div class=card__titulo>" + prod.nombreCarta + "</div><div class=card__precio>" + prod.precio + " €</div><p class='info'>" + prod.nombreCompleto + "</p><p class='info'>" + prod.descripcion + "</p><button id='botonProductoAbrirModal' type='button' onclick='reinicioContador()' class='card__boton' data-toggle='modal' data-target='#exampleModal'>Ver Detalles</button> </div>");
         });
         indexController.mostrarDetallesCompra();
+
     }
-
-
 
     compruebaLogin(a) {
         if (a == "password no valido") {

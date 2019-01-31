@@ -23,15 +23,19 @@ class RegistroResource extends Resource {
         $this->execSQL();
         if ($this->num_rows === 0) {
             if (filter_var($correo, FILTER_VALIDATE_EMAIL)) { 
-        $this->sql ="INSERT INTO `usuarios` (nombreUsuario,contrasenya,nombre,apellidos,direccion,codigoPostal,correoElectronico) 
-        VALUES ('$usuario', '$contrasenya', '$nombre', '$apellidos', '$direccion', '$codigoPostal', '$correo')";
-        $this->execSQL();   
-        echo "Bienvenido";
+        try{
+            $this->sql ="INSERT INTO `usuarios` (nombreUsuario,contrasenya,nombre,apellidos,direccion,codigoPostal,correoElectronico) 
+            VALUES ('$usuario', '$contrasenya', '$nombre', '$apellidos', '$direccion', '$codigoPostal', '$correo')";
+            $this->execSQL();   
+        } catch (PDOException $e) {
+            http_response_code(500);
+            exit();
+        }
         } else {
-       echo "Correo electronico no valido";
+            http_response_code(400);
             }
         } else {
-            echo "El usuario ya existe";
+            http_response_code(400);
         }
 
 

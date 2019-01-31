@@ -33,8 +33,13 @@
 
 <body class="body">
     <div class="l-landing-page">
+<<<<<<< HEAD
 
         <button class="boton-carrito-flotante" data-toggle='modal'  data-target='#modalCarrito' onclick="mostrarCarrito()"><i class=" fas fa-shopping-cart"></i></button>
+=======
+        
+        <button class="boton-carrito-flotante"><i class=" fas fa-shopping-cart"></i></button>
+>>>>>>> alejandro
 
         <header class="l-landing-page__header">
             <nav class="main-menu">
@@ -70,7 +75,11 @@
                              </div>
                         </div>
 
+<<<<<<< HEAD
                         <li class="main-menu__item main-menu__item--seleccionado" >
+=======
+                        <li class="main-menu__item main-menu__item--seleccionado">
+>>>>>>> alejandro
                          <a onclick="logout()"><span id="logout"class="main-menu__login"><i class="fas fa-sign-out-alt"></i></span></a>
                          <a onclick="logout()"><i class="fas fa-sign-out-alt main-menu__icon-register"></i></a>
 
@@ -92,8 +101,13 @@
                             }
                         ?>  
 
+<<<<<<< HEAD
                     <li class="main-menu__item main-menu__item--invisible" ondrop="drop(event)" ondragover="allowDrop(event)">
                         <a id="imagen" data-toggle='modal'  data-target='#modalCarrito' onclick="mostrarCarrito()"><img src="images/icons8-add-shopping-cart-32.png" /></a>
+=======
+                    <li class="main-menu__item main-menu__item--invisible">
+                        <a id="imagen" href="#"><img src="images/icons8-add-shopping-cart-32.png" /></a>
+>>>>>>> alejandro
                     </li>
                 </ul>
             </nav>
@@ -132,6 +146,7 @@
             </div>
         </div>
 
+<<<<<<< HEAD
 
         <footer class="l-landing-page__footer">
 
@@ -186,6 +201,8 @@
 
 
     
+=======
+>>>>>>> alejandro
         <!-- Modal -->
 
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -228,6 +245,7 @@
             </div>
 
         </div>
+<<<<<<< HEAD
    <!-- Modal Carito-->
    <div id="modalCarrito" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -249,6 +267,15 @@
         </div>
         <!-- Modal -->
 
+=======
+
+
+        <!-- Modal -->
+
+
+
+
+>>>>>>> alejandro
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -274,7 +301,11 @@
 
                             <div class="modal-body__contador" id="contadorUnidades">
                                 <button class="moda-body__boton-menos" id="simboloMenos"> <i class="fas fa-minus"></i></button>
+<<<<<<< HEAD
                                 <span id='numeroContador' class="modal-body__unidades">1</span>
+=======
+                                <span class="modal-body__unidades">1</span>
+>>>>>>> alejandro
                                 <button id="simboloMas" class="moda-body__boton-mas"> <i class="fas fa-plus"></i></button>
 
                             </div>
@@ -293,6 +324,59 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+
+        <footer class="l-landing-page__footer">
+
+            <div class="footer">
+                <div class="footer__izquierda">
+                    <a href="http://localhost/pcgo/"><img class="logo" src="images/white.png" /></a>
+
+                    <div class="footer__links">
+                        <a href="#">Home</a>
+
+                        <a href="#">About</a>
+
+                        <a href="#">Faq</a>
+
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer__centro">
+                    <div class="footer__item-centro">
+                        <i class="fa fa-map-marker"></i>
+                        Av. Imaginaria. Valencia, España
+                    </div>
+
+                    <div class="footer__item-centro">
+                        <i class="fa fa-phone"></i>
+                        123456789
+                    </div>
+
+                    <div class="footer__item-centro">
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:pcgo@gmail.com">pcgo@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="footer__derecha">
+                    <span>Redes Sociales</span>
+                    <div class="footer__iconos">
+                        <a href="#"><i class="fab fa-facebook"></i><span>Facebook</span></a>
+                        <a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+                        <a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    PCGO &copy; 2018-2019
+                </div>
+            </div>
+        </footer>
+    </div>
+>>>>>>> alejandro
 </body>
 
 </html>

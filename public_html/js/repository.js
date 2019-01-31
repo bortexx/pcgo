@@ -21,7 +21,7 @@ class Repository {
                 callback(json);
             },
             error: function (jqXHR, status, error) {
-                alert('Disculpe, existió un problema');
+                indexController.comprobarErrorApi(jqXHR.status);
             },
             complete: function (jqXHR, status) {}
         });
@@ -36,7 +36,7 @@ class Repository {
 
             },
             error: function (jqXHR, status, error) {
-                alert('Disculpe, existió un problema');
+                indexController.comprobarErrorApi(jqXHR.status);
             },
             complete: function (jqXHR, status) {}
         });
@@ -53,7 +53,7 @@ class Repository {
             },
 
             error: function (jqXHR, status, error) {
-                alert('Disculpe, existió un problema');
+                indexController.comprobarErrorApi(jqXHR.status);
             },
             complete: function (jqXHR, status) {}
         });
