@@ -86,6 +86,11 @@ return array(
 			"resource" => "logout",
 			"action" => "postAll"
 		),
+		"Comprar" => array(
+			"route" => "/pcgo/api/comprar",
+			"resource" => "compra",
+			"action" => "postAll"
+		),
 	)
 );
 
