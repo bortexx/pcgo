@@ -102,6 +102,19 @@ class IndexController {
             }
         });
     }
+    
+    
+    cambiarColorCarrito(){
+         $("#imagen").empty();
+        $("#imagen").append("<img src='images/icons8-add-shopping-cart-32Green.png'/>");
+        
+        
+        setTimeout(function(){
+             $("#imagen").empty();
+             $("#imagen").append("<img src='images/icons8-add-shopping-cart-32.png'/>");  
+        }, 2500);
+    }
+    
 }
 let cantidad = 1;
 

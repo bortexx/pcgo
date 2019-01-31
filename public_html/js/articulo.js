@@ -10,6 +10,7 @@ class Articulo {
 
     anyadirArticuloAlCarrito(carrito, articulo, unidades) {
         carrito.anyadirArticulo(articulo, unidades);
+        indexController.cambiarColorCarrito();
     }
 
     mostrarArticulo(a) {
