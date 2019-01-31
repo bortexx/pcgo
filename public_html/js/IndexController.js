@@ -107,6 +107,20 @@ let cantidad = 1;
 
 $(document).ready(function () {
 
+
+    $("#btnRegistro").on("click", function () {
+        let datos = {
+            correo: $("#correoRegistro").val(),
+            nombre: $("#nombreRegistro").val(),
+            apellidos: $("#apellidosRegistro").val(),
+            direccion: $("#direccionRegistro").val(),
+            codigoPostal: $("#codigoPostalRegistro").val(),
+            usuario: $("#usuarioRegistro").val(),
+            contrasenya: $("#contrasenyaRegistro").val(),
+        }
+        repository.postModels('registro', indexController.compruebaRegistro, datos);
+    });
+
     $("#redireccionLogo").attr('href', window.location.href);
 
     $("#form-login").attr('action', window.location.href + "php/compruebaLogin.php");

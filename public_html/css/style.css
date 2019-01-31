@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 @charset "UTF-8";
-=======
->>>>>>> alejandro
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -942,17 +939,12 @@ html {
     animation-fill-mode: forwards;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1); } }
 
-<<<<<<< HEAD
 .boton-carrito-flotante {
   display: none; }
 
 @media (max-width: 453px) {
   .boton-carrito-flotante {
     display: block;
-=======
-@media (max-width: 453px) {
-  .boton-carrito-flotante {
->>>>>>> alejandro
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -960,7 +952,6 @@ html {
     border-radius: 25px;
     border: none;
     outline: none; } }
-<<<<<<< HEAD
 
 .modal-body {
   overflow-y: auto; }
@@ -990,5 +981,3 @@ html {
 
 .item {
   margin-left: 10px; }
-=======
->>>>>>> alejandro
