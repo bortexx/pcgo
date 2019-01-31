@@ -1,0 +1,33 @@
+.modal-body{
+    overflow-y: auto;
+}
+.modal-content--tamaño{
+    width: 90vw;
+    height: 90vh;
+}
+@media(max-width:500px) {
+    .modal-content--tamaño{
+        width: 200px;
+        height: auto;
+    }
+}
+
+.modalBody__articuloCarrito{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.modalBody__articuloCarrito--oscuro{
+    background-color: $fondoLandingPage;
+}
+
+.imagenCarrito{
+    width: 150px;
+    height: 170px;
+}
+
+.item{
+    margin-left: 10px;
+}
