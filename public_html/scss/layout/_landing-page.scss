@@ -1,0 +1,46 @@
+.l-landing-page {
+    display: grid;
+    grid-template-areas: "page__header page__header page__header page__header page__header page__header "
+        "page__carousel page__carousel page__carousel page__carousel page__carousel page__carousel "
+        "page__aside page__container page__container page__container page__container page__container "
+        "page__aside page__container page__container page__container page__container page__container "
+        "page__footer page__footer page__footer page__footer page__footer page__footer ";
+}
+
+@media(max-width:727px){
+    .l-landing-page{
+        grid-template-areas: "page__header"
+            "page__aside"
+            "page__carousel"
+            "page__container"
+            "page__footer";
+    }
+}
+
+.l-landing-page__header { 
+    @include debug;
+    grid-area:page__header; 
+
+}
+.l-landing-page__container { 
+    @include debug;
+    grid-area:page__container; 
+
+}
+.l-landing-page__aside { 
+    @include debug;
+
+    grid-area:page__aside;  
+
+}
+.l-landing-page__footer { 
+    @include debug;
+
+    grid-area:page__footer;  
+
+}
+.l-landing-page__carousel{
+    @include debug;
+    grid-area:page__carousel;  
+
+}
