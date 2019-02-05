@@ -1,19 +1,16 @@
-
 class Articulo {
-    constructor(id, imagen, nombre, precio, nombreCompleto, descripcion, unidades) {
+    constructor(id, imagen, nombre, precio, nombreCompleto, descripcion) {
         this.id = id;
         this.imagen = imagen;
         this.nombre = nombre;
         this.precio = precio;
         this.nombreCompleto = nombreCompleto;
         this.descripcion = descripcion;
-        this.unidades = unidades;
     }
 
-    anyadirArticuloAlCarrito(carrito) {
-        let articulo = new Articulo(this.id, this.imagen, this.nombre, this.precio);
-        carrito.anyadirArticulo(articulo);
-        console.log(carrito);
+    anyadirArticuloAlCarrito(carrito, articulo, unidades) {
+        carrito.anyadirArticulo(articulo, unidades);
+        indexController.cambiarColorCarrito();
     }
 
     mostrarArticulo(a) {

@@ -42,10 +42,20 @@ return array(
 			"route" => "/pcgo/api/logout",
 			"resource" => "logout",
 			"action" => "getAll"
-		),
+		),		
 	),
-
+	
 	"post" => array(
+		"Pedidos" => array(
+			"route" => "pcgo/api/pedidos",
+			"resource" => "pedidos",
+			"action" => "postPedido"
+		),
+		"Comprar" => array(
+			"route" => "pcgo/api/comprar",
+			"resource" => "compra",
+			"action" => "postAll"
+		),
 		"Categorias" => array(
 			"route" => "pcgo/api/categorias",
 			"resource" => "categorias",
@@ -86,6 +96,7 @@ return array(
 			"resource" => "logout",
 			"action" => "postAll"
 		),
+		
 	)
 );
 

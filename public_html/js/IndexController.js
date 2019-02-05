@@ -1,7 +1,10 @@
-class IndexController {
+let arti;
 
-    comprobarErrorApi(codigo){
-        switch(codigo){
+class IndexController {
+    
+
+    comprobarErrorApi(codigo) {
+        switch (codigo) {
             case 400:
                 alert("Error al dar de alta el usuario. El correo electrónico no es correcto o el usuario está en uso");
                 break;
@@ -16,12 +19,11 @@ class IndexController {
 
     mostrarProductos(json) {
         json.map(function (prod) {
-            $("#productos").append("<div class='card' id = " + prod.id + "><img class=card__image src=images/" + prod.imagen + "><div class=card__titulo>" + prod.nombreCarta + "</div><div class=card__precio>" + prod.precio + " €</div><p class='info'>" + prod.nombreCompleto + "</p><p class='info'>" + prod.descripcion + "</p><button id='botonProductoAbrirModal' type='button' onclick='reinicioContador()' class='card__boton' data-toggle='modal' data-target='#exampleModal'>Ver Detalles</button> </div>");
+            $("#productos").append("<div draggable='true' ondragstart='drag(event)' class='card' id ='" + prod.id + "'><img class=card__image src=images/" + prod.imagen + "><div class=card__titulo>" + prod.nombreCarta + "</div><div class=card__precio>" + prod.precio + " €</div><p class='info'>" + prod.nombreCompleto + "</p><p class='info'>" + prod.descripcion + "</p><button id='botonProductoAbrirModal' type='button' onclick='reinicioContador()' class='card__boton' data-toggle='modal' data-target='#exampleModal'>Ver Detalles</button> </div>");
         });
         indexController.mostrarDetallesCompra();
+
     }
-
-
 
     compruebaLogin(a) {
         if (a == "password no valido") {
@@ -45,7 +47,15 @@ class IndexController {
     }
 
     compruebaLogout() {
-         location.reload(true);
+        location.reload(true);
+    }
+
+    compruebaCompra(a) {
+        if(a==500){
+            alert("Se ha producido un error al realizar la compra");
+        }else{
+            alert("Compra realizada con éxito");
+        }
     }
 
     mostrarCategorias(json) {
@@ -54,15 +64,6 @@ class IndexController {
             $(".menu-side__items").append("<li id=" + cat.Nombre + " class='menu-side__item'>" + cat.Nombre + "</li>");
         });
         indexController.mostrarProductosFromCategorias();
-    }
-
-    mostrarCarrito(carrito) {
-        $("#imagen").click(function () {
-            eliminarElemento.eliminarElemento("productos");
-            carrito.articulos.map(function (n) {
-                $("#productos").append("<div class='card' id = " + n.id + "><img class=card__image src=images/" + n.imagen + "><div class=card__titulo>" + n.nombre + "</div><div class=card__precio>" + n.precio + " €</div></div>");
-            });
-        });
     }
 
     mostrarCarrusel(json) {
@@ -74,20 +75,13 @@ class IndexController {
 
     mostrarDetallesCompra() {
         $(".card").click(function () {
-            let art = articulo.mostrarArticulo(this);
-            console.log(art);
-            $("#modaltitulo").text(art.nombre);
-            $("#modalNombre").text(art.nombreCompleto);
-            $("#modalprecio").text("Precio: " + art.precio + " €");
-            $("#modalDescripcion").text(art.descripcion);
+            arti = art.mostrarArticulo(this);
+            $("#modaltitulo").text(arti.nombre);
+            $("#modalNombre").text(arti.nombreCompleto);
+            $("#modalprecio").text("Precio: " + arti.precio + " €");
+            $("#modalDescripcion").text(arti.descripcion);
             $("#modalImage").remove();
-            $("#modalimagen").append("<img id='modalImage'class='modal-body__imagen' src=images/" + art.imagen + "></img>");
-            articulo.id = art.id;
-            articulo.nombre = art.nombre;
-            articulo.imagen = art.imagen;
-            articulo.precio = art.precio;
-            articulo.nombreCompleto = art.nombreEspanyol;
-            articulo.descripcion = art.descripcion;
+            $("#modalimagen").append("<img id='modalImage'class='modal-body__imagen' src=images/" + arti.imagen + "></img>");
         });
     }
     mostrarCategoriasDesplegable() {
@@ -110,22 +104,51 @@ class IndexController {
             let tipo = this.id.toLowerCase();
             console.log(tipo);
             if (tipo == "ordenadores") {
-                repository.getModelosTipo("productos", indexController.mostrarProductos, "sobremesa");
-                repository.getModelosTipo("productos", indexController.mostrarProductos, "portatil");
+                repository.getModelosTipo("productos", indexController.mostrarProductos, "sobremesas");
+                repository.getModelosTipo("productos", indexController.mostrarProductos, "portatiles");
             } else {
                 repository.getModelosTipo("productos", indexController.mostrarProductos, tipo);
             }
         });
     }
 
+
+    cambiarColorCarrito() {
+        $("#imagen").empty();
+        $("#imagen").append("<img src='images/icons8-add-shopping-cart-32Green.png'/>");
+
+
+        setTimeout(function () {
+            $("#imagen").empty();
+            $("#imagen").append("<img src='images/icons8-add-shopping-cart-32.png'/>");
+        }, 2500);
+    }
+/////////////////////////////////////////////////////////////
+    compruebaPedido(idPedidoInsertado){
+        let datos = carrito.mostrarArrayArticulos();
+        datos.map(function (productoCarrito) {
+            let productoInsertar = {
+                unidades: productoCarrito.unidades,
+                precio: productoCarrito.articulo[3],
+                idPedido: idPedidoInsertado,
+                idArticulo: productoCarrito.articulo[0],
+            }
+           repository.postModels("comprar", indexController.compruebaCompra, productoInsertar);
+        });
+    }
+
+  ///////////////////////////////////////////////////////////////////////////////////////////
+
 }
 let cantidad = 1;
 
 $(document).ready(function () {
 
-    $("#btnSubmit").on("click", function () {
+
+    $("#btnRegistro").on("click", function () {
         let datos = {
             correo: $("#correoRegistro").val(),
+            dni: $("#dni").val(),
             nombre: $("#nombreRegistro").val(),
             apellidos: $("#apellidosRegistro").val(),
             direccion: $("#direccionRegistro").val(),
@@ -138,11 +161,11 @@ $(document).ready(function () {
 
     $("#redireccionLogo").attr('href', window.location.href);
 
+    $("#form-login").attr('action', window.location.href + "php/compruebaLogin.php");
     $("#simboloMenos").on("click", function () {
         if (cantidad > 1) {
             cantidad--;
             $('.modal-body__unidades').text(cantidad);
-            console.log(cantidad);
         } else {
             cantidad = 1;
             $('.modal-body__unidades').text(cantidad);
@@ -152,24 +175,35 @@ $(document).ready(function () {
     $("#simboloMas").on("click", function () {
         cantidad++;
         $('.modal-body__unidades').text(cantidad);
-
-        console.log(cantidad);
     });
 
 
-    $("#botoncomprar").click(function () {
-        articulo.anyadirArticuloAlCarrito(carrito);
+    $("#botonAnyadirAlCarrito").click(function () {
+        let articulo = [
+            id = arti.id,
+            imagen = arti.imagen,
+            nombre = arti.nombre,
+            precio = arti.precio,
+            nombreCompleto = arti.nombreEspanyol,
+            descripcion = arti.descripcion
+        ]
+        let unidades = Number($("#numeroContador").text());
+        art.anyadirArticuloAlCarrito(carrito, articulo, unidades);
     });
 
+
+    $("#botonComprar").click(function () {
+        var prec = precioCompra.innerHTML;
+        let precioTotal = Number(prec.substring(7, prec.length-1));
+        let datosPedido = {
+            precio: precioTotal
+        }
+        repository.postModels('pedidos', indexController.compruebaPedido, datosPedido);
+        
+    });
 
 });
 
-function reinicioContador() {
-    if (!$("#exampleModal").hasClass("show")) {
-        cantidad = 1;
-        $('.modal-body__unidades').text(cantidad);
-    }
-}
 
 function login() {
     event.preventDefault();
@@ -180,6 +214,121 @@ function login() {
     repository.postModels('comprueba', indexController.compruebaLogin, datos);
 }
 
+
 function logout() {
     repository.postModels('logout', indexController.compruebaLogout);
+}
+
+function mostrarCarrito() {
+    let precioCompra = 0;
+    let contador = 0;
+    let arrayCarrito = carrito.mostrarArrayArticulos();
+    $(".modalBody__articuloCarrito").remove();
+    $(".modalBody__articuloCarrito--oscuro").remove();
+
+    arrayCarrito.map(function (articulo) {
+        contador++;
+        let precioNumber = Number(articulo.articulo[3]);
+        let unidadesNumber = Number(articulo.unidades);
+        precioCompra = precioCompra + (precioNumber * unidadesNumber);
+        if (contador % 2 == 0) {
+            $("#bodyModalCarrito").append("<div id='articuloCarrito" + articulo.articulo[0] + "' class='modalBody__articuloCarrito--oscuro'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='modal-carrito-body__boton-menos' id='simboloMenosCarrito" + articulo.articulo[0] + "'> <i class='fas fa-minus'></i></button><span id='unidades" + articulo.articulo[0] + "'class='item'>" + articulo.unidades + "</span><button id='simboloMasCarrito" + articulo.articulo[0] + "' class='modal-carrito-body__boton-mas'> <i class='fas fa-plus'></i></button><span class='modal-carrito__body-precio2' id='precioCarrito'> Precio: " + articulo.articulo[3] +  "€ </span><span class='info' id='precioTotalCarrito" + articulo.articulo[0] + "'> Total: " + articulo.articulo[3] * articulo.unidades + "</span><button class='btn btn-default' id='botonEliminarArticulo" + articulo.articulo[0] + "'>Eliminar</button></div>");
+
+        } else {
+            $("#bodyModalCarrito").append("<div id='articuloCarrito" + articulo.articulo[0] + "' class='modalBody__articuloCarrito'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='modal-carrito-body__boton-menos' id='simboloMenosCarrito" + articulo.articulo[0] + "'> <i class='fas fa-minus'></i></button><span id='unidades" + articulo.articulo[0] + "' class='item'>" + articulo.unidades + "</span><button id='simboloMasCarrito" + articulo.articulo[0] + "' class='modal-carrito-body__boton-mas'> <i class='fas fa-plus'></i></button><span class='modal-carrito__body-precio' id='precioCarrito'> Precio: " + articulo.articulo[3] + " € </span><span class='info' id='precioTotalCarrito" + articulo.articulo[0] + "'> Total: " + articulo.articulo[3] * articulo.unidades + "</span><button class='btn btn-default' id='botonEliminarArticulo" + articulo.articulo[0] + "'>Eliminar</button></div>");
+        }
+
+        $("#simboloMenosCarrito" + articulo.articulo[0]).on('click', function () {
+            if (Number($("#unidades" + articulo.articulo[0]).text()) > 1) {
+                let unidades = Number($("#unidades" + articulo.articulo[0]).text());
+                unidades = unidades - 1;
+                articulo.unidades = unidades;
+
+                $("#unidades" + articulo.articulo[0]).text(unidades);
+                //$("#precioTotalCarrito" + articulo.articulo[0]).text("Total: " + articulo.articulo[3] * Number($("#unidades" + articulo.articulo[0]).text()));
+                let precioNumber = Number(articulo.articulo[3]);
+                let unidadesNumber = Number(articulo.unidades);
+                precioCompra = precioCompra - precioNumber;
+                $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
+            } else {
+                $("#unidades" + articulo.articulo[0]).text(1);
+            }
+        });
+
+        $("#simboloMasCarrito" + articulo.articulo[0]).on('click', function () {
+            let unidades = Number($("#unidades" + articulo.articulo[0]).text());
+            unidades = unidades + 1;
+            articulo.unidades = unidades;
+
+            $("#unidades" + articulo.articulo[0]).text(unidades);
+            //$("#precioTotalCarrito" + articulo.articulo[0]).text("Total: " + articulo.articulo[3] * Number($("#unidades" + articulo.articulo[0]).text()));
+            precioNumber = Number(articulo.articulo[3]);
+            precioCompra = precioCompra + precioNumber;
+            $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
+
+        });
+
+        $("#botonEliminarArticulo" + articulo.articulo[0]).click(function () {
+            $("#articuloCarrito" + articulo.articulo[0]).remove();
+            let pos = arrayCarrito.indexOf(articulo);
+            arrayCarrito.splice(pos, 1);
+            precioNumber = Number(articulo.articulo[3]);
+            unidadesNumber = Number(articulo.unidades);
+            precioCompra = precioCompra - (precioNumber * unidadesNumber);
+            precioCompra.toFixed(2);
+            $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
+        });
+
+
+
+    });
+    $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
+}
+
+function botonMasCarrito() {
+    $("#simboloMas").click(function () {
+        articulo.unidades = articulo.unidades++;
+        $("#unidades").text(articulo.unidades);
+    });
+}
+
+function botonMenosCarrito(unidades) {
+    $("#simboloMenos").click(function () {
+        articulo.unidades = articulo.unidades--;
+        $("#unidades").text(articulo.unidades);
+    });
+}
+
+function reinicioContador() {
+    if (!$("#exampleModal").hasClass("show")) {
+        cantidad = 1;
+        $('.modal-body__unidades').text(cantidad);
+    }
+}
+let id;
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.currentTarget.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var id = ev.dataTransfer.getData("text");
+
+    articuloSeleccionado = document.getElementById(id);
+    arti = art.mostrarArticulo(articuloSeleccionado);
+
+    let articulo = [
+        id = arti.id,
+        imagen = arti.imagen,
+        nombre = arti.nombre,
+        precio = arti.precio,
+        nombreCompleto = arti.nombreEspanyol,
+        descripcion = arti.descripcion
+    ]
+    art.anyadirArticuloAlCarrito(carrito, articulo, 1);
 }

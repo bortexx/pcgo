@@ -1,7 +1,6 @@
 class Repository {
     constructor(prefijo) {
         let pref = window.location.href + "api/";
-        console.log(pref);
         if (this.prefijo == undefined) {
             this.prefijo = pref;
         } else {
@@ -27,13 +26,14 @@ class Repository {
         });
     };
 
-    getModelosTipo(nombre, tipo) {
+
+    getModelosTipo(nombre, callback, tipo) {
         $.ajax({
             url: this.prefijo + nombre + "/" + tipo,
             type: 'GET',
             dataType: 'json',
             success: function (json) {
-
+                callback(json);
             },
             error: function (jqXHR, status, error) {
                 indexController.comprobarErrorApi(jqXHR.status);
@@ -49,7 +49,7 @@ class Repository {
             data: data,
             dataType: "text",
             success: function (a) {
-                    callback(a);
+                callback(a);
             },
 
             error: function (jqXHR, status, error) {
@@ -58,6 +58,8 @@ class Repository {
             complete: function (jqXHR, status) {}
         });
     }
+
+  
 
 
 };

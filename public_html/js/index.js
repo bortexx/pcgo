@@ -2,7 +2,7 @@ let carrito = new Carrito(3);
 let indexController = new IndexController();
 let repository = new Repository();
 let eliminarElemento = new EliminarElemento();
-let articulo = new Articulo();
+let art = new Articulo();
 
 $(document).ready(function () {
     indexController.mostrarCategoriasDesplegable();

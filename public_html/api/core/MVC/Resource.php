@@ -41,7 +41,26 @@ abstract class Resource {
         $this->num_rows = $i;
     }
 
-    
+    protected function execSQLInsert($params = null) {
+        $ps = $this->db->prepare($this->sql);
+        if (!is_null($params)) {
+            foreach ($params as $key => $value) {
+                $ps->bindParam($key, $value);
+            }
+        }
+        $ps->execute();
+    }
+
+    protected function setSQL($params = null) {
+        $ps = $this->db->prepare($this->sql);
+        if (!is_null($params)) {
+            foreach ($params as $key => $value) {
+                $ps->bindParam($key, $value);
+            }
+        }
+        $ps->execute();
+
+    }
 
     protected function setData(){
         echo \json_encode($this->data);

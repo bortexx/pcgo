@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -497,7 +498,7 @@ html {
     display: none; }
   .menu-side__items--visible {
     animation-duration: 1s;
-    animation-name: slide;
+    animation-name: slide2;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -506,7 +507,7 @@ html {
     animation-timing-function: linear;
     background-color: rgba(255, 255, 255, 0.85);
     animation-fill-mode: forwards;
-    margin-top: -54px; }
+    margin-top: -141px; }
   .menu-side__items--invisible {
     animation-duration: 2s;
     animation-name: slideoff;
@@ -526,11 +527,11 @@ html {
   .menu-side__titulo {
     display: none; } }
 
-@keyframes slide {
+@keyframes slide2 {
   0% {
     top: -65px; }
   100% {
-    top: 132px; } }
+    top: 213px; } }
 
 @keyframes slideoff {
   0% {
@@ -938,8 +939,12 @@ html {
     animation-fill-mode: forwards;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1); } }
 
+.boton-carrito-flotante {
+  display: none; }
+
 @media (max-width: 453px) {
   .boton-carrito-flotante {
+    display: block;
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -947,3 +952,71 @@ html {
     border-radius: 25px;
     border: none;
     outline: none; } }
+
+.modal-body {
+  overflow-y: auto; }
+
+.modal-footer__precio {
+  margin-bottom: 1px; }
+
+.modal-content--tamaño {
+  width: 90vw;
+  height: 90vh; }
+
+.modal-carrito-body__boton-mas {
+  border-radius: 25px;
+  background-color: #292c2f;
+  color: #FFFFFF;
+  border: none;
+  margin-left: 3px;
+  outline: none;
+  margin-right: 50px; }
+
+.modal-carrito-body__boton-menos {
+  border-radius: 25px;
+  background-color: #292c2f;
+  color: #FFFFFF;
+  border: none;
+  margin-right: -7px;
+  outline: none;
+  margin-left: 10px; }
+
+.modal-carrito-body__boton:focus {
+  outline-color: transparent;
+  outline-style: none; }
+
+.modal-carrito-body__boton:focus {
+  outline-color: transparent;
+  outline-style: none; }
+
+.modal-content {
+  margin-left: 30px;
+  margin-right: 30px; }
+
+.modal-carrito__body-precio {
+  margin-right: 20px; }
+
+.modal-carrito__body-precio2 {
+  margin-right: 20px; }
+
+@media (max-width: 500px) {
+  .modal-content--tamaño {
+    width: 200px;
+    height: auto; } }
+
+.modalBody__articuloCarrito {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center; }
+
+.modalBody__articuloCarrito--oscuro {
+  background-color: #E7E7E7; }
+
+.imagenCarrito {
+  width: 150px;
+  height: 170px; }
+
+.item {
+  margin-left: 10px; }

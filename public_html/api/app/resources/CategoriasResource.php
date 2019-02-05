@@ -18,7 +18,6 @@ class CategoriasResource extends Resource {
 
         public function postCategoriasAction(){
             $this->sql = 'INSERT INTO categorias VALUES (valor1, valor2, valor3, .)';
-
         }
     
 /*

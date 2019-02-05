@@ -16,15 +16,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        crossorigin="anonymous"></script>   
     <script src="js/repository.js" type="text/javascript"></script>
     <script src="js/eliminarElementos.js" type="text/javascript"></script>
     <script src="js/articulo.js" type="text/javascript"></script>
     <script src="js/carrito.js" type="text/javascript"></script>
     <script src="js/IndexController.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Aleo|Libre+Baskerville|Libre+Franklin|Oswald|Roboto+Mono" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -33,8 +31,8 @@
 
 <body class="body">
     <div class="l-landing-page">
-        
-        <button class="boton-carrito-flotante"><i class=" fas fa-shopping-cart"></i></button>
+
+        <button class="boton-carrito-flotante" data-toggle='modal'  data-target='#modalCarrito' onclick="mostrarCarrito()"><i class=" fas fa-shopping-cart"></i></button>
 
         <header class="l-landing-page__header">
             <nav class="main-menu">
@@ -70,7 +68,7 @@
                              </div>
                         </div>
 
-                        <li class="main-menu__item main-menu__item--seleccionado">
+                        <li class="main-menu__item main-menu__item--seleccionado" >
                          <a onclick="logout()"><span id="logout"class="main-menu__login"><i class="fas fa-sign-out-alt"></i></span></a>
                          <a onclick="logout()"><i class="fas fa-sign-out-alt main-menu__icon-register"></i></a>
 
@@ -92,8 +90,8 @@
                             }
                         ?>  
 
-                    <li class="main-menu__item main-menu__item--invisible">
-                        <a id="imagen" href="#"><img src="images/icons8-add-shopping-cart-32.png" /></a>
+                    <li class="main-menu__item main-menu__item--invisible" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <a id="imagen" data-toggle='modal'  data-target='#modalCarrito' onclick="mostrarCarrito()"><img src="images/icons8-add-shopping-cart-32.png" /></a>
                     </li>
                 </ul>
             </nav>
@@ -132,99 +130,6 @@
             </div>
         </div>
 
-        <!-- Modal -->
-
-        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="loginmodal-container">
-                    <h1>Login</h1><br>
-                    <form id="form-login" method="post"  >
-                        <input id="usuarioLogin" type="text" name="usuario" placeholder="Usuario">
-                        <input id="contrasenyaLogin" type="password" name="contrasenya" placeholder="Contraseña">
-                        <button onclick="login()">Enviar</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <div class="modal fade" id="registrarseModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-            aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="loginmodal-container">
-                    <h1>Registrate</h1><br>
-                    <form name="registro" method="post" onsubmit="return false">
-                        <input id="correoRegistro" type="text" name="correo" placeholder="Correo Electrónico">
-                        <input id="nombreRegistro" type="text" name="nombre" placeholder="Nombre">
-                        <input id="apellidosRegistro" type="text" name="apellidos" placeholder="Apellidos">
-                        <input id="direccionRegistro" type="text" name="direccion" placeholder="Dirección">
-                        <input id="codigoPostalRegistro" type="text" name="codigoPostal" placeholder="Código Postal">
-                        <input id="usuarioRegistro" type="text" name="usuario" placeholder="Usuario">
-                        <input id="contrasenyaRegistro" type="password" name="contraseña" placeholder="Contraseña">
-                        <input type="submit" id="btnSubmit" value="Registrarme!" onclick="registro()"/>
-                    </form>
-
-                    <div class="login-help">
-                    </div>
-                </div>
-            </div>            
-            </div>
-
-        </div>
-
-
-        <!-- Modal -->
-
-
-
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modaltitulo"></h5>
-                        <button id="cerrarModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body-a" id="modalbody">
-                        <div id="modalimagen">
-
-                        </div>
-                        <div class="modal-derecha">
-
-                            <div class="modal-body__nombre" id="modalNombre">
-
-                            </div>
-                            <div class="modal-body__precio" id="modalprecio">
-
-                            </div>
-
-                            <div class="modal-body__contador" id="contadorUnidades">
-                                <button class="moda-body__boton-menos" id="simboloMenos"> <i class="fas fa-minus"></i></button>
-                                <span class="modal-body__unidades">1</span>
-                                <button id="simboloMas" class="moda-body__boton-mas"> <i class="fas fa-plus"></i></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="modal-body-b" id="modalbodyb">
-                        <div class="modal-body__descripcion" id="modalDescripcion">
-
-                        </div>
-                    </div>
-                    <div class="modal-footer1">
-                        <button type="button" id="botoncomprar" class="modal__botonPrimario">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <footer class="l-landing-page__footer">
 
@@ -275,6 +180,119 @@
             </div>
         </footer>
     </div>
+
+
+
+    
+        <!-- Modal -->
+
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="loginmodal-container">
+                    <h1>Login</h1><br>
+                    <form id="form-login" method="post"  >
+                        <input id="usuarioLogin" type="text" name="usuario" placeholder="Usuario">
+                        <input id="contrasenyaLogin" type="password" name="contrasenya" placeholder="Contraseña">
+                        <button onclick="login()">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="modal fade" id="registrarseModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="loginmodal-container">
+                    <h1>Registrate</h1><br>
+                    <form name="registro" method="post" onsubmit="return false">
+                        <input id="correoRegistro" type="text" name="correo" placeholder="Correo Electrónico">
+                        <input id="dni" type="text" name="dni" placeholder="DNI">
+                        <input id="nombreRegistro" type="text" name="nombre" placeholder="Nombre">
+                        <input id="apellidosRegistro" type="text" name="apellidos" placeholder="Apellidos">
+                        <input id="direccionRegistro" type="text" name="direccion" placeholder="Dirección">
+                        <input id="codigoPostalRegistro" type="text" name="codigoPostal" placeholder="Código Postal">
+                        <input id="usuarioRegistro" type="text" name="usuario" placeholder="Usuario">
+                        <input id="contrasenyaRegistro" type="password" name="contraseña" placeholder="Contraseña">
+                        <input type="submit" id="btnRegistro" value="Registrarme!"/>
+                    </form>
+
+                    <div class="login-help">
+                    </div>
+                </div>
+            </div>            
+            </div>
+
+        </div>
+   <!-- Modal Carito-->
+   <div id="modalCarrito" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content modal-content--tamaño">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div id="bodyModalCarrito" class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <p class="modal-footer__precio" id='precioCompra'></p>
+                <button id="botonComprar" type="button" class="btn btn-default" data-dismiss="modal">Comprar</button>
+            </div>
+            </div>
+
+        </div>
+        </div>
+        <!-- Modal -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modaltitulo"></h5>
+                        <button id="cerrarModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body-a" id="modalbody">
+                        <div id="modalimagen">
+
+                        </div>
+                        <div class="modal-derecha">
+
+                            <div class="modal-body__nombre" id="modalNombre">
+
+                            </div>
+                            <div class="modal-body__precio" id="modalprecio">
+
+                            </div>
+
+                            <div class="modal-body__contador" id="contadorUnidades">
+                                <button class="moda-body__boton-menos" id="simboloMenos"> <i class="fas fa-minus"></i></button>
+                                <span id='numeroContador' class="modal-body__unidades">1</span>
+                                <button id="simboloMas" class="moda-body__boton-mas"> <i class="fas fa-plus"></i></button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-body-b" id="modalbodyb">
+                        <div class="modal-body__descripcion" id="modalDescripcion">
+
+                        </div>
+                    </div>
+                    <div class="modal-footer1">
+                        <button type="button" id="botonAnyadirAlCarrito" class="modal__botonPrimario">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
