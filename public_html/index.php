@@ -16,15 +16,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        crossorigin="anonymous"></script>   
     <script src="js/repository.js" type="text/javascript"></script>
     <script src="js/eliminarElementos.js" type="text/javascript"></script>
     <script src="js/articulo.js" type="text/javascript"></script>
     <script src="js/carrito.js" type="text/javascript"></script>
     <script src="js/IndexController.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Aleo|Libre+Baskerville|Libre+Franklin|Oswald|Roboto+Mono" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -212,6 +210,7 @@
                     <h1>Registrate</h1><br>
                     <form name="registro" method="post" onsubmit="return false">
                         <input id="correoRegistro" type="text" name="correo" placeholder="Correo Electrónico">
+                        <input id="dni" type="text" name="dni" placeholder="DNI">
                         <input id="nombreRegistro" type="text" name="nombre" placeholder="Nombre">
                         <input id="apellidosRegistro" type="text" name="apellidos" placeholder="Apellidos">
                         <input id="direccionRegistro" type="text" name="direccion" placeholder="Dirección">
@@ -241,7 +240,8 @@
                 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Comprar</button>
+                <p class="modal-footer__precio" id='precioCompra'></p>
+                <button id="botonComprar" type="button" class="btn btn-default" data-dismiss="modal">Comprar</button>
             </div>
             </div>
 
@@ -288,7 +288,7 @@
                         </div>
                     </div>
                     <div class="modal-footer1">
-                        <button type="button" id="botoncomprar" class="modal__botonPrimario">Añadir al carrito</button>
+                        <button type="button" id="botonAnyadirAlCarrito" class="modal__botonPrimario">Añadir al carrito</button>
                     </div>
                 </div>
             </div>

@@ -6,8 +6,8 @@ class CompruebaResource extends Resource {
 
     public function postAllAction() {
   
-        $usuario = $_POST['usuario'];
-        $password = $_POST['contrasenya'];
+        $usuario = htmlspecialchars($_POST['usuario']);
+        $password = htmlspecialchars($_POST['contrasenya']);
         try{
             $this->sql = "SELECT id, nombreUsuario, contrasenya FROM usuarios  
             WHERE nombreUsuario = '$usuario' LIMIT 1";        
@@ -24,7 +24,7 @@ class CompruebaResource extends Resource {
             http_response_code(401);
         }
         else if ($password == $password_comprueba) {
-            setcookie("DWS", $this->data[0]['id'] . ";" . $this->data[0]['nombreUsuario'] , time() + (86400 * 7));  
+            setcookie("DWS", $this->data[0]['id'] . ";" . $this->data[0]['nombreUsuario'], time() + (86400 * 7));  
             header("location: http://localhost/pcgo/api");
         } else {
             http_response_code(401);

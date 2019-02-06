@@ -73,7 +73,7 @@
 
     .menu-side__items--visible {
         animation-duration: 1s;
-        animation-name: slide;
+        animation-name: slide2;
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -83,8 +83,7 @@
         background-color:  rgba(255, 255, 255, 0.85);
         animation-fill-mode: forwards;
 
-
-        margin-top: -54px;
+        margin-top: -141px;
     }
 
      .menu-side__items--invisible {
@@ -116,9 +115,9 @@
     }
 }
 
-@keyframes slide {
+@keyframes slide2 {
   0%   {top: -65px;}
-  100% {top: 132px; }
+  100% {top: 213px; }
   }
   
   @keyframes slideoff {

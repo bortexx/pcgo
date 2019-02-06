@@ -13,7 +13,7 @@ class LogoutResource extends Resource {
             echo "borrado";
 
             //Esto es una maravilla no borrar
-        //session_destroy();
+        session_destroy();
         } else {
             echo "no borrado";
         }

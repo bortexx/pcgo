@@ -2,26 +2,29 @@
 
 use core\MVC\Resource as Resource;
 
-class RegistroResource extends Resource {
+class CompraResource extends Resource {
 
     public function getAllAction() {
-       
+
     }
 
     public function postAllAction() {
         
-        $carrito = $_POST['carrito'];
-
+        $producto = $_POST['articulo'];
+        $unidades = $_POST['unidades'];
+        $idUsuario = $_SESSION["id"];
+    
+        $precioTotalArticulo = $unidades * $producto[3];
+            
         try{
-            $this->sql ="INSERT INTO `usuarios` (nombreUsuario,contrasenya,nombre,apellidos,direccion,codigoPostal,correoElectronico) 
-            VALUES ('$usuario', '$contrasenya', '$nombre', '$apellidos', '$direccion', '$codigoPostal', '$correo')";
-            $this->execSQL();   
+            $this->sql ="INSERT INTO `detallescompra` (lineaCompra,idUsuario,idProducto,unidades,precio,importe) 
+            VALUES (null,$idUsuario,$producto[0],$unidades,$producto[3],$precioTotalArticulo)";
+            $this->setSQL();   
+            echo "Gracias por la compra";
         } catch (PDOException $e) {
             http_response_code(500);
             exit();
-        }
-
-
+        
     }
-    
+}
     }

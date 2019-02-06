@@ -398,11 +398,11 @@ html {
 
 .l-landing-page {
   display: grid;
-  grid-template-areas: "page__header page__header page__header page__header page__header page__header " "page__carousel page__carousel page__carousel page__carousel page__carousel page__carousel " "page__aside page__container page__container page__container page__container page__container " "page__aside page__container page__container page__container page__container page__container " "page__footer page__footer page__footer page__footer page__footer page__footer "; }
+  grid-template-areas: "page__header page__header page__header page__header page__header page__header " "page__carousel page__carousel page__carousel page__carousel page__carousel page__carousel " "page__aside page__container page__container page__container page__container page__container " "page__aside page__container page__container page__container page__container page__container " "page__footer page__footer page__footer page__footer page__footer page__footer "; }
 
 @media (max-width: 727px) {
   .l-landing-page {
-    grid-template-areas: "page__header" "page__aside" "page__carousel" "page__container" "page__footer"; } }
+    grid-template-areas: "page__header" "page__aside" "page__carousel" "page__container" "page__footer"; } }
 
 .l-landing-page__header {
   grid-area: page__header; }
@@ -498,7 +498,7 @@ html {
     display: none; }
   .menu-side__items--visible {
     animation-duration: 1s;
-    animation-name: slide;
+    animation-name: slide2;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -507,7 +507,7 @@ html {
     animation-timing-function: linear;
     background-color: rgba(255, 255, 255, 0.85);
     animation-fill-mode: forwards;
-    margin-top: -54px; }
+    margin-top: -141px; }
   .menu-side__items--invisible {
     animation-duration: 2s;
     animation-name: slideoff;
@@ -527,11 +527,11 @@ html {
   .menu-side__titulo {
     display: none; } }
 
-@keyframes slide {
+@keyframes slide2 {
   0% {
     top: -65px; }
   100% {
-    top: 132px; } }
+    top: 213px; } }
 
 @keyframes slideoff {
   0% {
@@ -956,9 +956,48 @@ html {
 .modal-body {
   overflow-y: auto; }
 
+.modal-footer__precio {
+  margin-bottom: 1px; }
+
 .modal-content--tamaño {
   width: 90vw;
   height: 90vh; }
+
+.modal-carrito-body__boton-mas {
+  border-radius: 25px;
+  background-color: #292c2f;
+  color: #FFFFFF;
+  border: none;
+  margin-left: 3px;
+  outline: none;
+  margin-right: 50px; }
+
+.modal-carrito-body__boton-menos {
+  border-radius: 25px;
+  background-color: #292c2f;
+  color: #FFFFFF;
+  border: none;
+  margin-right: -7px;
+  outline: none;
+  margin-left: 10px; }
+
+.modal-carrito-body__boton:focus {
+  outline-color: transparent;
+  outline-style: none; }
+
+.modal-carrito-body__boton:focus {
+  outline-color: transparent;
+  outline-style: none; }
+
+.modal-content {
+  margin-left: 30px;
+  margin-right: 30px; }
+
+.modal-carrito__body-precio {
+  margin-right: 20px; }
+
+.modal-carrito__body-precio2 {
+  margin-right: 20px; }
 
 @media (max-width: 500px) {
   .modal-content--tamaño {

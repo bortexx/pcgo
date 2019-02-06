@@ -49,6 +49,15 @@ class IndexController {
         location.reload(true);
     }
 
+    compruebaCompra(a) {
+        if (a == "Gracias por la compra") {
+            alert("Gracias por la compra");
+        } else {
+            comprobarErrorApi(a);
+        }
+
+    }
+
     mostrarCategorias(json) {
         $("#menu-side").append("<ul class='menu-side__items' id='menu-side__items'>");
         json.map(function (cat) {
@@ -95,26 +104,26 @@ class IndexController {
             let tipo = this.id.toLowerCase();
             console.log(tipo);
             if (tipo == "ordenadores") {
-                repository.getModelosTipo("productos", indexController.mostrarProductos, "sobremesa");
-                repository.getModelosTipo("productos", indexController.mostrarProductos, "portatil");
+                repository.getModelosTipo("productos", indexController.mostrarProductos, "sobremesas");
+                repository.getModelosTipo("productos", indexController.mostrarProductos, "portatiles");
             } else {
                 repository.getModelosTipo("productos", indexController.mostrarProductos, tipo);
             }
         });
     }
-    
-    
-    cambiarColorCarrito(){
-         $("#imagen").empty();
+
+
+    cambiarColorCarrito() {
+        $("#imagen").empty();
         $("#imagen").append("<img src='images/icons8-add-shopping-cart-32Green.png'/>");
-        
-        
-        setTimeout(function(){
-             $("#imagen").empty();
-             $("#imagen").append("<img src='images/icons8-add-shopping-cart-32.png'/>");  
+
+
+        setTimeout(function () {
+            $("#imagen").empty();
+            $("#imagen").append("<img src='images/icons8-add-shopping-cart-32.png'/>");
         }, 2500);
     }
-    
+
 }
 let cantidad = 1;
 
@@ -124,6 +133,7 @@ $(document).ready(function () {
     $("#btnRegistro").on("click", function () {
         let datos = {
             correo: $("#correoRegistro").val(),
+            dni: $("#dni").val(),
             nombre: $("#nombreRegistro").val(),
             apellidos: $("#apellidosRegistro").val(),
             direccion: $("#direccionRegistro").val(),
@@ -137,12 +147,10 @@ $(document).ready(function () {
     $("#redireccionLogo").attr('href', window.location.href);
 
     $("#form-login").attr('action', window.location.href + "php/compruebaLogin.php");
-    console.log(window.location.href);
     $("#simboloMenos").on("click", function () {
         if (cantidad > 1) {
             cantidad--;
             $('.modal-body__unidades').text(cantidad);
-            console.log(cantidad);
         } else {
             cantidad = 1;
             $('.modal-body__unidades').text(cantidad);
@@ -152,11 +160,10 @@ $(document).ready(function () {
     $("#simboloMas").on("click", function () {
         cantidad++;
         $('.modal-body__unidades').text(cantidad);
-        console.log(cantidad);
     });
 
 
-    $("#botoncomprar").click(function () {
+    $("#botonAnyadirAlCarrito").click(function () {
         let articulo = [
             id = arti.id,
             imagen = arti.imagen,
@@ -169,6 +176,13 @@ $(document).ready(function () {
         art.anyadirArticuloAlCarrito(carrito, articulo, unidades);
     });
 
+
+    $("#botonComprar").click(function () {
+        let datos = carrito.mostrarArrayArticulos();
+        datos.map(function (producto) {
+            repository.postModels("comprar", indexController.compruebaCompra, producto);
+        });
+    });
 
 });
 
@@ -187,32 +201,69 @@ function logout() {
 }
 
 function mostrarCarrito() {
+    let precioCompra = 0;
     let contador = 0;
     let arrayCarrito = carrito.mostrarArrayArticulos();
     $(".modalBody__articuloCarrito").remove();
     $(".modalBody__articuloCarrito--oscuro").remove();
-    console.log(arrayCarrito);
+
     arrayCarrito.map(function (articulo) {
         contador++;
+        let precioNumber = Number(articulo.articulo[3]);
+        let unidadesNumber = Number(articulo.unidades);
+        precioCompra = precioCompra + (precioNumber * unidadesNumber);
         if (contador % 2 == 0) {
-            $("#bodyModalCarrito").append("<div class='modalBody__articuloCarrito--oscuro'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='moda-body__boton-menos item' id='simboloMenos'> <i class='fas fa-minus'></i></button><span id='unidades'class='item'>" + articulo.unidades + "</span><button id='simboloMas' class='moda-body__boton-mas item'> <i class='fas fa-plus'></i></button><span>" + articulo.articulo[3] + "</span></div>");
+            $("#bodyModalCarrito").append("<div id='articuloCarrito" + articulo.articulo[0] + "' class='modalBody__articuloCarrito--oscuro'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='modal-carrito-body__boton-menos' id='simboloMenosCarrito" + articulo.articulo[0] + "'> <i class='fas fa-minus'></i></button><span id='unidades" + articulo.articulo[0] + "'class='item'>" + articulo.unidades + "</span><button id='simboloMasCarrito" + articulo.articulo[0] + "' class='modal-carrito-body__boton-mas'> <i class='fas fa-plus'></i></button><span class='modal-carrito__body-precio2' id='precioCarrito'> Precio: " + articulo.articulo[3] +  "€ </span><span class='info' id='precioTotalCarrito" + articulo.articulo[0] + "'> Total: " + articulo.articulo[3] * articulo.unidades + "</span><button class='btn btn-default' id='botonEliminarArticulo" + articulo.articulo[0] + "'>Eliminar</button></div>");
 
         } else {
-            $("#bodyModalCarrito").append("<div class='modalBody__articuloCarrito'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='moda-body__boton-menos item' id='simboloMenos'> <i class='fas fa-minus'></i></button><span id='unidades' class='item'>" + articulo.unidades + "</span><button id='simboloMas' class='moda-body__boton-mas item'> <i class='fas fa-plus'></i></button><span>" + articulo.articulo[3] + "</span></div>");
+            $("#bodyModalCarrito").append("<div id='articuloCarrito" + articulo.articulo[0] + "' class='modalBody__articuloCarrito'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='modal-carrito-body__boton-menos' id='simboloMenosCarrito" + articulo.articulo[0] + "'> <i class='fas fa-minus'></i></button><span id='unidades" + articulo.articulo[0] + "' class='item'>" + articulo.unidades + "</span><button id='simboloMasCarrito" + articulo.articulo[0] + "' class='modal-carrito-body__boton-mas'> <i class='fas fa-plus'></i></button><span class='modal-carrito__body-precio' id='precioCarrito'> Precio: " + articulo.articulo[3] + " € </span><span class='info' id='precioTotalCarrito" + articulo.articulo[0] + "'> Total: " + articulo.articulo[3] * articulo.unidades + "</span><button class='btn btn-default' id='botonEliminarArticulo" + articulo.articulo[0] + "'>Eliminar</button></div>");
         }
+
+        $("#simboloMenosCarrito" + articulo.articulo[0]).on('click', function () {
+            if (Number($("#unidades" + articulo.articulo[0]).text()) > 1) {
+                let unidades = Number($("#unidades" + articulo.articulo[0]).text());
+                unidades = unidades - 1;
+                articulo.unidades = unidades;
+
+                $("#unidades" + articulo.articulo[0]).text(unidades);
+                //$("#precioTotalCarrito" + articulo.articulo[0]).text("Total: " + articulo.articulo[3] * Number($("#unidades" + articulo.articulo[0]).text()));
+                let precioNumber = Number(articulo.articulo[3]);
+                let unidadesNumber = Number(articulo.unidades);
+                precioCompra = precioCompra - precioNumber;
+                $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
+            } else {
+                $("#unidades" + articulo.articulo[0]).text(1);
+            }
+        });
+
+        $("#simboloMasCarrito" + articulo.articulo[0]).on('click', function () {
+            let unidades = Number($("#unidades" + articulo.articulo[0]).text());
+            unidades = unidades + 1;
+            articulo.unidades = unidades;
+
+            $("#unidades" + articulo.articulo[0]).text(unidades);
+            //$("#precioTotalCarrito" + articulo.articulo[0]).text("Total: " + articulo.articulo[3] * Number($("#unidades" + articulo.articulo[0]).text()));
+            precioNumber = Number(articulo.articulo[3]);
+            precioCompra = precioCompra + precioNumber;
+            $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
+
+        });
+
+        $("#botonEliminarArticulo" + articulo.articulo[0]).click(function () {
+            $("#articuloCarrito" + articulo.articulo[0]).remove();
+            let pos = arrayCarrito.indexOf(articulo);
+            arrayCarrito.splice(pos, 1);
+            precioNumber = Number(articulo.articulo[3]);
+            unidadesNumber = Number(articulo.unidades);
+            precioCompra = precioCompra - (precioNumber * unidadesNumber);
+            precioCompra.toFixed(2);
+            $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
+        });
+
+
+
     });
-}
-
-function compraFinalizada() {
-    repository.getModels("pedido", indexController.mostrarCategorias);
-}
-
-function mensajeCompra(a) {
-    if (a == "Compra realizada con exito") {
-        alert("Compra realizada con exito.");
-    } else {
-        alert("Error. La compra no se ha podido realizar.");
-    }
+    $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
 }
 
 function botonMasCarrito() {
@@ -251,8 +302,6 @@ function drop(ev) {
 
     articuloSeleccionado = document.getElementById(id);
     arti = art.mostrarArticulo(articuloSeleccionado);
-    //console.log(articuloDrop);
-    //carrito.anyadirArticulo(articuloDrop);
 
     let articulo = [
         id = arti.id,
@@ -262,6 +311,5 @@ function drop(ev) {
         nombreCompleto = arti.nombreEspanyol,
         descripcion = arti.descripcion
     ]
-    let unidades = Number($("#numeroContador").text());
-    art.anyadirArticuloAlCarrito(carrito, articulo, unidades);
+    art.anyadirArticuloAlCarrito(carrito, articulo, 1);
 }
