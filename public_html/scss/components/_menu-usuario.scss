@@ -20,8 +20,7 @@
 .menu-usuario:hover>.menu-usuario__desplegable {
     animation-duration: 0.1s;
     animation-name: slide;
-    display: flex;
-    flex-direction: column;
+    @include flex(column, none, none);
     position: absolute;
     width: 120px;
     animation-timing-function: linear;
@@ -64,8 +63,7 @@
     .menu-usuario:hover>.menu-usuario__desplegable {
         animation-duration: 0.1s;
         animation-name: slide;
-        display: flex;
-        flex-direction: column;
+        @include flex(column, none, none);
         position: absolute;
         width: 120px;
         animation-timing-function: linear;

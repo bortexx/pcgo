@@ -1,18 +1,7 @@
-  .modal-footer1{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-}
-
 .modal__botonPrimario{
-    color: #FFFFFF;
-    background-color: #292c2f;
+    color: $modalColorLetraBotones;
+    font-family: $letra;
+    background-color: $modalFondoBotones;
     border: none;
     height: 100%;
     width: 100%;
@@ -29,21 +18,18 @@ height: 300px;
 
 .modal-body-a{
     padding: 20px;
-display: flex;
+    @include flex(column, none, none);
+    text-align: center;
 }
 .modal-body-b{
     padding: 20px;
-    display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-
 }
 
 .modal-body__contador{
-    display: flex;
-    flex-direction: row;
+    //@include flex(row, none, none);
     margin-right: auto;
     margin-left: auto;
+    font-family: $letra;
 }
 
 
@@ -51,21 +37,21 @@ flex-direction: row;
     text-align: center;
     margin-bottom: 15px;
     margin-top: 15px;
-
+    font-family: $letra;
 }
 .modal-derecha{
-    display:flex;
-    flex-direction: column;
+    @include flex(column, center, none);
     width: 100%;
-    justify-content: center;
     text-align:center;
 
 }
 
 .moda-body__boton-menos{
 border-radius: 25px;
-background-color: #292c2f;
-color:#FFFFFF;
+padding-top: 4px;
+padding-bottom: 4px;
+background-color: $modalFondoBotones;
+color:$modalColorLetraBotones;
 border:none;
 margin-right: 5px;
 outline: none;
@@ -82,8 +68,30 @@ outline: none;
 }
 .moda-body__boton-mas{
     border-radius: 25px;
-    background-color: #292c2f;
-    color:#FFFFFF;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: $modalFondoBotones;
+    color:$modalColorLetraBotones;
     border:none;
     margin-left: 5px;
+}
+.modal-body__descripcion{
+    font-family: $letra;
+}
+.modal-body__nombre{
+    font-family: $letra;
+}
+.modal-header__titulo{
+    font-family: $letra;
+}
+.modal-headerProducto{
+    background-color: $modalProductoFondoHeader;
+    color: $modalColorLetra;
+}
+.modal-header-producto__close{
+    color: $modalColorLetra;
+}
+.modal-header-producto__close:hover{
+    color: $modalColorLetra;
+    font-size: 30px;
 }

@@ -22,11 +22,9 @@
 
 @media(max-width:727px) {
     .main-menu {
-        display: flex;
-        justify-content: flex-start;
+        @include flex(row, flex-start, none);
         box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
         background-color: $fondoMainMenu;
-        flex-wrap: wrap;
         position: absolute;
         z-index: 1;
         width: 100%;
@@ -58,9 +56,7 @@
 
 
 .main-menu__items {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex(row, none, none);
     font-family: $letra;
     width: 100%;
     color: $colorLetraMainMenu;
@@ -111,9 +107,7 @@
     }
 
     .main-menu__items {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        @include flex(row, none, none);
     }
 }
 
@@ -127,10 +121,7 @@
     }
 
     .main-menu__items {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
+        @include flex(row, none, center);
     }
 
     .main-menu__item--derecha {

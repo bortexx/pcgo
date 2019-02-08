@@ -1,10 +1,26 @@
 $debug:0;
 $letra: Libre Franklin, sans-serif;
+
 $colorLetraPrincipal: #FFFFFF;
-$colorLetraMainMenu: #FFFFFF;
-$fondoMainMenu: #202124;
-$fondoLandingPage: #E7E7E7;
-$fondoMenuSide: #FFFFFF;
-$footerColorLetra: #FFFFFF;
+$cardColorLetraBoton: $colorLetraPrincipal;
+$colorLetraMainMenu: $colorLetraPrincipal;
+$footerColorLetra: $colorLetraPrincipal;
 $mainMenuColorLetra: $colorLetraPrincipal;
-$fondoFooter: #202124;
+$modalCarritoColorLetra: $colorLetraPrincipal;
+$modalColorLetraBotones: $colorLetraPrincipal;
+$modalColorLetra: $colorLetraPrincipal;
+
+
+$colorFondosOscuros: #202124;
+$fondoMainMenu: $colorFondosOscuros;
+$menuSideFondo--hover: $colorFondosOscuros;
+$fondoFooter: $colorFondosOscuros;
+$modalFondoBotones: $colorFondosOscuros;
+$modalCarritoFondoBotones: $colorFondosOscuros;
+$modalProductoFondoHeader: $colorFondosOscuros;
+$botonFlotanteColorFondo: $colorFondosOscuros;
+$fondoMenuSide: #FFFFFF;
+$fondoLandingPage: #E7E7E7;
+$colorBotonEliminar: #FF1E00;
+
+
