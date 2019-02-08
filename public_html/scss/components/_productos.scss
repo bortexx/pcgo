@@ -1,38 +1,4 @@
 .productos {
     width: 100%;
-    //height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include flex(row, center, none);
 }
-
-@media(max-width:1237px) {
-    .productos {
-        width: 100%;
-        //height: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-.productos__item {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 15px;
-    margin-left: 40px;
-    height: 200px;
-    width: 200px;
-    background-color: white;
-    border: 1px solid black;
-}
-
-.productos__item--imagen {
-    height: 120px;
-    width: 160px;
-}
-
-.productos__item--texto {}

@@ -13,7 +13,7 @@
 .menu-side__titulo {
     font-family: $letra;
     font-size: 22px;
-    text-align: center; //esto esta mal hay que mirar el html y ponerle clase al P.
+    text-align: center;
     margin-bottom: 15px;
     font-weight: bold;
 }
@@ -30,7 +30,7 @@
 .menu-side__item:hover {
     display: block;
     text-align: center;
-    background-color: #000000;
+    background-color: $menuSideFondo--hover;
     color: white
 }
 
@@ -74,32 +74,26 @@
     .menu-side__items--visible {
         animation-duration: 1s;
         animation-name: slide2;
-        display: flex;
-        flex-direction: column;
+        @include flex(column, none, none);
         position: absolute;
          z-index: 0;
         width: 100%;
         animation-timing-function: linear;
         background-color:  rgba(255, 255, 255, 0.85);
         animation-fill-mode: forwards;
-
         margin-top: -141px;
     }
 
      .menu-side__items--invisible {
         animation-duration: 2s;
         animation-name: slideoff;
-        display: flex;
-        flex-direction: column;
+        @include flex(column, none, none);
         position: absolute;
          z-index: 0;
         width: 100%;
         animation-timing-function: linear;
         background-color:  rgba(255, 255, 255, 0.85);
         animation-fill-mode: forwards;
-
-
-
         margin-top: -54px;
     }
 

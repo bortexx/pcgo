@@ -213,26 +213,28 @@ function mostrarCarrito() {
         let unidadesNumber = Number(articulo.unidades);
         precioCompra = precioCompra + (precioNumber * unidadesNumber);
         if (contador % 2 == 0) {
-            $("#bodyModalCarrito").append("<div id='articuloCarrito" + articulo.articulo[0] + "' class='modalBody__articuloCarrito--oscuro'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='modal-carrito-body__boton-menos' id='simboloMenosCarrito" + articulo.articulo[0] + "'> <i class='fas fa-minus'></i></button><span id='unidades" + articulo.articulo[0] + "'class='item'>" + articulo.unidades + "</span><button id='simboloMasCarrito" + articulo.articulo[0] + "' class='modal-carrito-body__boton-mas'> <i class='fas fa-plus'></i></button><span class='modal-carrito__body-precio2' id='precioCarrito'> Precio: " + articulo.articulo[3] +  "€ </span><span class='info' id='precioTotalCarrito" + articulo.articulo[0] + "'> Total: " + articulo.articulo[3] * articulo.unidades + "</span><button class='btn btn-default' id='botonEliminarArticulo" + articulo.articulo[0] + "'>Eliminar</button></div>");
+            $("#bodyModalCarrito").append("<div id='articuloCarrito" + articulo.articulo[0] + "' class='modalBody__articuloCarrito--oscuro'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='modal-carrito-body__boton-menos' id='simboloMenosCarrito" + articulo.articulo[0] + "'> <i class='fas fa-minus'></i></button><span id='unidades" + articulo.articulo[0] + "'class='item'>" + articulo.unidades + "</span><button id='simboloMasCarrito" + articulo.articulo[0] + "' class='modal-carrito-body__boton-mas'> <i class='fas fa-plus'></i></button><span class='modal-carrito__body-precio' id='precioCarrito" + articulo.articulo[0] + "'>Precio: "+articulo.articulo[3]+" €</span><span class='modal-carrito__body-total' id='precioTotalCarrito" + articulo.articulo[0] + "'>Total: "+articulo.articulo[3]*articulo.unidades+" €</span><button class='bttn' id='botonEliminarArticulo" + articulo.articulo[0] + "'>Eliminar</button></div>");
 
         } else {
-            $("#bodyModalCarrito").append("<div id='articuloCarrito" + articulo.articulo[0] + "' class='modalBody__articuloCarrito'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='modal-carrito-body__boton-menos' id='simboloMenosCarrito" + articulo.articulo[0] + "'> <i class='fas fa-minus'></i></button><span id='unidades" + articulo.articulo[0] + "' class='item'>" + articulo.unidades + "</span><button id='simboloMasCarrito" + articulo.articulo[0] + "' class='modal-carrito-body__boton-mas'> <i class='fas fa-plus'></i></button><span class='modal-carrito__body-precio' id='precioCarrito'> Precio: " + articulo.articulo[3] + " € </span><span class='info' id='precioTotalCarrito" + articulo.articulo[0] + "'> Total: " + articulo.articulo[3] * articulo.unidades + "</span><button class='btn btn-default' id='botonEliminarArticulo" + articulo.articulo[0] + "'>Eliminar</button></div>");
+            $("#bodyModalCarrito").append("<div id='articuloCarrito" + articulo.articulo[0] + "' class='modalBody__articuloCarrito'> <img class='imagenCarrito' src=images/" + articulo.articulo[1] + "><span class='item'>" + articulo.articulo[2] + "</span><button class='modal-carrito-body__boton-menos' id='simboloMenosCarrito" + articulo.articulo[0] + "'> <i class='fas fa-minus'></i></button><span id='unidades" + articulo.articulo[0] + "' class='item'>" + articulo.unidades + "</span><button id='simboloMasCarrito" + articulo.articulo[0] + "' class='modal-carrito-body__boton-mas'> <i class='fas fa-plus'></i></button><span class='modal-carrito__body-precio' id='precioCarrito" + articulo.articulo[0] + "'>Precio: "+articulo.articulo[3]+" €</span><span class='modal-carrito__body-total' id='precioTotalCarrito" + articulo.articulo[0] + "'>Total: "+articulo.articulo[3]*articulo.unidades+" €</span><button class='bttn' id='botonEliminarArticulo" + articulo.articulo[0] + "'>Eliminar</button></div>");
         }
 
         $("#simboloMenosCarrito" + articulo.articulo[0]).on('click', function () {
+            let todoPrecio = $("#precioCarrito"+articulo.articulo[0]).text();
+            let todoPrecio1 = Number(todoPrecio.slice(7, -2));
             if (Number($("#unidades" + articulo.articulo[0]).text()) > 1) {
                 let unidades = Number($("#unidades" + articulo.articulo[0]).text());
                 unidades = unidades - 1;
                 articulo.unidades = unidades;
 
                 $("#unidades" + articulo.articulo[0]).text(unidades);
-                //$("#precioTotalCarrito" + articulo.articulo[0]).text("Total: " + articulo.articulo[3] * Number($("#unidades" + articulo.articulo[0]).text()));
                 let precioNumber = Number(articulo.articulo[3]);
-                let unidadesNumber = Number(articulo.unidades);
                 precioCompra = precioCompra - precioNumber;
                 $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
+                restarTotalArticulo(articulo);
             } else {
                 $("#unidades" + articulo.articulo[0]).text(1);
+                $("#precioTotalCarrito"+articulo.articulo[0]).text("Total: "+todoPrecio1+" €")
             }
         });
 
@@ -242,11 +244,10 @@ function mostrarCarrito() {
             articulo.unidades = unidades;
 
             $("#unidades" + articulo.articulo[0]).text(unidades);
-            //$("#precioTotalCarrito" + articulo.articulo[0]).text("Total: " + articulo.articulo[3] * Number($("#unidades" + articulo.articulo[0]).text()));
             precioNumber = Number(articulo.articulo[3]);
             precioCompra = precioCompra + precioNumber;
             $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
-
+            sumarTotalArticulo(articulo);
         });
 
         $("#botonEliminarArticulo" + articulo.articulo[0]).click(function () {
@@ -266,18 +267,22 @@ function mostrarCarrito() {
     $("#precioCompra").text("Total: " + precioCompra.toFixed(2) + "€");
 }
 
-function botonMasCarrito() {
-    $("#simboloMas").click(function () {
-        articulo.unidades = articulo.unidades++;
-        $("#unidades").text(articulo.unidades);
-    });
+function sumarTotalArticulo(articulo) {
+    let todoTotal = $("#precioTotalCarrito"+articulo.articulo[0]).text();
+    let todoPrecio = $("#precioCarrito"+articulo.articulo[0]).text();
+    let todoTotal1 = Number(todoTotal.slice(7, -2));
+    let todoPrecio1 = Number(todoPrecio.slice(7, -2));
+    let totalArticuloMostrar = todoTotal1 + todoPrecio1;
+    $("#precioTotalCarrito"+articulo.articulo[0]).text("Total: "+totalArticuloMostrar+" €")
 }
 
-function botonMenosCarrito(unidades) {
-    $("#simboloMenos").click(function () {
-        articulo.unidades = articulo.unidades--;
-        $("#unidades").text(articulo.unidades);
-    });
+function restarTotalArticulo(articulo) {
+    let todoTotal = $("#precioTotalCarrito"+articulo.articulo[0]).text();
+    let todoPrecio = $("#precioCarrito"+articulo.articulo[0]).text();
+    let todoTotal1 = Number(todoTotal.slice(7, -2));
+    let todoPrecio1 = Number(todoPrecio.slice(7, -2));
+    let totalArticuloMostrar = todoTotal1 - todoPrecio1;
+    $("#precioTotalCarrito"+articulo.articulo[0]).text("Total: "+totalArticuloMostrar+" €")
 }
 
 function reinicioContador() {
