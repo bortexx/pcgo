@@ -1,4 +1,7 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    
            session_start();
             if (isset($_COOKIE["DWS"])) {
                 $usuario = explode(";", $_COOKIE["DWS"]);
@@ -9,10 +12,11 @@
                 $_SESSION["logged"] = false;
             }
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
+
 
     header("Access-Control-Allow-Origin: * ");
+    		header("Access-Control-Allow-Headers: *");
+
     try {
         $mysql = new PDO("mysql:dbname=tienda2;host=localhost", "root", "");
        // $mysql = new PDO("mysql:dbname=pcgo;host=192.168.59.104:3306", "root", "root");
