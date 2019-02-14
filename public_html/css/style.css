@@ -908,6 +908,16 @@ html {
 .login-help {
   font-size: 12px; }
 
+.loginmodal-container__boton {
+  font-family: Libre Franklin, sans-serif;
+  margin-left: auto;
+  background-color: #202124;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #FFFFFF;
+  margin-right: 20px; }
+
 .menu-usuario {
   text-align: center;
   width: 120px; }

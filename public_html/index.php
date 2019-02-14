@@ -193,7 +193,7 @@
                     <form id="form-login" method="post"  >
                         <input id="usuarioLogin" type="text" name="usuario" placeholder="Usuario">
                         <input id="contrasenyaLogin" type="password" name="contrasenya" placeholder="Contraseña">
-                        <button onclick="login()">Enviar</button>
+                        <button class='loginmodal-container__boton' onclick="login()">Enviar</button>
                     </form>
                 </div>
             </div>

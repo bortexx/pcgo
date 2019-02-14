@@ -8,6 +8,7 @@ class CompruebaResource extends Resource {
   
         $usuario = htmlspecialchars($_POST['usuario']);
         $password = htmlspecialchars($_POST['contrasenya']);
+        
         try{
             $this->sql = "SELECT id, nombreUsuario, contrasenya FROM usuarios  
             WHERE nombreUsuario = '$usuario' LIMIT 1";        

@@ -94,3 +94,13 @@
 .login-help{
   font-size: 12px;
 }
+.loginmodal-container__boton{
+    font-family: $letra;
+    margin-left: auto;
+    background-color: $botonLoginColorFondo;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: $botonLoginColorLetra;
+    margin-right: 20px;
+}

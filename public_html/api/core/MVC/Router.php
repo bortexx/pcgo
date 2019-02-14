@@ -42,6 +42,9 @@ class Router {
 		foreach ($routes["post"] as $currentRoute) {
 			$this->addRoute($currentRoute, 'post');
 		}
+		foreach ($routes["delete"] as $currentRoute) {
+			$this->addRoute($currentRoute, 'delete');
+		}
 	}
 
 

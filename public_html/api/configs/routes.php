@@ -91,7 +91,26 @@ return array(
 			"resource" => "compra",
 			"action" => "postAll"
 		),
-	)
+	),
+
+	"delete" => array(
+		"BorrarProductos" => array(
+			"route" => "/pcgo/api/productos/:id",
+			"resource" => "productos",
+			"action" => "getDelete"
+		),
+		"BorrarUsuarios" => array(
+			"route" => "/pcgo/api/usuarios/:id",
+			"resource" => "usuarios",
+			"action" => "getDelete"
+		),
+		"BorrarCategorias" => array(
+			"route" => "/pcgo/api/categorias/:id",
+			"resource" => "categorias",
+			"action" => "getDelete"
+		),
+		
+	),
 );
 
 

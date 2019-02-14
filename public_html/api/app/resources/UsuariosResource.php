@@ -25,4 +25,12 @@ class UsuariosResource extends Resource {
     }
     */
 }
+public function getDeleteAction(){
+    $id = $this->controller->getParam('id');
+    $this->sql = 'DELETE from usuarios where id = :id';
+    $params = array(
+        'id' => $id,
+    );
+    $this->setSQL($params);
+}
 }

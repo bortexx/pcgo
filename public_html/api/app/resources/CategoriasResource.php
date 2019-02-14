@@ -20,15 +20,12 @@ class CategoriasResource extends Resource {
             $this->sql = 'INSERT INTO categorias VALUES (valor1, valor2, valor3, .)';
         }
     
-/*
-    public function getByIdAction() {
-        $equipo = $this->controller->getParam('equipo');
-        $this->sql = 'SELECT * FROM equipos WHERE Nombre = :nombre';
-        $params = array(
-            'nombre' => $equipo,
-        );
-        $this->execSQL($params);
-        $this->setData();
-    }
-*/
+        public function getDeleteAction(){
+            $id = $this->controller->getParam('id');
+            $this->sql = 'DELETE from categorias where id = :id';
+            $params = array(
+                'id' => $id,
+            );
+            $this->setSQL($params);
+        }
 }
