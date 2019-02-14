@@ -14,15 +14,13 @@
 
     header("Access-Control-Allow-Origin: * ");
 	header("Access-Control-Allow-Headers: * ");
-	header("Access-Control-Allow-Methods: POST, PUT, GET, OPTIONS");
+	header("Access-Control-Allow-Methods: POST, PUT, GET, DELETE, OPTIONS");
     try {
         $mysql = new PDO("mysql:dbname=tiendafinal;host=localhost", "root", "");
        // $mysql = new PDO("mysql:dbname=pcgo;host=192.168.59.104:3306", "root", "root");
         $mysql->exec("set names utf8");
         $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
-        /*echo "<p>Error: Cannot connect to database server.</p>\n";
-        echo $e;*/
        http_response_code(500);
         exit();
     }
