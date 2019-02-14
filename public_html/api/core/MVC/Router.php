@@ -42,12 +42,9 @@ class Router {
 		foreach ($routes["post"] as $currentRoute) {
 			$this->addRoute($currentRoute, 'post');
 		}
-<<<<<<< HEAD
-=======
 		foreach ($routes["put"] as $currentRoute) {
 			$this->addRoute($currentRoute, 'put');
 		}
->>>>>>> origin/alejandro
 	}
 
 

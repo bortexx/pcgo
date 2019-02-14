@@ -1,9 +1,4 @@
 <?php
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/alejandro
 return array(	
 	"get" => array(
 		"Categorias" => array(
@@ -45,12 +40,6 @@ return array(
 			"route" => "/pcgo/api/logout",
 			"resource" => "logout",
 			"action" => "getAll"
-<<<<<<< HEAD
-		),
-	),
-
-	"post" => array(
-=======
 		),		
 	),
 	
@@ -65,7 +54,6 @@ return array(
 			"resource" => "compra",
 			"action" => "postAll"
 		),
->>>>>>> origin/alejandro
 		"Categorias" => array(
 			"route" => "pcgo/api/categorias",
 			"resource" => "categorias",
@@ -106,17 +94,6 @@ return array(
 			"resource" => "logout",
 			"action" => "postAll"
 		),
-<<<<<<< HEAD
-		"Comprar" => array(
-			"route" => "/pcgo/api/comprar",
-			"resource" => "compra",
-			"action" => "postAll"
-		),
-	)
-);
-
-
-=======
 		
 	),
 	"put" => array(
@@ -138,4 +115,3 @@ return array(
 	)
 );
 
->>>>>>> origin/alejandro
