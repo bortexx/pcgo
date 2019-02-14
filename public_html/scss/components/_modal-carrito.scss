@@ -1,14 +1,22 @@
 .modal-body{
     overflow-y: auto;
 }
+<<<<<<< HEAD
 .modal-content--tamaño{
     right:90%;
+=======
+.modal-footer__precio{
+    margin-bottom: 1px;
+}
+.modal-content--tamaño{
+>>>>>>> origin/kevin
     width: 90vw;
     height: 90vh;
 }
 
 .modal-carrito-body__boton-mas{
     border-radius: 25px;
+<<<<<<< HEAD
     padding-top: 4px;
     padding-bottom: 4px;
     background-color: $modalCarritoFondoBotones;
@@ -27,6 +35,24 @@
     outline:none;
     margin-left:auto;
     margin-right: 5px;
+=======
+    background-color: #292c2f;
+    color: #FFFFFF;
+    border: none;
+    margin-left: 3px;
+    outline:none;
+    margin-right: 50px;
+}
+.modal-carrito-body__boton-menos{
+    border-radius: 25px;
+    background-color: #292c2f;
+    color: #FFFFFF;
+    border: none;
+    margin-right: -7px;
+    outline:none;
+    margin-left: 10px;
+
+>>>>>>> origin/kevin
 }
 
 .modal-carrito-body__boton:focus { 
@@ -38,6 +64,7 @@
     outline-color: transparent; 
     outline-style: none;
 }
+<<<<<<< HEAD
 @media only screen and (max-width: 600px) and (min-width: 501px)  {
     .modal-content--tamaño{
         right:initial;
@@ -59,15 +86,42 @@
     .imagenCarrito{
         width: 20px;
         height: 20px;
+=======
+.modal-content{
+margin-left: 30px;
+margin-right: 30px;
+}
+
+.modal-carrito__body-precio{
+    margin-right: 20px;
+}
+.modal-carrito__body-precio2{
+    margin-right: 20px;
+    }
+@media(max-width:500px) {
+    .modal-content--tamaño{
+        width: 200px;
+        height: auto;
+>>>>>>> origin/kevin
     }
 }
 
 .modalBody__articuloCarrito{
+<<<<<<< HEAD
     @include flex(row, flex-start, center);
     
 }
 .modalBody__articuloCarrito--oscuro{
     @include flex(row, flex-start, center);
+=======
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.modalBody__articuloCarrito--oscuro{
+>>>>>>> origin/kevin
     background-color: $fondoLandingPage;
 }
 
@@ -78,6 +132,7 @@
 
 .item{
     margin-left: 10px;
+<<<<<<< HEAD
     font-family: $letra;
 }
 
@@ -131,3 +186,6 @@
     color: $modalCarritoColorLetra;
     font-size: 30px;
 }
+=======
+}
+>>>>>>> origin/kevin

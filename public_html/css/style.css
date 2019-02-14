@@ -1,10 +1,18 @@
 @charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+<<<<<<< HEAD
 /* Document
    ========================================================================== */
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
+=======
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+>>>>>>> origin/kevin
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 html {
@@ -13,33 +21,59 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */ }
 
+<<<<<<< HEAD
 /* Sections
    ========================================================================== */
 /**
  * Remove the margin in all browsers.
+=======
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+>>>>>>> origin/kevin
  */
 body {
   margin: 0; }
 
+<<<<<<< HEAD
 /**
  * Render the `main` element consistently in IE.
+=======
+/**
+ * Render the `main` element consistently in IE.
+>>>>>>> origin/kevin
  */
 main {
   display: block; }
 
+<<<<<<< HEAD
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
+=======
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+>>>>>>> origin/kevin
  */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
+<<<<<<< HEAD
 /* Grouping content
    ========================================================================== */
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
+=======
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+>>>>>>> origin/kevin
  */
 hr {
   box-sizing: content-box;
@@ -49,9 +83,15 @@ hr {
   overflow: visible;
   /* 2 */ }
 
+<<<<<<< HEAD
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
+=======
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+>>>>>>> origin/kevin
  */
 pre {
   font-family: monospace, monospace;
@@ -59,17 +99,30 @@ pre {
   font-size: 1em;
   /* 2 */ }
 
+<<<<<<< HEAD
 /* Text-level semantics
    ========================================================================== */
 /**
  * Remove the gray background on active links in IE 10.
+=======
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+>>>>>>> origin/kevin
  */
 a {
   background-color: transparent; }
 
+<<<<<<< HEAD
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+=======
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+>>>>>>> origin/kevin
  */
 abbr[title] {
   border-bottom: none;
@@ -79,16 +132,27 @@ abbr[title] {
   text-decoration: underline dotted;
   /* 2 */ }
 
+<<<<<<< HEAD
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
+=======
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+>>>>>>> origin/kevin
  */
 b,
 strong {
   font-weight: bolder; }
 
+<<<<<<< HEAD
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
+=======
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+>>>>>>> origin/kevin
  */
 code,
 kbd,
@@ -98,15 +162,26 @@ samp {
   font-size: 1em;
   /* 2 */ }
 
+<<<<<<< HEAD
 /**
  * Add the correct font size in all browsers.
+=======
+/**
+ * Add the correct font size in all browsers.
+>>>>>>> origin/kevin
  */
 small {
   font-size: 80%; }
 
+<<<<<<< HEAD
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
+=======
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+>>>>>>> origin/kevin
  */
 sub,
 sup {
@@ -121,19 +196,34 @@ sub {
 sup {
   top: -0.5em; }
 
+<<<<<<< HEAD
 /* Embedded content
    ========================================================================== */
 /**
  * Remove the border on images inside links in IE 10.
+=======
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+>>>>>>> origin/kevin
  */
 img {
   border-style: none; }
 
+<<<<<<< HEAD
 /* Forms
    ========================================================================== */
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
+=======
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+>>>>>>> origin/kevin
  */
 button,
 input,
@@ -149,26 +239,43 @@ textarea {
   margin: 0;
   /* 2 */ }
 
+<<<<<<< HEAD
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
+=======
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+>>>>>>> origin/kevin
  */
 button,
 input {
   /* 1 */
   overflow: visible; }
 
+<<<<<<< HEAD
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
+=======
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+>>>>>>> origin/kevin
  */
 button,
 select {
   /* 1 */
   text-transform: none; }
 
+<<<<<<< HEAD
 /**
  * Correct the inability to style clickable types in iOS and Safari.
+=======
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+>>>>>>> origin/kevin
  */
 button,
 [type="button"],
@@ -176,8 +283,13 @@ button,
 [type="submit"] {
   -webkit-appearance: button; }
 
+<<<<<<< HEAD
 /**
  * Remove the inner border and padding in Firefox.
+=======
+/**
+ * Remove the inner border and padding in Firefox.
+>>>>>>> origin/kevin
  */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -186,8 +298,13 @@ button::-moz-focus-inner,
   border-style: none;
   padding: 0; }
 
+<<<<<<< HEAD
 /**
  * Restore the focus styles unset by the previous rule.
+=======
+/**
+ * Restore the focus styles unset by the previous rule.
+>>>>>>> origin/kevin
  */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
@@ -195,17 +312,30 @@ button:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText; }
 
+<<<<<<< HEAD
 /**
  * Correct the padding in Firefox.
+=======
+/**
+ * Correct the padding in Firefox.
+>>>>>>> origin/kevin
  */
 fieldset {
   padding: 0.35em 0.75em 0.625em; }
 
+<<<<<<< HEAD
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
+=======
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+>>>>>>> origin/kevin
  */
 legend {
   box-sizing: border-box;
@@ -221,21 +351,37 @@ legend {
   white-space: normal;
   /* 1 */ }
 
+<<<<<<< HEAD
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+=======
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+>>>>>>> origin/kevin
  */
 progress {
   vertical-align: baseline; }
 
+<<<<<<< HEAD
 /**
  * Remove the default vertical scrollbar in IE 10+.
+=======
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+>>>>>>> origin/kevin
  */
 textarea {
   overflow: auto; }
 
+<<<<<<< HEAD
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
+=======
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+>>>>>>> origin/kevin
  */
 [type="checkbox"],
 [type="radio"] {
@@ -244,16 +390,27 @@ textarea {
   padding: 0;
   /* 2 */ }
 
+<<<<<<< HEAD
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
+=======
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+>>>>>>> origin/kevin
  */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
+<<<<<<< HEAD
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
+=======
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+>>>>>>> origin/kevin
  */
 [type="search"] {
   -webkit-appearance: textfield;
@@ -261,15 +418,26 @@ textarea {
   outline-offset: -2px;
   /* 2 */ }
 
+<<<<<<< HEAD
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
+=======
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+>>>>>>> origin/kevin
  */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
+<<<<<<< HEAD
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
+=======
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+>>>>>>> origin/kevin
  */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
@@ -277,37 +445,67 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+<<<<<<< HEAD
 /* Interactive
    ========================================================================== */
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
+=======
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+>>>>>>> origin/kevin
  */
 details {
   display: block; }
 
+<<<<<<< HEAD
 /*
  * Add the correct display in all browsers.
+=======
+/*
+ * Add the correct display in all browsers.
+>>>>>>> origin/kevin
  */
 summary {
   display: list-item; }
 
+<<<<<<< HEAD
 /* Misc
    ========================================================================== */
 /**
  * Add the correct display in IE 10+.
+=======
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+>>>>>>> origin/kevin
  */
 template {
   display: none; }
 
+<<<<<<< HEAD
 /**
  * Add the correct display in IE 10.
+=======
+/**
+ * Add the correct display in IE 10.
+>>>>>>> origin/kevin
  */
 [hidden] {
   display: none; }
 
+<<<<<<< HEAD
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
+=======
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+>>>>>>> origin/kevin
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -376,11 +574,19 @@ html {
 
 .l-landing-page {
   display: grid;
-  grid-template-areas: "page__header page__header page__header page__header page__header page__header " "page__carousel page__carousel page__carousel page__carousel page__carousel page__carousel " "page__aside page__container page__container page__container page__container page__container " "page__aside page__container page__container page__container page__container page__container " "page__footer page__footer page__footer page__footer page__footer page__footer "; }
+  grid-template-areas: "page__header page__header page__header page__header page__header page__header "
+ "page__carousel page__carousel page__carousel page__carousel page__carousel page__carousel "
+ "page__aside page__container page__container page__container page__container page__container "
+ "page__aside page__container page__container page__container page__container page__container "
+ "page__footer page__footer page__footer page__footer page__footer page__footer "; }
 
 @media (max-width: 727px) {
   .l-landing-page {
-    grid-template-areas: "page__header" "page__aside" "page__carousel" "page__container" "page__footer"; } }
+    grid-template-areas: "page__header"
+ "page__aside"
+ "page__carousel"
+ "page__container"
+ "page__footer"; } }
 
 .l-landing-page__header {
   grid-area: page__header; }
@@ -445,7 +651,11 @@ html {
 .menu-side__item:hover {
   display: block;
   text-align: center;
+<<<<<<< HEAD
   background-color: #202124;
+=======
+  background-color: #000000;
+>>>>>>> origin/kevin
   color: white; }
 
 .menu-side__items {
@@ -479,9 +689,12 @@ html {
     animation-name: slide2;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     flex-wrap: wrap;
     justify-content: none;
     align-items: none;
+=======
+>>>>>>> origin/kevin
     position: absolute;
     z-index: 0;
     width: 100%;
@@ -494,9 +707,12 @@ html {
     animation-name: slideoff;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     flex-wrap: wrap;
     justify-content: none;
     align-items: none;
+=======
+>>>>>>> origin/kevin
     position: absolute;
     z-index: 0;
     width: 100%;
@@ -544,12 +760,19 @@ html {
 @media (max-width: 727px) {
   .main-menu {
     display: flex;
+<<<<<<< HEAD
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: none;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
     background-color: #202124;
+=======
+    justify-content: flex-start;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: #202124;
+    flex-wrap: wrap;
+>>>>>>> origin/kevin
     position: absolute;
     z-index: 1;
     width: 100%; }
@@ -569,8 +792,11 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+<<<<<<< HEAD
   justify-content: none;
   align-items: none;
+=======
+>>>>>>> origin/kevin
   font-family: Libre Franklin, sans-serif;
   width: 100%;
   color: #FFFFFF;
@@ -606,9 +832,13 @@ html {
   .main-menu__items {
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
     flex-wrap: wrap;
     justify-content: none;
     align-items: none; } }
+=======
+    flex-wrap: wrap; } }
+>>>>>>> origin/kevin
 
 @media (max-width: 276px) {
   .main-menu__item--invisible {
@@ -619,7 +849,10 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+<<<<<<< HEAD
     justify-content: none;
+=======
+>>>>>>> origin/kevin
     align-items: center; }
   .main-menu__item--derecha {
     margin-left: 0px; } }
@@ -635,30 +868,43 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+<<<<<<< HEAD
   justify-content: space-around;
   align-items: none; }
+=======
+  justify-content: space-around; }
+>>>>>>> origin/kevin
 
 .footer__izquierda {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
   align-items: none;
   color: #FFFFFF; }
+=======
+  color: white; }
+>>>>>>> origin/kevin
 
 .footer__centro {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
   align-items: none;
   color: #FFFFFF;
+=======
+  color: white;
+>>>>>>> origin/kevin
   margin-bottom: 10px;
   margin-top: 45px; }
 
 .footer__derecha {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
   align-items: none;
@@ -672,10 +918,20 @@ html {
   flex-wrap: wrap;
   justify-content: none;
   align-items: none; }
+=======
+  color: white;
+  margin-top: 45px; }
+
+.footer__links {
+  color: white;
+  display: flex;
+  flex-direction: column; }
+>>>>>>> origin/kevin
 
 .footer__iconos {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
   align-items: none;
@@ -683,6 +939,12 @@ html {
 
 .footer__copyright {
   color: #FFFFFF;
+=======
+  color: white; }
+
+.footer__copyright {
+  color: white;
+>>>>>>> origin/kevin
   margin-top: auto;
   font-size: 12px;
   text-align: center;
@@ -693,6 +955,10 @@ html {
 
 .card {
   width: 200px;
+<<<<<<< HEAD
+=======
+  border: 1px solid black;
+>>>>>>> origin/kevin
   align-items: center;
   text-align: center;
   margin: 20px; }
@@ -717,18 +983,39 @@ html {
 
 .card__boton {
   color: #FFFFFF;
+<<<<<<< HEAD
   font-family: Libre Franklin, sans-serif;
   background-color: #202124;
+=======
+  background-color: #292c2f;
+>>>>>>> origin/kevin
   border: none;
   border-radius: 0px;
   height: 40px;
   width: 100%;
   margin-top: 10px; }
 
+<<<<<<< HEAD
 .modal__botonPrimario {
   color: #FFFFFF;
   font-family: Libre Franklin, sans-serif;
   background-color: #202124;
+=======
+.modal-footer1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.modal__botonPrimario {
+  color: #FFFFFF;
+  background-color: #292c2f;
+>>>>>>> origin/kevin
   border: none;
   height: 100%;
   width: 100%;
@@ -743,6 +1030,7 @@ html {
 
 .modal-body-a {
   padding: 20px;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -757,27 +1045,55 @@ html {
   margin-right: auto;
   margin-left: auto;
   font-family: Libre Franklin, sans-serif; }
+=======
+  display: flex; }
+
+.modal-body-b {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+.modal-body__contador {
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: auto; }
+>>>>>>> origin/kevin
 
 .modal-body__precio {
   text-align: center;
   margin-bottom: 15px;
+<<<<<<< HEAD
   margin-top: 15px;
   font-family: Libre Franklin, sans-serif; }
+=======
+  margin-top: 15px; }
+>>>>>>> origin/kevin
 
 .modal-derecha {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: center;
   align-items: none;
   width: 100%;
+=======
+  width: 100%;
+  justify-content: center;
+>>>>>>> origin/kevin
   text-align: center; }
 
 .moda-body__boton-menos {
   border-radius: 25px;
+<<<<<<< HEAD
   padding-top: 4px;
   padding-bottom: 4px;
   background-color: #202124;
+=======
+  background-color: #292c2f;
+>>>>>>> origin/kevin
   color: #FFFFFF;
   border: none;
   margin-right: 5px;
@@ -793,13 +1109,18 @@ html {
 
 .moda-body__boton-mas {
   border-radius: 25px;
+<<<<<<< HEAD
   padding-top: 4px;
   padding-bottom: 4px;
   background-color: #202124;
+=======
+  background-color: #292c2f;
+>>>>>>> origin/kevin
   color: #FFFFFF;
   border: none;
   margin-left: 5px; }
 
+<<<<<<< HEAD
 .modal-body__descripcion {
   font-family: Libre Franklin, sans-serif; }
 
@@ -820,6 +1141,8 @@ html {
   color: #FFFFFF;
   font-size: 30px; }
 
+=======
+>>>>>>> origin/kevin
 .info {
   display: none; }
 
@@ -838,7 +1161,11 @@ html {
 .loginmodal-container h1 {
   text-align: center;
   font-size: 1.8em;
+<<<<<<< HEAD
   font-family: Libre Franklin, sans-serif; }
+=======
+  font-family: roboto; }
+>>>>>>> origin/kevin
 
 .loginmodal-container input[type=submit] {
   width: 100%;
@@ -875,7 +1202,11 @@ html {
   height: 36px;
   padding: 0 8px;
   /* border-radius: 3px; */
+<<<<<<< HEAD
   /* -webkit-user-select: none;
+=======
+  /* -webkit-user-select: none;
+>>>>>>> origin/kevin
   user-select: none; */ }
 
 .loginmodal-submit {
@@ -927,9 +1258,12 @@ html {
   animation-name: slide;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
   align-items: none;
+=======
+>>>>>>> origin/kevin
   position: absolute;
   width: 120px;
   animation-timing-function: linear;
@@ -960,9 +1294,12 @@ html {
     animation-name: slide;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     flex-wrap: wrap;
     justify-content: none;
     align-items: none;
+=======
+>>>>>>> origin/kevin
     position: absolute;
     width: 120px;
     animation-timing-function: linear;
@@ -981,22 +1318,35 @@ html {
     right: 30px;
     z-index: 10;
     border-radius: 25px;
+<<<<<<< HEAD
     padding: 10px;
     border: none;
     outline: none;
     background-color: #202124;
     color: #FFFFFF; } }
+=======
+    border: none;
+    outline: none; } }
+>>>>>>> origin/kevin
 
 .modal-body {
   overflow-y: auto; }
 
+<<<<<<< HEAD
 .modal-content--tamaño {
   right: 90%;
+=======
+.modal-footer__precio {
+  margin-bottom: 1px; }
+
+.modal-content--tamaño {
+>>>>>>> origin/kevin
   width: 90vw;
   height: 90vh; }
 
 .modal-carrito-body__boton-mas {
   border-radius: 25px;
+<<<<<<< HEAD
   padding-top: 4px;
   padding-bottom: 4px;
   background-color: #202124;
@@ -1015,6 +1365,23 @@ html {
   outline: none;
   margin-left: auto;
   margin-right: 5px; }
+=======
+  background-color: #292c2f;
+  color: #FFFFFF;
+  border: none;
+  margin-left: 3px;
+  outline: none;
+  margin-right: 50px; }
+
+.modal-carrito-body__boton-menos {
+  border-radius: 25px;
+  background-color: #292c2f;
+  color: #FFFFFF;
+  border: none;
+  margin-right: -7px;
+  outline: none;
+  margin-left: 10px; }
+>>>>>>> origin/kevin
 
 .modal-carrito-body__boton:focus {
   outline-color: transparent;
@@ -1024,6 +1391,7 @@ html {
   outline-color: transparent;
   outline-style: none; }
 
+<<<<<<< HEAD
 @media only screen and (max-width: 600px) and (min-width: 501px) {
   .modal-content--tamaño {
     right: initial;
@@ -1041,6 +1409,22 @@ html {
   .imagenCarrito {
     width: 20px;
     height: 20px; } }
+=======
+.modal-content {
+  margin-left: 30px;
+  margin-right: 30px; }
+
+.modal-carrito__body-precio {
+  margin-right: 20px; }
+
+.modal-carrito__body-precio2 {
+  margin-right: 20px; }
+
+@media (max-width: 500px) {
+  .modal-content--tamaño {
+    width: 200px;
+    height: auto; } }
+>>>>>>> origin/kevin
 
 .modalBody__articuloCarrito {
   display: flex;
@@ -1050,11 +1434,14 @@ html {
   align-items: center; }
 
 .modalBody__articuloCarrito--oscuro {
+<<<<<<< HEAD
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+=======
+>>>>>>> origin/kevin
   background-color: #E7E7E7; }
 
 .imagenCarrito {
@@ -1062,6 +1449,7 @@ html {
   height: 170px; }
 
 .item {
+<<<<<<< HEAD
   margin-left: 10px;
   font-family: Libre Franklin, sans-serif; }
 
@@ -1118,3 +1506,6 @@ html {
 .modal-header-carrito__close:hover {
   color: #FFFFFF;
   font-size: 30px; }
+=======
+  margin-left: 10px; }
+>>>>>>> origin/kevin

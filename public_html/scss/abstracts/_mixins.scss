@@ -2,6 +2,7 @@
     @if $debug==1{
         border: solid 1px $color;
     }
+<<<<<<< HEAD
 }
 
 @mixin flex($direction, $justifyContent, $alignItems){
@@ -10,4 +11,6 @@
     flex-wrap: wrap;
     justify-content: $justifyContent;
     align-items: $alignItems;
+=======
+>>>>>>> origin/kevin
 }

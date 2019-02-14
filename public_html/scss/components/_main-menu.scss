@@ -22,9 +22,17 @@
 
 @media(max-width:727px) {
     .main-menu {
+<<<<<<< HEAD
         @include flex(row, flex-start, none);
         box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
         background-color: $fondoMainMenu;
+=======
+        display: flex;
+        justify-content: flex-start;
+        box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
+        background-color: $fondoMainMenu;
+        flex-wrap: wrap;
+>>>>>>> origin/kevin
         position: absolute;
         z-index: 1;
         width: 100%;
@@ -56,7 +64,13 @@
 
 
 .main-menu__items {
+<<<<<<< HEAD
     @include flex(row, none, none);
+=======
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+>>>>>>> origin/kevin
     font-family: $letra;
     width: 100%;
     color: $colorLetraMainMenu;
@@ -107,7 +121,13 @@
     }
 
     .main-menu__items {
+<<<<<<< HEAD
         @include flex(row, none, none);
+=======
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+>>>>>>> origin/kevin
     }
 }
 
@@ -121,7 +141,14 @@
     }
 
     .main-menu__items {
+<<<<<<< HEAD
         @include flex(row, none, center);
+=======
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+>>>>>>> origin/kevin
     }
 
     .main-menu__item--derecha {

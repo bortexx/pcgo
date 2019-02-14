@@ -1,7 +1,25 @@
+<<<<<<< HEAD
 .modal__botonPrimario{
     color: $modalColorLetraBotones;
     font-family: $letra;
     background-color: $modalFondoBotones;
+=======
+  .modal-footer1{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.modal__botonPrimario{
+    color: #FFFFFF;
+    background-color: #292c2f;
+>>>>>>> origin/kevin
     border: none;
     height: 100%;
     width: 100%;
@@ -18,6 +36,7 @@ height: 300px;
 
 .modal-body-a{
     padding: 20px;
+<<<<<<< HEAD
     @include flex(column, none, none);
     text-align: center;
 }
@@ -30,6 +49,23 @@ height: 300px;
     margin-right: auto;
     margin-left: auto;
     font-family: $letra;
+=======
+display: flex;
+}
+.modal-body-b{
+    padding: 20px;
+    display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+
+}
+
+.modal-body__contador{
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+>>>>>>> origin/kevin
 }
 
 
@@ -37,21 +73,36 @@ height: 300px;
     text-align: center;
     margin-bottom: 15px;
     margin-top: 15px;
+<<<<<<< HEAD
     font-family: $letra;
 }
 .modal-derecha{
     @include flex(column, center, none);
     width: 100%;
+=======
+
+}
+.modal-derecha{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+>>>>>>> origin/kevin
     text-align:center;
 
 }
 
 .moda-body__boton-menos{
 border-radius: 25px;
+<<<<<<< HEAD
 padding-top: 4px;
 padding-bottom: 4px;
 background-color: $modalFondoBotones;
 color:$modalColorLetraBotones;
+=======
+background-color: #292c2f;
+color:#FFFFFF;
+>>>>>>> origin/kevin
 border:none;
 margin-right: 5px;
 outline: none;
@@ -68,6 +119,7 @@ outline: none;
 }
 .moda-body__boton-mas{
     border-radius: 25px;
+<<<<<<< HEAD
     padding-top: 4px;
     padding-bottom: 4px;
     background-color: $modalFondoBotones;
@@ -94,4 +146,10 @@ outline: none;
 .modal-header-producto__close:hover{
     color: $modalColorLetra;
     font-size: 30px;
+=======
+    background-color: #292c2f;
+    color:#FFFFFF;
+    border:none;
+    margin-left: 5px;
+>>>>>>> origin/kevin
 }

@@ -2,41 +2,29 @@
 
 use core\MVC\Resource as Resource;
 
-class CompruebaResource extends Resource {
+class CompraResource extends Resource {
+
+    public function getAllAction() {
+
+    }
 
     public function postAllAction() {
-	
-		//var_dump($_POST);
-		
-        $usuario = htmlspecialchars($_POST['usuario']);
-        $password = htmlspecialchars($_POST['contrasenya']);
+        
+        $producto = $_POST['articulo'];
+        $unidades = $_POST['unidades'];
+        $idUsuario = $_SESSION["id"];
+    
+        $precioTotalArticulo = $unidades * $producto[3];
+            
         try{
-            $this->sql = "SELECT id, nombreUsuario, contrasenya, admin FROM usuarios  
-            WHERE nombreUsuario = '$usuario' LIMIT 1";        
-            $this->execSQL();
+            $this->sql ="INSERT INTO `detallescompra` (lineaCompra,idUsuario,idProducto,unidades,precio,importe) 
+            VALUES (null,$idUsuario,$producto[0],$unidades,$producto[3],$precioTotalArticulo)";
+            $this->setSQL();   
+            echo "Gracias por la compra";
         } catch (PDOException $e) {
             http_response_code(500);
             exit();
-        }
-        $usuario_comprueba =  $this->data[0]['nombreUsuario'];
-        $password_comprueba = $this->data[0]['contrasenya'];
-		$isAdmin = $this->data[0]['admin'];
         
-        if ($this->num_rows === 0) {
-            http_response_code(401);
-        }
-        else if ($password == $password_comprueba) {
-            setcookie("DWS", $this->data[0]['id'] . ";" . $this->data[0]['nombreUsuario'], time() + (86400 * 7));  
-			$data = array("status" => "ok", "admin" => $isAdmin);
-			$json = json_encode($data);
-			print_r($json);
-        } else {
-            http_response_code(401);
-        }
-
-
-        
-    
     }
-
 }
+    }

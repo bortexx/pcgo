@@ -1,5 +1,9 @@
 .card {
     width: 200px;
+<<<<<<< HEAD
+=======
+    border: 1px solid black;
+>>>>>>> origin/kevin
     align-items: center;
     text-align: center;
     margin: 20px;
@@ -28,9 +32,14 @@
     font-family: $letra;
 }
 .card__boton{
+<<<<<<< HEAD
     color: $cardColorLetraBoton;
     font-family: $letra;
     background-color: $modalFondoBotones;
+=======
+    color: #FFFFFF;
+    background-color: #292c2f;
+>>>>>>> origin/kevin
     border: none;
     border-radius: 0px;
     //height: 100%;
