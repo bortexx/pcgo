@@ -3,6 +3,7 @@
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
     text-align: left;
     @include flex(row, space-around, none);
 }
@@ -14,6 +15,8 @@
     @include flex(column, none, none);
     color:$footerColorLetra;
 =======
+=======
+>>>>>>> origin/alejandro
 	text-align: left;
     display:flex;
     flex-direction: row;
@@ -29,11 +32,15 @@
     display:flex;
     flex-direction: column; 
     color:white;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     margin-bottom: 10px;
     margin-top: 45px;
 }
 .footer__derecha{
+<<<<<<< HEAD
 <<<<<<< HEAD
     @include flex(column, none, none);
     color:$footerColorLetra;
@@ -51,6 +58,8 @@
 .footer__copyright{
     color:$footerColorLetra;
 =======
+=======
+>>>>>>> origin/alejandro
     display:flex;
     flex-direction: column;
     color:white;
@@ -69,7 +78,10 @@
 }
 .footer__copyright{
     color:white;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     margin-top: auto;
     font-size: 12px;
     text-align: center;

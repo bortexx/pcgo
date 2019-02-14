@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .modal__botonPrimario{
     color: $modalColorLetraBotones;
     font-family: $letra;
     background-color: $modalFondoBotones;
 =======
+=======
+>>>>>>> origin/alejandro
   .modal-footer1{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -19,7 +22,10 @@
 .modal__botonPrimario{
     color: #FFFFFF;
     background-color: #292c2f;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     border: none;
     height: 100%;
     width: 100%;
@@ -37,6 +43,7 @@ height: 300px;
 .modal-body-a{
     padding: 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     @include flex(column, none, none);
     text-align: center;
 }
@@ -50,6 +57,8 @@ height: 300px;
     margin-left: auto;
     font-family: $letra;
 =======
+=======
+>>>>>>> origin/alejandro
 display: flex;
 }
 .modal-body-b{
@@ -65,7 +74,10 @@ flex-direction: row;
     flex-direction: row;
     margin-right: auto;
     margin-left: auto;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
 }
 
 
@@ -74,12 +86,15 @@ flex-direction: row;
     margin-bottom: 15px;
     margin-top: 15px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-family: $letra;
 }
 .modal-derecha{
     @include flex(column, center, none);
     width: 100%;
 =======
+=======
+>>>>>>> origin/alejandro
 
 }
 .modal-derecha{
@@ -87,13 +102,17 @@ flex-direction: row;
     flex-direction: column;
     width: 100%;
     justify-content: center;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     text-align:center;
 
 }
 
 .moda-body__boton-menos{
 border-radius: 25px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 padding-top: 4px;
 padding-bottom: 4px;
@@ -103,6 +122,10 @@ color:$modalColorLetraBotones;
 background-color: #292c2f;
 color:#FFFFFF;
 >>>>>>> origin/kevin
+=======
+background-color: #292c2f;
+color:#FFFFFF;
+>>>>>>> origin/alejandro
 border:none;
 margin-right: 5px;
 outline: none;
@@ -119,6 +142,7 @@ outline: none;
 }
 .moda-body__boton-mas{
     border-radius: 25px;
+<<<<<<< HEAD
 <<<<<<< HEAD
     padding-top: 4px;
     padding-bottom: 4px;
@@ -147,9 +171,14 @@ outline: none;
     color: $modalColorLetra;
     font-size: 30px;
 =======
+=======
+>>>>>>> origin/alejandro
     background-color: #292c2f;
     color:#FFFFFF;
     border:none;
     margin-left: 5px;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
 }

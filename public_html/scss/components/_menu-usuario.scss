@@ -21,11 +21,16 @@
     animation-duration: 0.1s;
     animation-name: slide;
 <<<<<<< HEAD
+<<<<<<< HEAD
     @include flex(column, none, none);
 =======
     display: flex;
     flex-direction: column;
 >>>>>>> origin/kevin
+=======
+    display: flex;
+    flex-direction: column;
+>>>>>>> origin/alejandro
     position: absolute;
     width: 120px;
     animation-timing-function: linear;
@@ -69,11 +74,16 @@
         animation-duration: 0.1s;
         animation-name: slide;
 <<<<<<< HEAD
+<<<<<<< HEAD
         @include flex(column, none, none);
 =======
         display: flex;
         flex-direction: column;
 >>>>>>> origin/kevin
+=======
+        display: flex;
+        flex-direction: column;
+>>>>>>> origin/alejandro
         position: absolute;
         width: 120px;
         animation-timing-function: linear;

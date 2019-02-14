@@ -1,6 +1,9 @@
 <?php
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/alejandro
 return array(	
 	"get" => array(
 		"Categorias" => array(
@@ -42,10 +45,27 @@ return array(
 			"route" => "/pcgo/api/logout",
 			"resource" => "logout",
 			"action" => "getAll"
+<<<<<<< HEAD
 		),
 	),
 
 	"post" => array(
+=======
+		),		
+	),
+	
+	"post" => array(
+		"Pedidos" => array(
+			"route" => "pcgo/api/pedidos",
+			"resource" => "pedidos",
+			"action" => "postPedido"
+		),
+		"Comprar" => array(
+			"route" => "pcgo/api/comprar",
+			"resource" => "compra",
+			"action" => "postAll"
+		),
+>>>>>>> origin/alejandro
 		"Categorias" => array(
 			"route" => "pcgo/api/categorias",
 			"resource" => "categorias",
@@ -86,6 +106,7 @@ return array(
 			"resource" => "logout",
 			"action" => "postAll"
 		),
+<<<<<<< HEAD
 		"Comprar" => array(
 			"route" => "/pcgo/api/comprar",
 			"resource" => "compra",
@@ -95,3 +116,26 @@ return array(
 );
 
 
+=======
+		
+	),
+	"put" => array(
+		"Usuarios" => array(
+			"route" => "pcgo/api/usuarios",
+			"resource" => "usuarios",
+			"action" => "putUsuarioById"
+		),
+		"Categorias" => array(
+			"route" => "pcgo/api/categorias",
+			"resource" => "categorias",
+			"action" => "putCategoria"
+		),
+		"Productos" => array(
+			"route" => "pcgo/api/productos",
+			"resource" => "productos",
+			"action" => "putProducto"
+		)
+	)
+);
+
+>>>>>>> origin/alejandro

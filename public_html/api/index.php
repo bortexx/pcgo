@@ -11,12 +11,13 @@
 
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
-    header("Access-Control-Allow-Origin: * ");
-    header("Access-Control-Allow-Headers: *");
 
+    header("Access-Control-Allow-Origin: * ");
+	header("Access-Control-Allow-Headers: * ");
+	header("Access-Control-Allow-Methods: POST, PUT, GET, OPTIONS");
     try {
-        $mysql = new PDO("mysql:dbname=tienda2;host=localhost", "root", "");
-        //$mysql = new PDO("mysql:dbname=tienda2;host=172.16.205.57:3303", "root", "root");
+        $mysql = new PDO("mysql:dbname=tienda;host=localhost", "root", "");
+       // $mysql = new PDO("mysql:dbname=pcgo;host=192.168.59.104:3306", "root", "root");
         $mysql->exec("set names utf8");
         $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {

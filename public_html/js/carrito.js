@@ -8,7 +8,10 @@ class Carrito{
         let distinto = true;
         if(this.articulos.length == 0){
             this.articulos.push({articulo, unidades});
+<<<<<<< HEAD
             console.log({articulo, unidades});
+=======
+>>>>>>> origin/alejandro
         }else{
             for(let i=0; i < this.articulos.length; i++){
                 if(this.articulos[i].articulo[0] == articulo[0]){

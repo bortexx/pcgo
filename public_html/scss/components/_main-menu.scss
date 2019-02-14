@@ -23,16 +23,22 @@
 @media(max-width:727px) {
     .main-menu {
 <<<<<<< HEAD
+<<<<<<< HEAD
         @include flex(row, flex-start, none);
         box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
         background-color: $fondoMainMenu;
 =======
+=======
+>>>>>>> origin/alejandro
         display: flex;
         justify-content: flex-start;
         box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
         background-color: $fondoMainMenu;
         flex-wrap: wrap;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
         position: absolute;
         z-index: 1;
         width: 100%;
@@ -65,12 +71,18 @@
 
 .main-menu__items {
 <<<<<<< HEAD
+<<<<<<< HEAD
     @include flex(row, none, none);
 =======
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 >>>>>>> origin/kevin
+=======
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+>>>>>>> origin/alejandro
     font-family: $letra;
     width: 100%;
     color: $colorLetraMainMenu;
@@ -122,12 +134,18 @@
 
     .main-menu__items {
 <<<<<<< HEAD
+<<<<<<< HEAD
         @include flex(row, none, none);
 =======
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
 >>>>>>> origin/kevin
+=======
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+>>>>>>> origin/alejandro
     }
 }
 
@@ -142,13 +160,19 @@
 
     .main-menu__items {
 <<<<<<< HEAD
+<<<<<<< HEAD
         @include flex(row, none, center);
 =======
+=======
+>>>>>>> origin/alejandro
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     }
 
     .main-menu__item--derecha {

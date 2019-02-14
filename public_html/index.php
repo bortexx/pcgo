@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="vendor/font-awesome/css/all.css" rel="stylesheet" type="text/css" />
@@ -20,6 +21,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 =======
+=======
+>>>>>>> origin/alejandro
     <link href="vendor/font-awesome/css/all.css" rel="stylesheet" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -28,7 +31,10 @@
         crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>   
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     <script src="js/repository.js" type="text/javascript"></script>
     <script src="js/eliminarElementos.js" type="text/javascript"></script>
     <script src="js/articulo.js" type="text/javascript"></script>
@@ -36,13 +42,19 @@
     <script src="js/IndexController.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/alejandro
     <link href="https://fonts.googleapis.com/css?family=Aleo|Libre+Baskerville|Libre+Franklin|Oswald|Roboto+Mono" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
 </head>
 
 <body class="body">
@@ -250,6 +262,7 @@
             <!-- Modal content-->
             <div class="modal-content modal-content--tamaño">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="modal-header modal-headerCarrito">
                 <h5 class='modal-header-carrito__titulo'>Carrito GO</h5>
                 <button type="button" class="close modal-header-carrito__close" data-dismiss="modal">&times;</button>
@@ -257,6 +270,10 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
 >>>>>>> origin/kevin
+=======
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+>>>>>>> origin/alejandro
             </div>
             <div id="bodyModalCarrito" class="modal-body">
                 
@@ -264,10 +281,14 @@
             <div class="modal-footer">
                 <p class="modal-footer__precio" id='precioCompra'></p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <button id="botonComprar" type="button" class="modal-footer__boton-comprar" data-dismiss="modal">Comprar</button>
 =======
                 <button id="botonComprar" type="button" class="btn btn-default" data-dismiss="modal">Comprar</button>
 >>>>>>> origin/kevin
+=======
+                <button id="botonComprar" type="button" class="btn btn-default" data-dismiss="modal">Comprar</button>
+>>>>>>> origin/alejandro
             </div>
             </div>
 
@@ -280,6 +301,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="modal-header modal-headerProducto">
                         <h5 class="modal-header__titulo modal-title" id="modaltitulo"></h5>
                         <button id="cerrarModal" type="button" class="close modal-header-producto__close" data-dismiss="modal" aria-label="Close">
@@ -288,6 +310,11 @@
                         <h5 class="modal-title" id="modaltitulo"></h5>
                         <button id="cerrarModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
 >>>>>>> origin/kevin
+=======
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modaltitulo"></h5>
+                        <button id="cerrarModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+>>>>>>> origin/alejandro
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>

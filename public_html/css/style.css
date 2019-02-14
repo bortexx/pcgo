@@ -1,11 +1,15 @@
 @charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/alejandro
 /* Document
    ========================================================================== */
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
+<<<<<<< HEAD
 =======
 /* Document
    ========================================================================== */
@@ -13,6 +17,8 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
  */
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 html {
@@ -22,31 +28,43 @@ html {
   /* 2 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/alejandro
 /* Sections
    ========================================================================== */
 /**
  * Remove the margin in all browsers.
+<<<<<<< HEAD
 =======
 /* Sections
    ========================================================================== */
 /**
  * Remove the margin in all browsers.
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
  */
 body {
   margin: 0; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Render the `main` element consistently in IE.
 =======
 /**
  * Render the `main` element consistently in IE.
 >>>>>>> origin/kevin
+=======
+/**
+ * Render the `main` element consistently in IE.
+>>>>>>> origin/alejandro
  */
 main {
   display: block; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -56,17 +74,26 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
 >>>>>>> origin/kevin
+=======
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+>>>>>>> origin/alejandro
  */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/alejandro
 /* Grouping content
    ========================================================================== */
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
+<<<<<<< HEAD
 =======
 /* Grouping content
    ========================================================================== */
@@ -74,6 +101,8 @@ h1 {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
  */
 hr {
   box-sizing: content-box;
@@ -84,6 +113,7 @@ hr {
   /* 2 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -92,6 +122,11 @@ hr {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
 >>>>>>> origin/kevin
+=======
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+>>>>>>> origin/alejandro
  */
 pre {
   font-family: monospace, monospace;
@@ -100,20 +135,27 @@ pre {
   /* 2 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/alejandro
 /* Text-level semantics
    ========================================================================== */
 /**
  * Remove the gray background on active links in IE 10.
+<<<<<<< HEAD
 =======
 /* Text-level semantics
    ========================================================================== */
 /**
  * Remove the gray background on active links in IE 10.
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
  */
 a {
   background-color: transparent; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -123,6 +165,11 @@ a {
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
 >>>>>>> origin/kevin
+=======
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+>>>>>>> origin/alejandro
  */
 abbr[title] {
   border-bottom: none;
@@ -133,17 +180,23 @@ abbr[title] {
   /* 2 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
 =======
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
 >>>>>>> origin/kevin
+=======
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+>>>>>>> origin/alejandro
  */
 b,
 strong {
   font-weight: bolder; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -153,6 +206,11 @@ strong {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
 >>>>>>> origin/kevin
+=======
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+>>>>>>> origin/alejandro
  */
 code,
 kbd,
@@ -163,16 +221,22 @@ samp {
   /* 2 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Add the correct font size in all browsers.
 =======
 /**
  * Add the correct font size in all browsers.
 >>>>>>> origin/kevin
+=======
+/**
+ * Add the correct font size in all browsers.
+>>>>>>> origin/alejandro
  */
 small {
   font-size: 80%; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -182,6 +246,11 @@ small {
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
 >>>>>>> origin/kevin
+=======
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+>>>>>>> origin/alejandro
  */
 sub,
 sup {
@@ -197,26 +266,36 @@ sup {
   top: -0.5em; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Embedded content
    ========================================================================== */
 /**
  * Remove the border on images inside links in IE 10.
 =======
+=======
+>>>>>>> origin/alejandro
 /* Embedded content
    ========================================================================== */
 /**
  * Remove the border on images inside links in IE 10.
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
  */
 img {
   border-style: none; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/alejandro
 /* Forms
    ========================================================================== */
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
+<<<<<<< HEAD
 =======
 /* Forms
    ========================================================================== */
@@ -224,6 +303,8 @@ img {
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
  */
 button,
 input,
@@ -240,6 +321,7 @@ textarea {
   /* 2 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -248,6 +330,11 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
 >>>>>>> origin/kevin
+=======
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+>>>>>>> origin/alejandro
  */
 button,
 input {
@@ -255,6 +342,7 @@ input {
   overflow: visible; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -263,6 +351,11 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
 >>>>>>> origin/kevin
+=======
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+>>>>>>> origin/alejandro
  */
 button,
 select {
@@ -270,12 +363,17 @@ select {
   text-transform: none; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Correct the inability to style clickable types in iOS and Safari.
 =======
 /**
  * Correct the inability to style clickable types in iOS and Safari.
 >>>>>>> origin/kevin
+=======
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+>>>>>>> origin/alejandro
  */
 button,
 [type="button"],
@@ -284,12 +382,17 @@ button,
   -webkit-appearance: button; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Remove the inner border and padding in Firefox.
 =======
 /**
  * Remove the inner border and padding in Firefox.
 >>>>>>> origin/kevin
+=======
+/**
+ * Remove the inner border and padding in Firefox.
+>>>>>>> origin/alejandro
  */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -299,12 +402,17 @@ button::-moz-focus-inner,
   padding: 0; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Restore the focus styles unset by the previous rule.
 =======
 /**
  * Restore the focus styles unset by the previous rule.
 >>>>>>> origin/kevin
+=======
+/**
+ * Restore the focus styles unset by the previous rule.
+>>>>>>> origin/alejandro
  */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
@@ -313,22 +421,31 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Correct the padding in Firefox.
 =======
 /**
  * Correct the padding in Firefox.
 >>>>>>> origin/kevin
+=======
+/**
+ * Correct the padding in Firefox.
+>>>>>>> origin/alejandro
  */
 fieldset {
   padding: 0.35em 0.75em 0.625em; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/alejandro
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
+<<<<<<< HEAD
 =======
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -336,6 +453,8 @@ fieldset {
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
  */
 legend {
   box-sizing: border-box;
@@ -352,27 +471,38 @@ legend {
   /* 1 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
 =======
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
 >>>>>>> origin/kevin
+=======
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+>>>>>>> origin/alejandro
  */
 progress {
   vertical-align: baseline; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Remove the default vertical scrollbar in IE 10+.
 =======
 /**
  * Remove the default vertical scrollbar in IE 10+.
 >>>>>>> origin/kevin
+=======
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+>>>>>>> origin/alejandro
  */
 textarea {
   overflow: auto; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * 1. Add the correct box sizing in IE 10.
@@ -382,6 +512,11 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
 >>>>>>> origin/kevin
+=======
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+>>>>>>> origin/alejandro
  */
 [type="checkbox"],
 [type="radio"] {
@@ -391,17 +526,23 @@ textarea {
   /* 2 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
 =======
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
 >>>>>>> origin/kevin
+=======
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+>>>>>>> origin/alejandro
  */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -411,6 +552,11 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
 >>>>>>> origin/kevin
+=======
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+>>>>>>> origin/alejandro
  */
 [type="search"] {
   -webkit-appearance: textfield;
@@ -419,16 +565,22 @@ textarea {
   /* 2 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
 =======
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
 >>>>>>> origin/kevin
+=======
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+>>>>>>> origin/alejandro
  */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -438,6 +590,11 @@ textarea {
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
 >>>>>>> origin/kevin
+=======
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+>>>>>>> origin/alejandro
  */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
@@ -446,57 +603,80 @@ textarea {
   /* 2 */ }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/alejandro
 /* Interactive
    ========================================================================== */
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
+<<<<<<< HEAD
 =======
 /* Interactive
    ========================================================================== */
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
  */
 details {
   display: block; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * Add the correct display in all browsers.
 =======
 /*
  * Add the correct display in all browsers.
 >>>>>>> origin/kevin
+=======
+/*
+ * Add the correct display in all browsers.
+>>>>>>> origin/alejandro
  */
 summary {
   display: list-item; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Misc
    ========================================================================== */
 /**
  * Add the correct display in IE 10+.
 =======
+=======
+>>>>>>> origin/alejandro
 /* Misc
    ========================================================================== */
 /**
  * Add the correct display in IE 10+.
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
  */
 template {
   display: none; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Add the correct display in IE 10.
 =======
 /**
  * Add the correct display in IE 10.
 >>>>>>> origin/kevin
+=======
+/**
+ * Add the correct display in IE 10.
+>>>>>>> origin/alejandro
  */
 [hidden] {
   display: none; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -506,6 +686,11 @@ template {
    v2.0 | 20110126
    License: none (public domain)
 >>>>>>> origin/kevin
+=======
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+>>>>>>> origin/alejandro
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -569,6 +754,7 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+<<<<<<< HEAD
   justify-content: center;
   align-items: none; }
 
@@ -587,6 +773,40 @@ html {
  "page__carousel"
  "page__container"
  "page__footer"; } }
+=======
+  justify-content: center; }
+
+@media (max-width: 1237px) {
+  .productos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; } }
+
+.productos__item {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 15px;
+  margin-left: 40px;
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid black; }
+
+.productos__item--imagen {
+  height: 120px;
+  width: 160px; }
+
+.l-landing-page {
+  display: grid;
+  grid-template-areas: "page__header page__header page__header page__header page__header page__header " "page__carousel page__carousel page__carousel page__carousel page__carousel page__carousel " "page__aside page__container page__container page__container page__container page__container " "page__aside page__container page__container page__container page__container page__container " "page__footer page__footer page__footer page__footer page__footer page__footer "; }
+
+@media (max-width: 727px) {
+  .l-landing-page {
+    grid-template-areas: "page__header" "page__aside" "page__carousel" "page__container" "page__footer"; } }
+>>>>>>> origin/alejandro
 
 .l-landing-page__header {
   grid-area: page__header; }
@@ -652,10 +872,14 @@ html {
   display: block;
   text-align: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: #202124;
 =======
   background-color: #000000;
 >>>>>>> origin/kevin
+=======
+  background-color: #000000;
+>>>>>>> origin/alejandro
   color: white; }
 
 .menu-side__items {
@@ -690,11 +914,14 @@ html {
     display: flex;
     flex-direction: column;
 <<<<<<< HEAD
+<<<<<<< HEAD
     flex-wrap: wrap;
     justify-content: none;
     align-items: none;
 =======
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     position: absolute;
     z-index: 0;
     width: 100%;
@@ -708,11 +935,14 @@ html {
     display: flex;
     flex-direction: column;
 <<<<<<< HEAD
+<<<<<<< HEAD
     flex-wrap: wrap;
     justify-content: none;
     align-items: none;
 =======
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     position: absolute;
     z-index: 0;
     width: 100%;
@@ -761,6 +991,7 @@ html {
   .main-menu {
     display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -768,11 +999,16 @@ html {
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
     background-color: #202124;
 =======
+=======
+>>>>>>> origin/alejandro
     justify-content: flex-start;
     box-shadow: 0px 5px rgba(0, 0, 0, 0.1);
     background-color: #202124;
     flex-wrap: wrap;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     position: absolute;
     z-index: 1;
     width: 100%; }
@@ -793,10 +1029,13 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
 <<<<<<< HEAD
+<<<<<<< HEAD
   justify-content: none;
   align-items: none;
 =======
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
   font-family: Libre Franklin, sans-serif;
   width: 100%;
   color: #FFFFFF;
@@ -833,12 +1072,16 @@ html {
     display: flex;
     flex-direction: row;
 <<<<<<< HEAD
+<<<<<<< HEAD
     flex-wrap: wrap;
     justify-content: none;
     align-items: none; } }
 =======
     flex-wrap: wrap; } }
 >>>>>>> origin/kevin
+=======
+    flex-wrap: wrap; } }
+>>>>>>> origin/alejandro
 
 @media (max-width: 276px) {
   .main-menu__item--invisible {
@@ -850,9 +1093,12 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
 <<<<<<< HEAD
+<<<<<<< HEAD
     justify-content: none;
 =======
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     align-items: center; }
   .main-menu__item--derecha {
     margin-left: 0px; } }
@@ -869,15 +1115,20 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
 <<<<<<< HEAD
+<<<<<<< HEAD
   justify-content: space-around;
   align-items: none; }
 =======
   justify-content: space-around; }
 >>>>>>> origin/kevin
+=======
+  justify-content: space-around; }
+>>>>>>> origin/alejandro
 
 .footer__izquierda {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
 <<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
@@ -886,10 +1137,14 @@ html {
 =======
   color: white; }
 >>>>>>> origin/kevin
+=======
+  color: white; }
+>>>>>>> origin/alejandro
 
 .footer__centro {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
 <<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
@@ -898,6 +1153,9 @@ html {
 =======
   color: white;
 >>>>>>> origin/kevin
+=======
+  color: white;
+>>>>>>> origin/alejandro
   margin-bottom: 10px;
   margin-top: 45px; }
 
@@ -905,6 +1163,7 @@ html {
   display: flex;
   flex-direction: column;
 <<<<<<< HEAD
+<<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
   align-items: none;
@@ -919,6 +1178,8 @@ html {
   justify-content: none;
   align-items: none; }
 =======
+=======
+>>>>>>> origin/alejandro
   color: white;
   margin-top: 45px; }
 
@@ -926,11 +1187,15 @@ html {
   color: white;
   display: flex;
   flex-direction: column; }
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
 
 .footer__iconos {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
 <<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
@@ -940,11 +1205,16 @@ html {
 .footer__copyright {
   color: #FFFFFF;
 =======
+=======
+>>>>>>> origin/alejandro
   color: white; }
 
 .footer__copyright {
   color: white;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
   margin-top: auto;
   font-size: 12px;
   text-align: center;
@@ -956,9 +1226,13 @@ html {
 .card {
   width: 200px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   border: 1px solid black;
 >>>>>>> origin/kevin
+=======
+  border: 1px solid black;
+>>>>>>> origin/alejandro
   align-items: center;
   text-align: center;
   margin: 20px; }
@@ -984,11 +1258,15 @@ html {
 .card__boton {
   color: #FFFFFF;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: Libre Franklin, sans-serif;
   background-color: #202124;
 =======
   background-color: #292c2f;
 >>>>>>> origin/kevin
+=======
+  background-color: #292c2f;
+>>>>>>> origin/alejandro
   border: none;
   border-radius: 0px;
   height: 40px;
@@ -996,11 +1274,14 @@ html {
   margin-top: 10px; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .modal__botonPrimario {
   color: #FFFFFF;
   font-family: Libre Franklin, sans-serif;
   background-color: #202124;
 =======
+=======
+>>>>>>> origin/alejandro
 .modal-footer1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1015,7 +1296,10 @@ html {
 .modal__botonPrimario {
   color: #FFFFFF;
   background-color: #292c2f;
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
   border: none;
   height: 100%;
   width: 100%;
@@ -1030,6 +1314,7 @@ html {
 
 .modal-body-a {
   padding: 20px;
+<<<<<<< HEAD
 <<<<<<< HEAD
   display: flex;
   flex-direction: column;
@@ -1046,6 +1331,8 @@ html {
   margin-left: auto;
   font-family: Libre Franklin, sans-serif; }
 =======
+=======
+>>>>>>> origin/alejandro
   display: flex; }
 
 .modal-body-b {
@@ -1059,21 +1346,29 @@ html {
   flex-direction: row;
   margin-right: auto;
   margin-left: auto; }
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
 
 .modal-body__precio {
   text-align: center;
   margin-bottom: 15px;
+<<<<<<< HEAD
 <<<<<<< HEAD
   margin-top: 15px;
   font-family: Libre Franklin, sans-serif; }
 =======
   margin-top: 15px; }
 >>>>>>> origin/kevin
+=======
+  margin-top: 15px; }
+>>>>>>> origin/alejandro
 
 .modal-derecha {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
 <<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: center;
@@ -1083,10 +1378,15 @@ html {
   width: 100%;
   justify-content: center;
 >>>>>>> origin/kevin
+=======
+  width: 100%;
+  justify-content: center;
+>>>>>>> origin/alejandro
   text-align: center; }
 
 .moda-body__boton-menos {
   border-radius: 25px;
+<<<<<<< HEAD
 <<<<<<< HEAD
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1094,6 +1394,9 @@ html {
 =======
   background-color: #292c2f;
 >>>>>>> origin/kevin
+=======
+  background-color: #292c2f;
+>>>>>>> origin/alejandro
   color: #FFFFFF;
   border: none;
   margin-right: 5px;
@@ -1110,16 +1413,21 @@ html {
 .moda-body__boton-mas {
   border-radius: 25px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   padding-top: 4px;
   padding-bottom: 4px;
   background-color: #202124;
 =======
   background-color: #292c2f;
 >>>>>>> origin/kevin
+=======
+  background-color: #292c2f;
+>>>>>>> origin/alejandro
   color: #FFFFFF;
   border: none;
   margin-left: 5px; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .modal-body__descripcion {
   font-family: Libre Franklin, sans-serif; }
@@ -1143,6 +1451,8 @@ html {
 
 =======
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
 .info {
   display: none; }
 
@@ -1162,10 +1472,14 @@ html {
   text-align: center;
   font-size: 1.8em;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-family: Libre Franklin, sans-serif; }
 =======
   font-family: roboto; }
 >>>>>>> origin/kevin
+=======
+  font-family: roboto; }
+>>>>>>> origin/alejandro
 
 .loginmodal-container input[type=submit] {
   width: 100%;
@@ -1203,10 +1517,14 @@ html {
   padding: 0 8px;
   /* border-radius: 3px; */
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* -webkit-user-select: none;
 =======
   /* -webkit-user-select: none;
 >>>>>>> origin/kevin
+=======
+  /* -webkit-user-select: none;
+>>>>>>> origin/alejandro
   user-select: none; */ }
 
 .loginmodal-submit {
@@ -1259,11 +1577,14 @@ html {
   display: flex;
   flex-direction: column;
 <<<<<<< HEAD
+<<<<<<< HEAD
   flex-wrap: wrap;
   justify-content: none;
   align-items: none;
 =======
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
   position: absolute;
   width: 120px;
   animation-timing-function: linear;
@@ -1295,11 +1616,14 @@ html {
     display: flex;
     flex-direction: column;
 <<<<<<< HEAD
+<<<<<<< HEAD
     flex-wrap: wrap;
     justify-content: none;
     align-items: none;
 =======
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
     position: absolute;
     width: 120px;
     animation-timing-function: linear;
@@ -1319,6 +1643,7 @@ html {
     z-index: 10;
     border-radius: 25px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding: 10px;
     border: none;
     outline: none;
@@ -1328,24 +1653,35 @@ html {
     border: none;
     outline: none; } }
 >>>>>>> origin/kevin
+=======
+    border: none;
+    outline: none; } }
+>>>>>>> origin/alejandro
 
 .modal-body {
   overflow-y: auto; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .modal-content--tamaño {
   right: 90%;
 =======
+=======
+>>>>>>> origin/alejandro
 .modal-footer__precio {
   margin-bottom: 1px; }
 
 .modal-content--tamaño {
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
   width: 90vw;
   height: 90vh; }
 
 .modal-carrito-body__boton-mas {
   border-radius: 25px;
+<<<<<<< HEAD
 <<<<<<< HEAD
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1366,6 +1702,8 @@ html {
   margin-left: auto;
   margin-right: 5px; }
 =======
+=======
+>>>>>>> origin/alejandro
   background-color: #292c2f;
   color: #FFFFFF;
   border: none;
@@ -1381,7 +1719,10 @@ html {
   margin-right: -7px;
   outline: none;
   margin-left: 10px; }
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
 
 .modal-carrito-body__boton:focus {
   outline-color: transparent;
@@ -1391,6 +1732,7 @@ html {
   outline-color: transparent;
   outline-style: none; }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 @media only screen and (max-width: 600px) and (min-width: 501px) {
   .modal-content--tamaño {
@@ -1410,6 +1752,8 @@ html {
     width: 20px;
     height: 20px; } }
 =======
+=======
+>>>>>>> origin/alejandro
 .modal-content {
   margin-left: 30px;
   margin-right: 30px; }
@@ -1424,7 +1768,10 @@ html {
   .modal-content--tamaño {
     width: 200px;
     height: auto; } }
+<<<<<<< HEAD
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
 
 .modalBody__articuloCarrito {
   display: flex;
@@ -1435,6 +1782,7 @@ html {
 
 .modalBody__articuloCarrito--oscuro {
 <<<<<<< HEAD
+<<<<<<< HEAD
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1442,6 +1790,8 @@ html {
   align-items: center;
 =======
 >>>>>>> origin/kevin
+=======
+>>>>>>> origin/alejandro
   background-color: #E7E7E7; }
 
 .imagenCarrito {
@@ -1449,6 +1799,7 @@ html {
   height: 170px; }
 
 .item {
+<<<<<<< HEAD
 <<<<<<< HEAD
   margin-left: 10px;
   font-family: Libre Franklin, sans-serif; }
@@ -1509,3 +1860,6 @@ html {
 =======
   margin-left: 10px; }
 >>>>>>> origin/kevin
+=======
+  margin-left: 10px; }
+>>>>>>> origin/alejandro
