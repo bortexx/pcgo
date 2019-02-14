@@ -45,4 +45,14 @@ class UsuariosResource extends Resource
             http_response_code(400);
         }
     }
+
+    public function getDeleteAction()
+    {
+        $id = $this->controller->getParam('id');
+        $this->sql = 'DELETE from usuarios where id = :id';
+        $params = array(
+            'id' => $id,
+        );
+        $this->setSQL($params);
+    }
 }

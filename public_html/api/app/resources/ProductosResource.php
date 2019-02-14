@@ -59,4 +59,13 @@ class ProductosResource extends Resource {
         }
     }
     
+   public function getDeleteAction(){
+    $id = $this->controller->getParam('id');
+    $this->sql = 'DELETE from productos where id = :id';
+    $params = array(
+        'id' => $id,
+    );
+    $this->setSQL($params);
+}
+    
 }
