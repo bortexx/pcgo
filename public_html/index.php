@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -9,8 +8,6 @@
     <link rel="shortcut icon" href="images/logo.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="vendor/font-awesome/css/all.css" rel="stylesheet" type="text/css" />
@@ -20,47 +17,21 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-=======
-=======
->>>>>>> origin/alejandro
-    <link href="vendor/font-awesome/css/all.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>   
-<<<<<<< HEAD
->>>>>>> origin/kevin
-=======
->>>>>>> origin/alejandro
     <script src="js/repository.js" type="text/javascript"></script>
     <script src="js/eliminarElementos.js" type="text/javascript"></script>
     <script src="js/articulo.js" type="text/javascript"></script>
     <script src="js/carrito.js" type="text/javascript"></script>
     <script src="js/IndexController.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/alejandro
-    <link href="https://fonts.googleapis.com/css?family=Aleo|Libre+Baskerville|Libre+Franklin|Oswald|Roboto+Mono" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<<<<<<< HEAD
->>>>>>> origin/kevin
-=======
->>>>>>> origin/alejandro
 </head>
+
 
 <body class="body">
     <div class="l-landing-page">
 
-        <button class="boton-carrito-flotante" data-toggle='modal'  data-target='#modalCarrito' onclick="mostrarCarrito()"><i class=" fas fa-shopping-cart"></i></button>
+        <button class="boton-carrito-flotante" data-toggle='modal' data-target='#modalCarrito' onclick="mostrarCarrito()"><i
+                class=" fas fa-shopping-cart"></i></button>
 
         <header class="l-landing-page__header">
             <nav class="main-menu">
@@ -71,55 +42,57 @@
                     <li class="main-menu__logo">
                         <a id="redireccionLogo"><img class="logo" src="images/white.png" /></a>
                     </li>
-                    
+
                     <?php
-                    session_start();
-                    if(isset($_SESSION['nombreUsuario'])){
-                    ?>
-                        <div class="menu-usuario menu-usuario--derecha">
-                            <div class="menu-usuario__nombre">
-                                <li class="main-menu__item">
-                                <a><span id=""class="main-menu__login"><?php echo ucfirst($_SESSION['nombreUsuario']); ?></span></a>
+session_start();
+if (isset($_SESSION['nombreUsuario'])) {
+    ?>
+                    <div class="menu-usuario menu-usuario--derecha">
+                        <div class="menu-usuario__nombre">
+                            <li class="main-menu__item">
+                                <a><span id="" class="main-menu__login">
+                                        <?php echo ucfirst($_SESSION['nombreUsuario']); ?></span></a>
                                 <a><i class="fas fa-user main-menu__icon-login"></i></a>
                             </li>
-                            </div>
-                            <div class="menu-usuario__desplegable">
-                                <div class="menu-usuario__item">
-                                    <a><span id=""class="main-usuario__texto">Preferencias</span></a>
-                                </div>
-                                <div class="menu-usuario__item">
-                                    <a><span id=""class="main-usuario__texto">Mi tienda</span></a>
-                                </div>
-                                <div class="menu-usuario__item menu-usuario__item--invisible">
-                                    <a><span id=""class="main-usuario__texto">Logout</span></a>
-                                </div>
-                             </div>
                         </div>
+                        <div class="menu-usuario__desplegable">
+                            <div class="menu-usuario__item">
+                                <a><span id="" class="main-usuario__texto">Preferencias</span></a>
+                            </div>
+                            <div class="menu-usuario__item">
+                                <a><span id="" class="main-usuario__texto">Mi tienda</span></a>
+                            </div>
+                            <div class="menu-usuario__item menu-usuario__item--invisible">
+                                <a><span id="" class="main-usuario__texto">Logout</span></a>
+                            </div>
+                        </div>
+                    </div>
 
-                        <li class="main-menu__item main-menu__item--seleccionado" >
-                         <a onclick="logout()"><span id="logout"class="main-menu__login"><i class="fas fa-sign-out-alt"></i></span></a>
-                         <a onclick="logout()"><i class="fas fa-sign-out-alt main-menu__icon-register"></i></a>
+                    <li class="main-menu__item main-menu__item--seleccionado">
+                        <a onclick="logout()"><span id="logout" class="main-menu__login"><i class="fas fa-sign-out-alt"></i></span></a>
+                        <a onclick="logout()"><i class="fas fa-sign-out-alt main-menu__icon-register"></i></a>
 
-                        </li>
-                        <?php
-                            } else {
-                        ?>
-                        
-                        <li class="main-menu__item main-menu__item--derecha main-menu__item--seleccionado">
-                         <a><span class="main-menu__login" data-toggle='modal'  data-target='#loginModal'>Login</span></a>
-                        <a><i class="fas fa-user main-menu__icon-login "  data-toggle='modal'  data-target='#loginModal'></i></a>
-                        </li>
-                        <li class="main-menu__item main-menu__item--seleccionado">
-                        <a><span class="main-menu__register" data-toggle='modal'  data-target='#registrarseModal'>Registro</span></a>
-                        <a><i class="fas fa-lock main-menu__icon-register" data-toggle='modal'  data-target='#registrarseModal'></i></a>
-                        </li>
+                    </li>
+                    <?php
+} else {
+    ?>
 
-                        <?php
-                            }
-                        ?>  
+                    <li class="main-menu__item main-menu__item--derecha main-menu__item--seleccionado">
+                        <a><span class="main-menu__login" data-toggle='modal' data-target='#loginModal'>Login</span></a>
+                        <a><i class="fas fa-user main-menu__icon-login " data-toggle='modal' data-target='#loginModal'></i></a>
+                    </li>
+                    <li class="main-menu__item main-menu__item--seleccionado">
+                        <a><span class="main-menu__register" data-toggle='modal' data-target='#registrarseModal'>Registro</span></a>
+                        <a><i class="fas fa-lock main-menu__icon-register" data-toggle='modal' data-target='#registrarseModal'></i></a>
+                    </li>
+
+                    <?php
+}
+?>
 
                     <li class="main-menu__item main-menu__item--invisible" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <a id="imagen" data-toggle='modal'  data-target='#modalCarrito' onclick="mostrarCarrito()"><img src="images/icons8-add-shopping-cart-32.png" /></a>
+                        <a id="imagen" data-toggle='modal' data-target='#modalCarrito' onclick="mostrarCarrito()"><img
+                                src="images/icons8-add-shopping-cart-32.png" /></a>
                     </li>
                 </ul>
             </nav>
@@ -208,10 +181,6 @@
             </div>
         </footer>
     </div>
-
-
-
-    
         <!-- Modal -->
 
         <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -223,7 +192,7 @@
                     <form id="form-login" method="post"  >
                         <input id="usuarioLogin" type="text" name="usuario" placeholder="Usuario">
                         <input id="contrasenyaLogin" type="password" name="contrasenya" placeholder="Contraseña">
-                        <button onclick="login()">Enviar</button>
+                        <button class='loginmodal-container__boton' onclick="login()">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -261,34 +230,16 @@
 
             <!-- Modal content-->
             <div class="modal-content modal-content--tamaño">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div class="modal-header modal-headerCarrito">
                 <h5 class='modal-header-carrito__titulo'>Carrito GO</h5>
                 <button type="button" class="close modal-header-carrito__close" data-dismiss="modal">&times;</button>
-=======
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
->>>>>>> origin/kevin
-=======
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
->>>>>>> origin/alejandro
             </div>
             <div id="bodyModalCarrito" class="modal-body">
                 
             </div>
             <div class="modal-footer">
                 <p class="modal-footer__precio" id='precioCompra'></p>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <button id="botonComprar" type="button" class="modal-footer__boton-comprar" data-dismiss="modal">Comprar</button>
-=======
-                <button id="botonComprar" type="button" class="btn btn-default" data-dismiss="modal">Comprar</button>
->>>>>>> origin/kevin
-=======
-                <button id="botonComprar" type="button" class="btn btn-default" data-dismiss="modal">Comprar</button>
->>>>>>> origin/alejandro
             </div>
             </div>
 
@@ -300,21 +251,9 @@
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div class="modal-header modal-headerProducto">
                         <h5 class="modal-header__titulo modal-title" id="modaltitulo"></h5>
                         <button id="cerrarModal" type="button" class="close modal-header-producto__close" data-dismiss="modal" aria-label="Close">
-=======
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modaltitulo"></h5>
-                        <button id="cerrarModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
->>>>>>> origin/kevin
-=======
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modaltitulo"></h5>
-                        <button id="cerrarModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
->>>>>>> origin/alejandro
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
@@ -352,6 +291,7 @@
                 </div>
             </div>
         </div>
+
 </body>
 
 </html>

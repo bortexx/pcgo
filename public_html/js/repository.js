@@ -1,10 +1,7 @@
 class Repository {
     constructor(prefijo) {
         let pref = window.location.href + "api/";
-<<<<<<< HEAD
         console.log(pref);
-=======
->>>>>>> origin/alejandro
         if (this.prefijo == undefined) {
             this.prefijo = pref;
         } else {
@@ -30,10 +27,6 @@ class Repository {
         });
     };
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/alejandro
     getModelosTipo(nombre, callback, tipo) {
         $.ajax({
             url: this.prefijo + nombre + "/" + tipo,
@@ -66,10 +59,5 @@ class Repository {
         });
     }
 
-<<<<<<< HEAD
-=======
-  
-
->>>>>>> origin/alejandro
 
 };

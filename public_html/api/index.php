@@ -16,7 +16,7 @@
 	header("Access-Control-Allow-Headers: * ");
 	header("Access-Control-Allow-Methods: POST, PUT, GET, OPTIONS");
     try {
-        $mysql = new PDO("mysql:dbname=tienda;host=localhost", "root", "");
+        $mysql = new PDO("mysql:dbname=tiendafinal;host=localhost", "root", "");
        // $mysql = new PDO("mysql:dbname=pcgo;host=192.168.59.104:3306", "root", "root");
         $mysql->exec("set names utf8");
         $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

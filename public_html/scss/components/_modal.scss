@@ -1,184 +1,108 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-.modal__botonPrimario{
+.modal__botonPrimario {
     color: $modalColorLetraBotones;
     font-family: $letra;
     background-color: $modalFondoBotones;
-=======
-=======
->>>>>>> origin/alejandro
-  .modal-footer1{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-}
-
-.modal__botonPrimario{
-    color: #FFFFFF;
-    background-color: #292c2f;
-<<<<<<< HEAD
->>>>>>> origin/kevin
-=======
->>>>>>> origin/alejandro
     border: none;
     height: 100%;
     width: 100%;
     padding: 12px;
 }
-.modal__botonPrimario:hover{
-    border:1px solid #FFFFFF;
+
+.modal__botonPrimario:hover {
+    border: 1px solid #FFFFFF;
 }
 
-.modal-body__imagen{
-width:280px;
-height: 300px;
+.modal-body__imagen {
+    width: 280px;
+    height: 300px;
 }
 
-.modal-body-a{
+.modal-body-a {
     padding: 20px;
-<<<<<<< HEAD
-<<<<<<< HEAD
     @include flex(column, none, none);
     text-align: center;
 }
-.modal-body-b{
+
+.modal-body-b {
     padding: 20px;
 }
 
-.modal-body__contador{
+.modal-body__contador {
     //@include flex(row, none, none);
     margin-right: auto;
     margin-left: auto;
     font-family: $letra;
-=======
-=======
->>>>>>> origin/alejandro
-display: flex;
-}
-.modal-body-b{
-    padding: 20px;
-    display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-
-}
-
-.modal-body__contador{
-    display: flex;
-    flex-direction: row;
-    margin-right: auto;
-    margin-left: auto;
-<<<<<<< HEAD
->>>>>>> origin/kevin
-=======
->>>>>>> origin/alejandro
 }
 
 
-.modal-body__precio{
+.modal-body__precio {
     text-align: center;
     margin-bottom: 15px;
     margin-top: 15px;
-<<<<<<< HEAD
-<<<<<<< HEAD
     font-family: $letra;
 }
-.modal-derecha{
+
+.modal-derecha {
     @include flex(column, center, none);
     width: 100%;
-=======
-=======
->>>>>>> origin/alejandro
-
-}
-.modal-derecha{
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-<<<<<<< HEAD
->>>>>>> origin/kevin
-=======
->>>>>>> origin/alejandro
-    text-align:center;
+    text-align: center;
 
 }
 
-.moda-body__boton-menos{
-border-radius: 25px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-padding-top: 4px;
-padding-bottom: 4px;
-background-color: $modalFondoBotones;
-color:$modalColorLetraBotones;
-=======
-background-color: #292c2f;
-color:#FFFFFF;
->>>>>>> origin/kevin
-=======
-background-color: #292c2f;
-color:#FFFFFF;
->>>>>>> origin/alejandro
-border:none;
-margin-right: 5px;
-outline: none;
-
-}
-.moda-body__boton-menos:focus { 
-    outline-color: transparent; 
-    outline-style: none;
-}
-
-.moda-body__boton-mas:focus { 
-    outline-color: transparent; 
-    outline-style: none;
-}
-.moda-body__boton-mas{
+.moda-body__boton-menos {
     border-radius: 25px;
-<<<<<<< HEAD
-<<<<<<< HEAD
     padding-top: 4px;
     padding-bottom: 4px;
     background-color: $modalFondoBotones;
-    color:$modalColorLetraBotones;
-    border:none;
+    color: $modalColorLetraBotones;
+    border: none;
+    margin-right: 5px;
+    outline: none;
+
+}
+
+.moda-body__boton-menos:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.moda-body__boton-mas:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.moda-body__boton-mas {
+    border-radius: 25px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: $modalFondoBotones;
+    color: $modalColorLetraBotones;
+    border: none;
     margin-left: 5px;
 }
-.modal-body__descripcion{
+
+.modal-body__descripcion {
     font-family: $letra;
 }
-.modal-body__nombre{
+
+.modal-body__nombre {
     font-family: $letra;
 }
-.modal-header__titulo{
+
+.modal-header__titulo {
     font-family: $letra;
 }
-.modal-headerProducto{
+
+.modal-headerProducto {
     background-color: $modalProductoFondoHeader;
     color: $modalColorLetra;
 }
-.modal-header-producto__close{
+
+.modal-header-producto__close {
     color: $modalColorLetra;
 }
-.modal-header-producto__close:hover{
+
+.modal-header-producto__close:hover {
     color: $modalColorLetra;
     font-size: 30px;
-=======
-=======
->>>>>>> origin/alejandro
-    background-color: #292c2f;
-    color:#FFFFFF;
-    border:none;
-    margin-left: 5px;
-<<<<<<< HEAD
->>>>>>> origin/kevin
-=======
->>>>>>> origin/alejandro
 }

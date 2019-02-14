@@ -13,15 +13,7 @@
 .menu-side__titulo {
     font-family: $letra;
     font-size: 22px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    text-align: center;
-=======
     text-align: center; //esto esta mal hay que mirar el html y ponerle clase al P.
->>>>>>> origin/kevin
-=======
-    text-align: center; //esto esta mal hay que mirar el html y ponerle clase al P.
->>>>>>> origin/alejandro
     margin-bottom: 15px;
     font-weight: bold;
 }
@@ -38,15 +30,7 @@
 .menu-side__item:hover {
     display: block;
     text-align: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
     background-color: $menuSideFondo--hover;
-=======
-    background-color: #000000;
->>>>>>> origin/kevin
-=======
-    background-color: #000000;
->>>>>>> origin/alejandro
     color: white
 }
 
@@ -90,66 +74,26 @@
     .menu-side__items--visible {
         animation-duration: 1s;
         animation-name: slide2;
-<<<<<<< HEAD
-<<<<<<< HEAD
         @include flex(column, none, none);
-=======
-        display: flex;
-        flex-direction: column;
->>>>>>> origin/kevin
-=======
-        display: flex;
-        flex-direction: column;
->>>>>>> origin/alejandro
         position: absolute;
          z-index: 0;
         width: 100%;
         animation-timing-function: linear;
         background-color:  rgba(255, 255, 255, 0.85);
         animation-fill-mode: forwards;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/kevin
-=======
-
->>>>>>> origin/alejandro
         margin-top: -141px;
     }
 
      .menu-side__items--invisible {
         animation-duration: 2s;
         animation-name: slideoff;
-<<<<<<< HEAD
-<<<<<<< HEAD
         @include flex(column, none, none);
-=======
-        display: flex;
-        flex-direction: column;
->>>>>>> origin/kevin
-=======
-        display: flex;
-        flex-direction: column;
->>>>>>> origin/alejandro
         position: absolute;
          z-index: 0;
         width: 100%;
         animation-timing-function: linear;
         background-color:  rgba(255, 255, 255, 0.85);
         animation-fill-mode: forwards;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/kevin
-=======
-
-
-
->>>>>>> origin/alejandro
         margin-top: -54px;
     }
 
