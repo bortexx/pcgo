@@ -16,14 +16,26 @@ class ProductosResource extends Resource {
        
     }
 
-    public function getByTipoAction() {
-        $tipo = $this->controller->getParam('tipo');
-        $this->sql = 'SELECT * FROM productos WHERE tipo = :tipo order by id';
-        $params = array(
-            'tipo' => $tipo,
-        );
-        $this->execSQL($params);
-        $this->setData();
+    public function postProductosAction() {
+
+
+        parse_str(file_get_contents("php://input"),$datosInsertar);
+  $nombre = $datosInsertar['nombre'];
+  $categorias = $datosInsertar['categorias'];
+  $precio = $datosInsertar['precio'];
+        
+        $this->sql = "SELECT * FROM productos WHERE nombreCarta = '$nombre' ";
+        $this->execSQL();
+        if ($this->num_rows === 0) {
+            $this->sql ="INSERT INTO `productos` (nombreCarta,Tipo,precio) 
+            VALUES ('$nombre', '$categorias',  '$precio')";
+            $this->execSQLInsert();  
+        } else {
+            http_response_code(400);
+        }
+
+
+  
     }
 
 }

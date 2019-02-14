@@ -13,6 +13,7 @@
     ini_set('display_errors', 1);
 
     header("Access-Control-Allow-Origin: * ");
+    header("Access-Control-Allow-Headers: * ");
     try {
         $mysql = new PDO("mysql:dbname=tienda;host=localhost", "root", "");
        // $mysql = new PDO("mysql:dbname=pcgo;host=192.168.59.104:3306", "root", "root");
