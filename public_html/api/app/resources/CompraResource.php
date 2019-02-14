@@ -21,7 +21,6 @@ class CompraResource extends Resource {
             $this->sql ="INSERT INTO linea_pedido(id_pedido,precio,unidades,importe,id_producto) 
             VALUES ('$idPedido','$precio','$unidades','$importe','$idArticulo')";
             $this->execSQLInsert();
-            echo $this->db->lastInsertId();
             http_response_code(200);
         } catch (PDOException $e) {
            http_response_code(500);
