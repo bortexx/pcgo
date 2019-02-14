@@ -1203,3 +1203,27 @@ html {
 .modal-header-carrito__close:hover {
   color: #FFFFFF;
   font-size: 30px; }
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: none;
+  align-items: none;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.about-us__image {
+  width: 540px;
+  height: 300px; }
+
+.about-us__text-content {
+  font-size: 16px;
+  margin-top: 16px;
+  font-family: Libre Franklin, sans-serif; }
+
+.about-us__text-tittle {
+  font-size: 18px;
+  margin-top: 30px;
+  font-family: Libre Franklin, sans-serif;
+  font-weight: bold; }

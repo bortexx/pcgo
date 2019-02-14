@@ -141,7 +141,7 @@ if (isset($_SESSION['nombreUsuario'])) {
                     <div class="footer__links">
                         <a href="#">Home</a>
 
-                        <a href="#">About</a>
+                        <a id="about" data-toggle='modal' data-target='#modalAbout'>About</a>
 
                         <a href="#">Faq</a>
 
@@ -220,7 +220,7 @@ if (isset($_SESSION['nombreUsuario'])) {
                     <div class="login-help">
                     </div>
                 </div>
-            </div>            
+            </div>
             </div>
 
         </div>
@@ -235,7 +235,7 @@ if (isset($_SESSION['nombreUsuario'])) {
                 <button type="button" class="close modal-header-carrito__close" data-dismiss="modal">&times;</button>
             </div>
             <div id="bodyModalCarrito" class="modal-body">
-                
+
             </div>
             <div class="modal-footer">
                 <p class="modal-footer__precio" id='precioCompra'></p>
@@ -244,7 +244,7 @@ if (isset($_SESSION['nombreUsuario'])) {
             </div>
 
         </div>
-        </div>
+    </div>
         <!-- Modal -->
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -291,6 +291,35 @@ if (isset($_SESSION['nombreUsuario'])) {
                 </div>
             </div>
         </div>
+
+
+  <!-- Modal Carito-->
+  <div id="modalAbout" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content modal-content--tamaño">
+            <div class="modal-header modal-headerCarrito">
+                <h5 class='modal-header-carrito__titulo'>About us</h5>
+                <button type="button" class="close modal-header-carrito__close" data-dismiss="modal">&times;</button>
+            </div>
+            <div id="bodyModalCarrito" class="modal-body">
+                <div class="about-us">
+                    <img class="about-us__image" src="images/aboutus.jpg"/>
+                    <span class="about-us__text-tittle">-Who we are?-</span>
+                    <span class="about-us__text-content">We are PCGO, an electronics store, funded in 2018.</span>
+                    <span class="about-us__text-tittle">-History-</span>
+                    <span class="about-us__text-content">The idea came from a group of friends in which we wanted the customer to come first so we decided to create PCGO.</span>
+                    <span class="about-us__text-tittle">-What we offer?-</span>
+                    <span class="about-us__text-content">We sell the best products at the best price like laptops, computers and smartphones among other things.</span>
+                    <span class="about-us__text-content">We also offer the best technical support and the best features which makes our customers always happy.</span>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
 
 </body>
 

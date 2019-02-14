@@ -143,6 +143,8 @@ let cantidad = 1;
 
 $(document).ready(function () {
 
+  
+
 
     $("#btnRegistro").on("click", function () {
         let datos = {
