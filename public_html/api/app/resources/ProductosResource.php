@@ -26,4 +26,18 @@ class ProductosResource extends Resource {
         $this->setData();
     }
 
+    public function putProductoAction(){
+        try{
+            parse_str(file_get_contents("php://input"),$datosModificar);
+            $id = $datosModificar['id'];
+            $nombre = $datosModificar['nombre'];
+            $categoria = $datosModificar['categoria'];
+            $precio = $datosModificar['precio'];
+            $this->sql ="UPDATE productos SET nombreCarta = '$nombre',Tipo = '$categoria', precio = '$precio' WHERE id = '$id'";
+            $this->execSQLInsert();
+        }catch(PDOException $e){
+            http_response_code(400);
+        }
+    }
+    
 }

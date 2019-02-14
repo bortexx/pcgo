@@ -16,19 +16,17 @@ class CategoriasResource extends Resource {
         
     }
 
-        public function postCategoriasAction(){
-            $this->sql = 'INSERT INTO categorias VALUES (valor1, valor2, valor3, .)';
+        public function putCategoriaAction(){
+            try{
+                parse_str(file_get_contents("php://input"),$datosModificar);
+                $id = $datosModificar['id'];
+                $nombre = $datosModificar['nombre'];
+                $this->sql ="UPDATE categorias SET Nombre = '$nombre' WHERE id = '$id'";
+                $this->execSQLInsert();
+            }catch(PDOException $e){
+                http_response_code(400);
+            }
         }
-    
-/*
-    public function getByIdAction() {
-        $equipo = $this->controller->getParam('equipo');
-        $this->sql = 'SELECT * FROM equipos WHERE Nombre = :nombre';
-        $params = array(
-            'nombre' => $equipo,
-        );
-        $this->execSQL($params);
-        $this->setData();
-    }
-*/
+
 }
+

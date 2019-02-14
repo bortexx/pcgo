@@ -1,6 +1,4 @@
 <?php
-
-
 return array(	
 	"get" => array(
 		"Categorias" => array(
@@ -97,7 +95,23 @@ return array(
 			"action" => "postAll"
 		),
 		
+	),
+	"put" => array(
+		"Usuarios" => array(
+			"route" => "pcgo/api/usuarios",
+			"resource" => "usuarios",
+			"action" => "putUsuarioById"
+		),
+		"Categorias" => array(
+			"route" => "pcgo/api/categorias",
+			"resource" => "categorias",
+			"action" => "putCategoria"
+		),
+		"Productos" => array(
+			"route" => "pcgo/api/productos",
+			"resource" => "productos",
+			"action" => "putProducto"
+		)
 	)
 );
-
 
