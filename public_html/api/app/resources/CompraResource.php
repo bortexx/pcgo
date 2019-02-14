@@ -27,7 +27,6 @@ class CompruebaResource extends Resource {
         }
         else if ($password == $password_comprueba) {
             setcookie("DWS", $this->data[0]['id'] . ";" . $this->data[0]['nombreUsuario'], time() + (86400 * 7));  
-           // header("location: http://localhost/pcgo/api");
 			$data = array("status" => "ok", "admin" => $isAdmin);
 			$json = json_encode($data);
 			print_r($json);
