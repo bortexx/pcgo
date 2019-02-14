@@ -1,0 +1,23 @@
+.about-us {
+    @include flex(column, none, none);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-us__image {
+    width: 540px;
+    height: 300px;
+}
+
+.about-us__text-content {
+    font-size: 16px;
+    margin-top: 16px;
+    font-family: $letra;
+}
+
+.about-us__text-tittle {
+    font-size: 18px;
+    margin-top: 30px;
+    font-family: $letra;
+    font-weight: bold;
+}
