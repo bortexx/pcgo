@@ -10,7 +10,6 @@ class CompruebaResource extends Resource
 
         $usuario = htmlspecialchars($_POST['usuario']);
         $password = htmlspecialchars($_POST['contrasenya']);
-
         try {
             $this->sql = "SELECT id, nombreUsuario, contrasenya, admin FROM usuarios
             WHERE nombreUsuario = '$usuario' LIMIT 1";
@@ -21,17 +20,18 @@ class CompruebaResource extends Resource
         }
         $usuario_comprueba = $this->data[0]['nombreUsuario'];
         $password_comprueba = $this->data[0]['contrasenya'];
-        $admin = $this->data[0]['admin'];
+        $isAdmin = $this->data[0]['admin'];
 
         if ($this->num_rows === 0) {
             http_response_code(401);
         } else if ($password == $password_comprueba) {
             setcookie("DWS", $this->data[0]['id'] . ";" . $this->data[0]['nombreUsuario'], time() + (86400 * 7));
-            header("location: http://localhost/pcgo/api");
+            $data = array("status" => "ok", "admin" => $isAdmin);
+            $json = json_encode($data);
+            print_r($json);
         } else {
             http_response_code(401);
         }
-
     }
 
 }
