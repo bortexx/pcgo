@@ -6,6 +6,13 @@ return array(
             "resource" => "categorias",
             "action" => "getAll",
         ),
+
+        "getPedidos" => array(
+            "route" => "pcgo/api/pedidos",
+            "resource" => "pedidos",
+            "action" => "getAll",
+        ),
+
         "Carrusel" => array(
             "route" => "/pcgo/api/carrusel",
             "resource" => "carrusel",
@@ -129,6 +136,10 @@ return array(
             "resource" => "categorias",
             "action" => "getDelete",
         ),
-
+        "BorrarPedidos" => array(
+            "route" => "/pcgo/api/pedidos/:id",
+            "resource" => "pedidos",
+            "action" => "getDelete",
+        ),
     ),
 );
