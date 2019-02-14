@@ -16,19 +16,21 @@ class CategoriasResource extends Resource {
         
     }
 
-        public function postCategoriasAction(){
-            $this->sql = 'INSERT INTO categorias VALUES (valor1, valor2, valor3, .)';
-        }
-    
-/*
-    public function getByIdAction() {
-        $equipo = $this->controller->getParam('equipo');
-        $this->sql = 'SELECT * FROM equipos WHERE Nombre = :nombre';
-        $params = array(
-            'nombre' => $equipo,
-        );
-        $this->execSQL($params);
-        $this->setData();
-    }
-*/
+    public function postCategoriasAction(){
+        parse_str(file_get_contents("php://input"),$datosInsertar);
+        $nombre = $datosInsertar['nombre'];
+              
+              $this->sql = "SELECT * FROM categorias WHERE nombre = '$nombre' ";
+              $this->execSQL();
+              if ($this->num_rows === 0) {
+                    $this->sql = "INSERT INTO `categorias` (nombre) 
+                  VALUES ('$nombre')";
+                  $this->execSQLInsert();   
+              } else {
+                  http_response_code(400);
+              }
+      
+      
+          }
+
 }
