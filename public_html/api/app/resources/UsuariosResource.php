@@ -32,7 +32,6 @@ class UsuariosResource extends Resource
 
     public function putUsuarioByIdAction()
     {
-
         try {
             parse_str(file_get_contents("php://input"), $datosModificar);
             $nombre = $datosModificar['nombre'];
