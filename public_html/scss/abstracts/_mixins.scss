@@ -1,0 +1,14 @@
+@mixin debug($color:red){
+    @if $debug==1{
+        border: solid 1px $color;
+    }
+
+}
+
+@mixin flex($direction, $justifyContent, $alignItems){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}

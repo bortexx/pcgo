@@ -1,0 +1,108 @@
+.modal__botonPrimario {
+    color: $modalColorLetraBotones;
+    font-family: $letra;
+    background-color: $modalFondoBotones;
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 12px;
+}
+
+.modal__botonPrimario:hover {
+    border: 1px solid #FFFFFF;
+}
+
+.modal-body__imagen {
+    width: 280px;
+    height: 300px;
+}
+
+.modal-body-a {
+    padding: 20px;
+    @include flex(column, none, none);
+    text-align: center;
+}
+
+.modal-body-b {
+    padding: 20px;
+}
+
+.modal-body__contador {
+    //@include flex(row, none, none);
+    margin-right: auto;
+    margin-left: auto;
+    font-family: $letra;
+}
+
+
+.modal-body__precio {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: $letra;
+}
+
+.modal-derecha {
+    @include flex(column, center, none);
+    width: 100%;
+    text-align: center;
+
+}
+
+.moda-body__boton-menos {
+    border-radius: 25px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: $modalFondoBotones;
+    color: $modalColorLetraBotones;
+    border: none;
+    margin-right: 5px;
+    outline: none;
+
+}
+
+.moda-body__boton-menos:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.moda-body__boton-mas:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.moda-body__boton-mas {
+    border-radius: 25px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: $modalFondoBotones;
+    color: $modalColorLetraBotones;
+    border: none;
+    margin-left: 5px;
+}
+
+.modal-body__descripcion {
+    font-family: $letra;
+}
+
+.modal-body__nombre {
+    font-family: $letra;
+}
+
+.modal-header__titulo {
+    font-family: $letra;
+}
+
+.modal-headerProducto {
+    background-color: $modalProductoFondoHeader;
+    color: $modalColorLetra;
+}
+
+.modal-header-producto__close {
+    color: $modalColorLetra;
+}
+
+.modal-header-producto__close:hover {
+    color: $modalColorLetra;
+    font-size: 30px;
+}

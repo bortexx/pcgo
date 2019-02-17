@@ -1,0 +1,150 @@
+.modal-body {
+    overflow-y: auto;
+}
+
+.modal-content--tamaño {
+    right: 90%;
+    width: 90vw;
+    height: 90vh;
+}
+
+.modal-carrito-body__boton-mas {
+    border-radius: 25px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: $modalCarritoFondoBotones;
+    color: $modalCarritoColorLetra;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+}
+
+.modal-carrito-body__boton-menos {
+    border-radius: 25px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: $modalCarritoFondoBotones;
+    color: $modalCarritoColorLetra;
+    border: none;
+    outline: none;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.modal-carrito-body__boton:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+.modal-carrito-body__boton:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 501px) {
+    .modal-content--tamaño {
+        right: initial;
+        width: 95vw;
+        height: 80vh;
+    }
+
+    .imagenCarrito {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media(max-width:500px) {
+    .modal-content--tamaño {
+        right: 0%;
+        width: 95vw;
+        height: 80vh;
+    }
+
+    .imagenCarrito {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+.modalBody__articuloCarrito {
+    @include flex(row, flex-start, center);
+
+}
+
+.modalBody__articuloCarrito--oscuro {
+    @include flex(row, flex-start, center);
+    background-color: $fondoLandingPage;
+}
+
+.imagenCarrito {
+    width: 150px;
+    height: 170px;
+}
+
+.item {
+    margin-left: 10px;
+    font-family: $letra;
+}
+
+.modal-footer {
+    @include flex(row, flex-start, center);
+}
+
+.bttn {
+    //cambiar el puto nombre de la clase
+    font-family: $letra;
+    margin-left: auto;
+    background-color: $colorBotonEliminar;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: $modalColorLetraBotones;
+    margin-right: 20px;
+}
+
+.modal-carrito__body-precio {
+    margin-left: auto;
+    font-family: $letra;
+}
+
+.modal-carrito__body-total {
+    font-family: $letra;
+    margin-left: auto;
+}
+
+.modal-footer__boton-comprar {
+    margin-left: auto !important;
+    margin-left: auto;
+    background-color: $modalCarritoFondoBotones;
+    color: $modalCarritoColorLetra;
+    font-family: $letra;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.modal-footer__precio {
+    font-family: $letra;
+}
+
+.modal-headerCarrito {
+    background-color: $modalProductoFondoHeader;
+    color: $modalCarritoColorLetra;
+}
+
+.modal-header-carrito__titulo {
+    color: $modalCarritoColorLetra;
+    font-family: $letra;
+    margin-left: 100px;
+}
+
+.modal-header-carrito__close {
+    color: $modalCarritoColorLetra;
+}
+
+.modal-header-carrito__close:hover {
+    color: $modalCarritoColorLetra;
+    font-size: 30px;
+}
