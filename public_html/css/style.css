@@ -373,8 +373,6 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   align-items: none;
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; }
 
@@ -659,10 +657,7 @@ html {
     flex-wrap: wrap;
     justify-content: none;
     align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center; }
+    flex-wrap: wrap; }
   .main-menu__item--derecha {
     margin-left: 0px; } }
 
@@ -1121,15 +1116,6 @@ html {
 @media (max-width: 500px) {
   .modal-content--tamaño {
     right: 0%;
-    width: 95vw;
-    height: 80vh; }
-  .imagenCarrito {
-    width: 20px;
-    height: 20px; } }
-
-@media (max-width: 1920px) {
-  .modal-content--tamaño {
-    right: 350px;
     width: 95vw;
     height: 80vh; }
   .imagenCarrito {
