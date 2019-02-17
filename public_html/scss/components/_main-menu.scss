@@ -133,10 +133,7 @@
 
     .main-menu__items {
         @include flex(row, none, center);
-        display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
     }
 
     .main-menu__item--derecha {

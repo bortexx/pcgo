@@ -1127,6 +1127,15 @@ html {
     width: 20px;
     height: 20px; } }
 
+@media (max-width: 1920px) {
+  .modal-content--tamaño {
+    right: 350px;
+    width: 95vw;
+    height: 80vh; }
+  .imagenCarrito {
+    width: 20px;
+    height: 20px; } }
+
 .modalBody__articuloCarrito {
   display: flex;
   flex-direction: row;
