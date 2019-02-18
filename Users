@@ -2,3 +2,6 @@
     password: admin
     
     o registrate y crea tu uno
+
+
+No va a salir el usuario logeado porque en francia no funciona bien el login ya que explota el sesion_start()
